@@ -186,10 +186,8 @@
   - group: new-height
     fields:
     - label: What is the new height at the center line of the front of the building?
-      helptext: If the height will be over 40 feet, you may need a shadow analysis.
       type: number
       unit: inches
-
 
   - group: new-ground-floor
     fields:

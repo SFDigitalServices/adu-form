@@ -1,5 +1,9 @@
-- title: Almost done!
-  description: All that's left is to find out whether you will need to submit more forms.
+- title: Learn how much work you'll need before you apply.
+  fields:
+    - label: All that's left is to find out whether you will need to submit more forms.
+      type: paragraph
+
+- title: About the project
   fields:
   - label: Will the work involve any of the following?
     type: checkbox
@@ -21,6 +25,17 @@
 
     - label: Electrical work
       shows: electrical
+
+    - label: Adding height to the existing building
+      shows: new-height
+
+  - group: new-height
+    fields:
+    - label: What will be the new height at the center line of the front of the building?
+      type: number
+      unit: inches
+      if: ">40"
+      shows: shadow-analysis
 
   - label: Will this ADU remove housing services?
     helptext: Housing services can include garages, parking facilities, driveways, storage spaces, laundry rooms, decks, patios, or gardens.
@@ -74,6 +89,15 @@
     type: header
     level: 3
 
+  - group: shadow-analysis
+    fields:
+    - label: Because the new building will be over 40 feet, you will need to apply for a shadow analysis.
+      type: paragraph
+
+    - label: Apply for a shadow analysis
+      type: link
+      url: https://sf-planning.org/sites/default/files/FileCenter/Documents/8442-Shadow%20Analysis%20Application.pdf
+
   - group: auto-runway
     fields:
     - label: "You'll need a separate permit for auto runways. (link)"
@@ -105,7 +129,6 @@
       type: link
       url: http://forms.sfplanning.org/HistoricRD_SupplementalApplication.pdf
 
-
   - group: plumbing
     fields:
     - label: "Apply for a plumbing permit"
@@ -119,13 +142,6 @@
       type: link
       url: https://dbiweb.sfgov.org/dbi_electrical/
       description: Since you are performing electrical work, you will need a electrical permit.
-
-  - group: new-height
-    fields:
-    - label: Apply for a shadow analysis
-      description: If the "new height at the center line of the front of the building" is 40+ feet&hellip;
-      url: https://sf-planning.org/sites/default/files/FileCenter/Documents/8442-Shadow%20Analysis%20Application.pdf
-      type: link
 
   - group: maher
     fields:
