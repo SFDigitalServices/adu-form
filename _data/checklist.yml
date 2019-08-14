@@ -34,7 +34,7 @@
     - label: What will be the new height at the center line of the front of the building?
       type: number
       unit: inches
-      if: ">40"
+      if: ">480"
       shows: shadow-analysis
 
   - label: Will this ADU remove housing services?
