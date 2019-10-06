@@ -491,7 +491,8 @@
 
   - group: sprinklers
     fields:
-    - label: Which areas of the property do the sprinklers cover?
+    - label: Which rooms and spaces do the sprinklers cover?
+      type: textarea
 
   - label: Does the property have fire alarms?
     type: radio
@@ -503,7 +504,8 @@
 
   - group: alarms
     fields:
-    - label: Which areas of the property do the alarms cover?
+    - label: Which rooms and spaces do the alarms cover?
+      type: textarea
 
 - title: Worker's compensation insurance
   fields:
@@ -753,7 +755,7 @@
     label: |
       By checking the box below, you certify that:
 
-      - You are either the owner, the lessee, or an authorized agent for them
+      - You are either the owner, the lessee, or their authorized agent
 
       - You are authorized to sign this permit application
 
@@ -813,7 +815,7 @@
 
       Before you continue, you must read the following pages and confirm you understand them.
 
-      _Note: A copy of your driver’s license, form notarization, or other verification acceptable to the agency is required to be presented when the permit is issued to verify the property owner’s signature._
+      _Note: To confirm you have agreed to these disclosures, you need to present a copy of your driver’s license, form notarization, or other verification we accept before we issue your permit._
 
 - title: Disclosures for Owner-Builders
   group: owner-builder
