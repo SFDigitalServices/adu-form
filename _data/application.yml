@@ -50,7 +50,7 @@
 
 - title: About the owner
   fields:
-  - label: Are you, the owner, also building this ADU?
+  - label: Is the owner also building this ADU?
     type: radio
     options:
     - label: "Yes"
@@ -59,8 +59,8 @@
     - label: "No"
       shows: app-contact
 
-- title: Builder's information
-  description: Who should we talk to when working on your application?
+- title: Application contact information
+  description: Who should we talk to when we process your application?
   group: app-contact
   fields:
   - label: Name
@@ -70,27 +70,63 @@
     other: true
     options:
     - label: Architect
-      shows: contact-org
+      shows: license-org-info
 
     - label: Contractor
-      shows: contact-org
+      shows: license-org-info
 
     - label: Engineer
 
     - label: Attorney
 
-  - group: contact-org
+
+  - group: license-org-info
     fields:
-    - label: Name of organization
+    - label: License number
+      maxlength: 12
 
-    - label: Mailing address
-      type: address
+    - label: License expiration date
+      type: date
 
-    - label: Phone number
-      type: phone
 
-    - label: Email
-      type: email
+- title: Application contact information
+  group: license-org-info 
+  fields:
+  - label: Name of your organization
+
+  - label: Mailing address
+    type: address
+
+  - label: Phone number
+    type: phone
+
+  - label: Email
+    type: email
+
+- title: Billing contact information
+  fields:
+  - label: Who should we contact to pay application fees?
+    type: radio
+    options:
+    - label: The owner
+
+    - label: The builder
+
+    - label: Someone else
+      shows: billing-contact
+
+
+- title: Billing contact information
+  group: billing-contact
+  fields:
+  - label: Name of billing contact
+
+  - label: Phone number
+    type: phone
+
+  - label: Email
+    type: email
+
 
 - title: Your property
   fields:
