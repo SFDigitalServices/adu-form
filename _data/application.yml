@@ -11,7 +11,9 @@
 
       - Safety-related topics like fire protection, seismic retrofitting, and worker's compensation insurance
 
-      If you are not building the ADU yourself, you might need a professional to help you answer some questions. If you have not yet hired a architect, contractor or engineer, you might want to do so before applying.
+      Then, we'll ask you to upload your plans as PDFs and agree to our legal terms.
+
+      If you are not building the ADU yourself, you might need a professional to help you answer some questions. If you have not yet hired a architect, contractor or engineer, you may want to do so before applying.
     type: paragraph
 
 - title: About the owner
@@ -532,6 +534,79 @@
     fields:
     - label: Upload a Phase I Environmental Site Assessment
       type: file
+
+- title: Your plans
+  fields:
+  - type: paragraph
+    label: |
+      Next, we'll ask you to upload your plans, and any supplemental documents, in PDF format.
+
+      If your plan is over 200 pages or 200MB, you should split up your PDFs into different sections. Otherwise, you should combine your plans into a single file.
+  
+  - label: Content guidelines
+    type: header
+    level: 3
+
+  - type: paragraph
+    label: |
+      To understand what your plans should include, read our [ADU checklist](https://sfplanning.org/resource/accessory-dwelling-units-adu-checklists). 
+
+  - label: Format guidelines
+    type: header
+    level: 3
+
+  - type: paragraph
+    label: |
+
+      Your PDFs must be vectorized and unsecured, with searchable text. You should also use bookmarks to distinguish different sections (like architectural, site, and structural.) If there are spaces for e-signatures, you should enable markup.
+
+      Plans should also have:
+
+      - A consistent format for existing and proposed plans, so we can  overlay them
+
+      - The first page on top, oriented in landscape
+
+      - Standard title blocks and sheet numbering
+
+      - A legible font with a size of at least 10pt
+
+      - Plan sheets at least 24 by 36 inches in size
+
+      - An index
+
+      - Drawings set to scale
+
+- title: Your plans
+  fields:
+  - label: Upload a PDF of your plans
+    type: file
+
+  - label: Supplemental documents
+    type: header
+    level: 3
+
+  - label: If you have any supplemental files, you can upload them here.
+    type: paragraph
+
+  - label: "Upload supplemental document #1"
+    type: file
+    optional: yes
+
+  - label: "Upload supplemental document #2"
+    type: file
+    optional: yes
+
+  - label: "Upload supplemental document #3"
+    type: file
+    optional: yes
+
+  - label: "Upload supplemental document #4"
+    type: file
+    optional: yes
+
+  - label: "Upload supplemental document #5"
+    type: file
+    optional: yes
 
 # Legal language
 
