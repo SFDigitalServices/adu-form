@@ -46,14 +46,31 @@
 
     - label: "No"
 
-  - label: Is this site currently in industrial use?
-    helptext: Only show this if "amount of excavation" is 50+ cubic yards, and PIM shows the site is in a Maher area
+  - label: Is the site in a Maher area?
+    hidden: yes
     type: radio
     options:
     - label: "Yes"
-      shows: maher
+      shows: maher-pre
 
     - label: "No"
+
+  - group: maher-pre
+    fields:
+    - label: Excavation volume
+      type: number
+      unit: cubic yards
+      maxlength: 5
+      shows: maher
+      if: ">49"
+
+    - label: Are you changing your property from industrial to residential use?
+      type: radio
+      options:
+      - label: "Yes"
+        shows: maher
+
+      - label: "No"
 
 - title: Great. Here's what you still need to submit.
   fields:
