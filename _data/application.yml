@@ -182,14 +182,21 @@
     type: number
     unit: cubic yards
     maxlength: 5
-    shows: geotechnical
+    shows: large-excavation
     if: ">49"
 
-  - group: geotechnical
+  - label: Slope of building
+    hidden: yes
+    type: number
+    maxlength: 2
+    unit: "%"
+    shows: large-excavation
+    if: ">20"
+
+  - group: large-excavation
     fields:
     - label: Upload a geotechnical report
       type: file
-      helptext: Also show this if PIM says the slope is at least 20%
 
   - label: Including foundation work, how deep will you disturb the surface below grade?
     type: number
@@ -244,13 +251,25 @@
 
     - label: "No"
 
-  - label: Is this site currently in industrial use?
-    helptext: Only show this if "amount of excavation" is 50+ cubic yards, and PIM shows the site is in a Maher area
+  - label: Is the site in a Maher area?
+    hidden: yes
     type: radio
     options:
     - label: "Yes"
+      shows: maher
 
     - label: "No"
+
+  - group: maher
+    fields:
+    - group: large-excavation
+      fields:
+      - label: Are you changing your property from industrial to residential use?
+        type: radio
+        options:
+        - label: "Yes"
+
+        - label: "No"
 
 - title: Describe your ADUs
   fields:
