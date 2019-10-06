@@ -252,6 +252,27 @@
 
     - label: "No"
 
+- title: Describe your ADUs
+  fields:
+  - label: Does the property currently have any ADUs?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: current-adus
+
+    - label: "No"
+
+  - group: current-adus
+    fields:
+    - label: How many ADUs does the property have? List their unit types and square footage.
+      helptext: Your ADU's unit type might be "Studio," "1 Bedroom", "2 Bedroom", etc.
+      type: textarea
+
+  - label: How many ADUs will the property have after construction? List their unit types and square footage.
+    helptext: Your ADU's unit type might be "Studio," "1 Bedroom", "2 Bedroom", etc.
+    type: textarea
+
+
 - title: Parking area
   fields:
   - label: How many square feet of parking space does the property have?
