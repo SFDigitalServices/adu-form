@@ -22,7 +22,7 @@
 
   - label: Phone number
     type: phone
-    optional: true
+    optional: yes
 
   - label: Email address
     type: email
