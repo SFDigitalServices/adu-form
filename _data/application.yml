@@ -59,7 +59,7 @@
     - label: "No"
       shows: app-contact
 
-- title: Application contact information
+- title: Contact information
   description: Who should we talk to when we process your application?
   group: app-contact
   fields:
@@ -89,7 +89,7 @@
       type: date
 
 
-- title: Application contact information
+- title: Contact information
   group: license-org-info 
   fields:
   - label: Name of your organization
