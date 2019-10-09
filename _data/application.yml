@@ -19,18 +19,22 @@
 - title: About the owner
   fields:
   - label: Name
+    annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
 
   - label: Phone number
     type: phone
     optional: yes
+    annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)  
 
   - label: Email address
     type: email
-
+    annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI) 
+ 
 - title: About the owner
   fields:
   - label: Mailing address
     type: address
+    annotation: PRJ (Planning), Authorized Agent Disclosure (DBI) 
 
   - label: Will this also be the address of your ADU?
     type: radio
@@ -39,19 +43,26 @@
 
     - label: "No"
       shows: project-address
+    annotation: If "yes," populate "Project address" with the mailing address
 
   - group: project-address
     fields:
     - label: Project address
       type: address
+      annotation: PRJ (Planning); G-23 Attachment B, Form 3/8, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
       address-fields:
       - 'street'
       - 'zip'
+
+    - label: Block and lot
+      annotation: G-23 Attachment B and Form 3/8 (DBI)
+      hidden: yes
 
 - title: About the owner
   fields:
   - label: Is the owner also building this ADU?
     type: radio
+    annotation: If "yes", populate the "Contact information" section with the owner's information
     options:
     - label: "Yes"
       shows: owner-builder
@@ -64,10 +75,12 @@
   group: app-contact
   fields:
   - label: Name
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
 
   - label: Relationship to owner
     type: radio
     other: true
+    annotation: PRJ and Joint Checklist (Planning), Authorized Agent Disclosure (DBI)
     options:
     - label: Architect
       shows: license-org-info
@@ -84,29 +97,36 @@
     fields:
     - label: License number
       maxlength: 12
+      annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
 
     - label: License expiration date
       type: date
+      annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
 
 
 - title: Contact information
   group: license-org-info 
   fields:
   - label: Name of your organization
+    annotation: Authorized Agent Disclosure (DBI) 
 
   - label: Mailing address
     type: address
+    annotation: PRJ (Planning), G-23 Attachment B, Form 3/8, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
 
   - label: Phone number
     type: phone
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Form 3/8, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
 
   - label: Email
     type: email
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Form 3/8 and Authorized Agent Disclosure (DBI)
 
 - title: Billing contact information
   fields:
   - label: Who should we contact to pay application fees?
     type: radio
+    annotation: PRJ (Planning) 
     options:
     - label: The owner
 
@@ -120,19 +140,24 @@
   group: billing-contact
   fields:
   - label: Name of billing contact
+    annotation: PRJ (Planning) 
 
   - label: Phone number
     type: phone
+    annotation: PRJ (Planning) 
 
   - label: Email
     type: email
+    annotation: PRJ (Planning) 
 
 
 - title: Your property
   fields:
   - label: Present use
+    annotation: Form 3/8 (DBI)
 
   - label: Proposed use
+    annotation: Form 3/8 (DBI)
 
 - title: Construction work
   fields:
@@ -140,6 +165,7 @@
   - label: Describe the work you are proposing in detail.
     type: textarea
     size: large
+    annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
     helptext: |
       You should include:
 
@@ -150,6 +176,7 @@
 
   - label: Type of construction
     type: select
+    annotation: Form 3/8 (DBI), Joint Checklist (Planning)
     options:
     - label: "I-A: Fire Resistive Non-Combustible"
     - label: "I-B: Fire Resistive Non-Combustible"
@@ -163,11 +190,13 @@
 
   - label: Estimated cost
     type: price
+    annotation: PRJ (Planning), Form 3/8 (DBI)
 
   - label: How long do you estimate it will take you to build the ADU?
     type: number
     maxlength: 2
     unit: months
+    annotation: PRJ (Planning)
 
 - title: Construction impact
   fields:
@@ -175,6 +204,7 @@
     type: number
     unit: square feet
     maxlength: 4
+    annotation: PRJ (Planning)
     shows: geotechnical
     if: ">999"
 
@@ -182,6 +212,7 @@
     type: number
     unit: cubic yards
     maxlength: 5
+    annotation: PRJ and Joint Checklist (Planning)
     shows: large-excavation
     if: ">49"
 
@@ -190,6 +221,7 @@
     type: number
     maxlength: 2
     unit: "%"
+    annotation: PRJ (Planning)
     shows: large-excavation
     if: ">20"
 
@@ -197,9 +229,11 @@
     fields:
     - label: Upload a geotechnical report
       type: file
+      annotation: PRJ (Planning)
 
   - label: Including foundation work, how deep will you disturb the surface below grade?
     type: number
+    annotation: PRJ and Joint Checklist (Planning)
     maxlength: 3
     unit: feet
 
@@ -209,23 +243,31 @@
     type: checkbox
     options:
     - label: Repairing or replacing the building's foundation
+      annotation: PRJ (Planning)
 
     - label: Building a driveway or auto runway
+      annotation: Form 3/8 (DBI)
 
     - label: Using street space
+      annotation: Form 3/8 (DBI)
 
     - label: Changing the front facade
 
     - label: Extending the building beyond the property line
+      annotation: Form 3/8 (DBI)
 
     - label: Plumbing work
+      annotation: Form 3/8 (DBI)
 
     - label: Electrical work
+      annotation: Form 3/8 (DBI)
 
     - label: Adding height to the existing building
+      annotation: Form 3/8 (DBI)
       shows: new-height
 
     - label: Adding a deck or horizontal extension
+      annotation: Form 3/8 (DBI)
       shows: new-ground-floor
 
   - group: new-height
@@ -233,6 +275,7 @@
     - label: What is the new height at the center line of the front of the building?
       type: number
       unit: inches
+      annotation: PRJ (Planning), Form 3/8 (DBI)
 
   - group: new-ground-floor
     fields:
@@ -240,12 +283,14 @@
       type: number
       maxlength: 4
       unit: square feet
+      annotation: Form 3/8 (DBI)
 
 - title: Construction impact
   fields:
   - label: Will this ADU remove housing services?
     helptext: Housing services can include garages, parking facilities, driveways, storage spaces, laundry rooms, decks, patios, or gardens.
     type: radio
+    annotation: G-23 Attachment B (DBI)
     options:
     - label: "Yes"
 
@@ -254,6 +299,7 @@
   - label: Is the site in a Maher area?
     hidden: yes
     type: radio
+    annotation: PRJ (Planning)
     options:
     - label: "Yes"
       shows: maher
@@ -266,6 +312,7 @@
       fields:
       - label: Are you changing your property from industrial to residential use?
         type: radio
+        annotation: PRJ (Planning)
         options:
         - label: "Yes"
 
@@ -275,6 +322,7 @@
   fields:
   - label: Does the property currently have any ADUs?
     type: radio
+    annotation: PRJ (Planning)
     options:
     - label: "Yes"
       shows: current-adus
@@ -286,10 +334,12 @@
     - label: How many ADUs does the property have? List their unit types and square footage.
       helptext: Your ADU's unit type might be "Studio," "1 Bedroom", "2 Bedroom", etc.
       type: textarea
+      annotation: PRJ (Planning)
 
   - label: How many ADUs will the property have after construction? List their unit types and square footage.
     helptext: Your ADU's unit type might be "Studio," "1 Bedroom", "2 Bedroom", etc.
     type: textarea
+    annotation: PRJ (Planning)
 
 
 - title: Parking area
@@ -297,6 +347,7 @@
   - label: How many square feet of parking space does the property have?
     type: number
     unit: gross square feet
+    annotation: Everything on this page is from the PRJ (Planning)
 
   - label: Will this change after you build the ADU(s)?
     type: radio
@@ -316,6 +367,7 @@
   fields:
   - label: How many parking spaces does the property have?
     type: number
+    annotation: Everything on this page is from the PRJ (Planning)
 
   - label: Will this change after you build the ADU(s)?
     type: radio
@@ -335,6 +387,7 @@
   - label: How many square feet of residential space does the property have?
     type: number
     unit: gross square feet
+    annotation: Everything on this page is from the PRJ (Planning)
 
   - label: Will this change after you build the ADU(s)?
     type: radio
@@ -354,6 +407,7 @@
   fields:
   - label: How many affordable dwelling units does the property have?
     type: number
+    annotation: Everything on this page is from the PRJ (Planning)
 
   - label: Will this change after you build the ADU(s)?
     type: radio
@@ -373,6 +427,7 @@
   - label: How many market-rate dwelling units does the property have?
     type: number
     unit: gross square feet
+    annotation: Everything on this page is from the PRJ (Planning)
 
   - label: Will this change after you build the ADU(s)?
     type: radio
@@ -387,11 +442,23 @@
     - label: How many market-rate dwelling units will there be?
       type: number
 
+  - label: Existing dwelling units
+    type: number
+    hidden: yes
+    annotation: Form 3/8 (DBI). Sum of existing affordable and market-rate dwelling units
+
+  - label: Proposed dwelling units
+    type: number
+    hidden: yes
+    annotation: Form 3/8 (DBI). Sum of proposed affordable and market-rate dwelling units
+
+
 - title: Commercial area
   fields:
   - label: How many square feet of commercial space does the property have?
     type: number
     unit: gross square feet
+    annotation: Everything on this page is from the PRJ (Planning)
 
   - label: Will this change after you build the ADU(s)?
     type: radio
@@ -411,6 +478,7 @@
   fields:
   - label: How many buildings does the property have?
     type: number
+    annotation: Everything on this page is from the PRJ (Planning)
 
   - label: Will this change after you build the ADU(s)?
     type: radio
@@ -429,9 +497,11 @@
   fields:
   - label: How many stories does the property have?
     type: number
+    annotation: Form 3/8 (DBI), PRJ and Joint Checklist (Planning)
 
   - label: Will this change after you build the ADU(s)?
     type: radio
+    annotation: If "no", populate "proposed stories" with the answer to "existing stories"
     options:
     - label: "Yes"
       shows: proposed-stories
@@ -442,11 +512,13 @@
     fields:
     - label: How many stories will there be?
       type: number
+      annotation: PRJ (Planning)
 
 - title: Basements / cellars
   fields:
   - label: How many basements or cellars does the property have?
     type: number
+    annotation: Everything on this page is from Form 3/8 (DBI)
 
   - label: Will this change after you build the ADU(s)?
     type: radio
@@ -465,6 +537,7 @@
   fields:
   - label: How many bicycle spaces does the property have?
     type: number
+    annotation: Everything on this page is from the PRJ (Planning)
 
   - label: Will this change after you build the ADU(s)?
     type: radio
@@ -483,6 +556,7 @@
   fields:
   - label: Does the property have fire sprinklers?
     type: radio
+    annotation: Multi-Family Joint Checklist (Planning)
     options:
     - label: "Yes"
       shows: sprinklers
@@ -493,9 +567,11 @@
     fields:
     - label: Which rooms and spaces do the sprinklers cover?
       type: textarea
+      annotation: Multi-Family Joint Checklist (Planning)
 
   - label: Does the property have fire alarms?
     type: radio
+    annotation: Multi-Family Joint Checklist (Planning)
     options:
     - label: "Yes"
       shows: alarms
@@ -505,11 +581,13 @@
   - group: alarms
     fields:
     - label: Which rooms and spaces do the alarms cover?
+      annotation: Multi-Family Joint Checklist (Planning)
       type: textarea
 
 - title: Worker's compensation insurance
   fields:
   - label: What best describes your worker's compensation insurance coverage for this project?
+    annotation: This is a duplicate, plain-language version of the 'Hold Harmless Clause' in Form 3/8, so it doesn't need to be recorded.
     type: radio
     options:
     - label: "I am self-insured and have a certificate of consent."
@@ -538,6 +616,7 @@
 - title: Seismic work
   fields:
   - label: Have you applied for a seismic retrofitting permit?
+    annotation: G-23 Attachment B (DBI)
     helptext: This is required for all city construction. For more information, see [Chapter 4D of the Existing Building Code](http://library.amlegal.com/nxt/gateway.dll/California/sfbuilding/existingbuildingcode2016edition/chapter4dmandatoryearthquakeretrofitofwo?f=templates$fn=default.htm$3.0).
     type: radio
     options:
@@ -551,8 +630,10 @@
     - label: What is your seismic retrofitting permit application number?
       type: number
       maxlength: 15
+      annotation: G-23 Attachment B (DBI)
 
   - label: Have you filed for a seismic strengthening permit?
+    annotation: G-23 Attachment B (DBI)
     helptext: This permit is optional. For more information, see [Administrative Bulletin AB-094](https://sfdbi.org/sites/default/files/migrated/FileCenter/Documents/Administrative_Bulletins/2013_AB/AB_094_updated_010114.pdf).
     type: radio
     options:
@@ -566,6 +647,7 @@
     - label: What is your seismic strengthening permit application number?
       type: number
       maxlength: 15
+      annotation: G-23 Attachment B (DBI)
 
   - label: >
       Does the building follow the ordinances for ADUS?
@@ -574,6 +656,7 @@
 
       After you submit, the planning department will check to see if you comply.
     type: radio
+    annotation: G-23 Attachment B (DBI)
     options:
     - label: "Yes"
 
@@ -602,6 +685,7 @@
 
   - label: Does the site have any of the above?
     type: radio
+    annotation: PRJ (Planning)
     options:
     - label: "Yes"
       shows: environmental-assessment
@@ -612,6 +696,7 @@
     fields:
     - label: Upload a Phase I Environmental Site Assessment
       type: file
+      annotation: PRJ (Planning)
 
 - title: Your plans
   fields:
@@ -658,6 +743,7 @@
   fields:
   - label: Upload a PDF of your plans
     type: file
+    annotation: Send to Bluebeam?
 
   - label: Supplemental documents
     type: header
@@ -669,6 +755,7 @@
   - label: "Upload supplemental document #1"
     type: file
     optional: yes
+    annotation: Send all supplemental docs to Bluebeam?
 
   - label: "Upload supplemental document #2"
     type: file
@@ -761,9 +848,11 @@
 
   - label: I declare under penalty of perjury that my application is true and correct.
     type: checkbox
+    annotation: Everyone
 
   - label: I hereby certify and agree that if I am issued a permit for the construction described in this application, I will comply with all the provisions of the permit and all relevant laws and ordinances.
     type: checkbox
+    annotation: Everyone
 
 - title: Terms
   fields:
@@ -780,17 +869,20 @@
     - label: >
         I have a certificate of consent to self-insure for workers' compensation. I will maintain the certificate for the work described in this permit.
       type: checkbox
+      annotation: Form 3/8 (DBI)
 
   - group: comp-II
     fields:
     - label: >
        I have workers' compensation insurance, as required by Section 3700 of the Labor Code. I will maintain the insurance for the work described in this permit.
       type: checkbox
+      annotation: Form 3/8 (DBI)
 
   - group: comp-III
     fields:
     - label: The work will cost $100 or less.
       type: checkbox
+      annotation: Form 3/8 (DBI)
 
   - group: comp-IV
     fields:
@@ -799,12 +891,14 @@
 
         If California worker's compensation laws do apply to this project, and I fail to comply with them, I understand that the city will revoke my permit.
       type: checkbox
+      annotation: Form 3/8 (DBI)
 
   - group: comp-V
     fields:
     - label: |
        I certify I will hire a contractor who complies with California worker's compensation laws for the work described in this permit. Before starting any work, they will file a finished copy of this form with the Central Permit Bureau.
       type: checkbox
+      annotation: Form 3/8 (DBI)
 
 - title: Disclosures for Owner-Builders
   group: owner-builder
@@ -886,6 +980,7 @@
 
   - type: checkbox
     label: I understand and agree to everything on this page.
+    annotation: Owner / Builder Disclosure (DBI)
 
 - title: Disclosures for Owner-Builders
   group: owner-builder
@@ -907,6 +1002,7 @@
 
   - type: checkbox
     label: I understand and agree to everything on this page.
+    annotation: Owner / Builder Disclosure (DBI)
 
 - title: Disclosures for Owner-Builders
   group: owner-builder
@@ -936,3 +1032,4 @@
 
   - type: checkbox
     label: I understand and agree to everything on this page.
+    annotation: Owner / Builder Disclosure (DBI)

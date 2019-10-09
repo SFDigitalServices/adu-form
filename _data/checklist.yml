@@ -9,10 +9,10 @@
     type: checkbox
     options:
     - label: Building a driveway or auto runway
-      show: auto-runway
+      shows: auto-runway
 
     - label: Using street space
-      show: street-space
+      shows: street-space
 
     - label: Changing the front facade
       shows: historic-resource
@@ -28,6 +28,14 @@
 
     - label: Adding height to the existing building
       shows: new-height
+
+  - label: Are you in an Air Pollutant Exposure Zone?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: air-quality
+
+    -label: "No"
 
   - group: new-height
     fields:
@@ -145,6 +153,12 @@
     - label: "Apply for a Historic Resource Determination"
       type: link
       url: http://forms.sfplanning.org/HistoricRD_SupplementalApplication.pdf
+
+  - group: air-quality
+    fields:
+    - type: paragraph
+      label: |
+        You need to submit a copy of your application with the Department of Public Health. Find more information [here.](https://www.sfdph.org/dph/eh/Air/default.asp)
 
   - group: plumbing
     fields:
