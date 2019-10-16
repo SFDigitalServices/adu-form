@@ -1,0 +1,483 @@
+- title: Current ADUs
+  fields:
+  - label: Does the property currently have ADUs?
+    type: radio
+    annotation: PRJ (Planning)
+    options:
+    - label: "Yes"
+      shows: current-adus
+      
+    - label: "No"
+
+
+  - group: current-adus
+    fields:
+      - label: "ADU #1"
+        type: header
+        level: 3
+
+      - label: "Unit type of ADU #1"
+        type: radio
+        other: true
+        options:
+        - label: "Studio"
+        - label: "1 Bedroom"
+        - label: "2 Bedroom"
+        - label: "3 Bedroom"
+
+      - label: "Square footage of ADU #1"
+        type: number
+        unit: square feet
+        maxlength: 4
+
+      - label: "ADU #2"
+        type: header
+        level: 3
+
+      - label: "Unit type of ADU #2"
+        type: radio
+        other: true
+        options:
+        - label: "Studio"
+        - label: "1 Bedroom"
+        - label: "2 Bedroom"
+        - label: "3 Bedroom"
+
+      - label: "Square footage of ADU #2"
+        type: number
+        unit: square feet
+        maxlength: 4
+
+      - label: "ADU #3"
+        type: header
+        level: 3
+
+      - label: "Unit type of ADU #3"
+        type: radio
+        other: true
+        options:
+        - label: "Studio"
+        - label: "1 Bedroom"
+        - label: "2 Bedroom"
+        - label: "3 Bedroom"
+
+      - label: "Square footage of ADU #3"
+        type: number
+        unit: square feet
+        maxlength: 4
+
+      - label: "ADU #4"
+        type: header
+        level: 3
+
+      - label: "Unit type of ADU #4"
+        type: radio
+        other: true
+        options:
+        - label: "Studio"
+        - label: "1 Bedroom"
+        - label: "2 Bedroom"
+        - label: "3 Bedroom"
+
+      - label: "Square footage of ADU #4"
+        type: number
+        unit: square feet
+        maxlength: 4
+
+      - label: "ADU #5"
+        type: header
+        level: 3
+
+      - label: "Unit type of ADU #5"
+        type: radio
+        other: true
+        options:
+        - label: "Studio"
+        - label: "1 Bedroom"
+        - label: "2 Bedroom"
+        - label: "3 Bedroom"
+
+      - label: "Square footage of ADU #5"
+        type: number
+        unit: square feet
+        maxlength: 4
+
+      - label: "ADU #6"
+        type: header
+        level: 3
+
+      - label: "Unit type of ADU #6"
+        type: radio
+        other: true
+        options:
+        - label: "Studio"
+        - label: "1 Bedroom"
+        - label: "2 Bedroom"
+        - label: "3 Bedroom"
+
+      - label: "Square footage of ADU #6"
+        type: number
+        unit: square feet
+        maxlength: 4
+
+      - label: "ADU #7"
+        type: header
+        level: 3
+
+      - label: "Unit type of ADU #7"
+        type: radio
+        other: true
+        options:
+        - label: "Studio"
+        - label: "1 Bedroom"
+        - label: "2 Bedroom"
+        - label: "3 Bedroom"
+
+      - label: "Square footage of ADU #7"
+        type: number
+        unit: square feet
+        maxlength: 4
+
+      - label: "ADU #8"
+        type: header
+        level: 3
+
+      - label: "Unit type of ADU #8"
+        type: radio
+        other: true
+        options:
+        - label: "Studio"
+        - label: "1 Bedroom"
+        - label: "2 Bedroom"
+        - label: "3 Bedroom"
+
+      - label: "Square footage of ADU #8"
+        type: number
+        unit: square feet
+        maxlength: 4
+
+      - label: "ADU #9"
+        type: header
+        level: 3
+
+      - label: "Unit type of ADU #9"
+        type: radio
+        other: true
+        options:
+        - label: "Studio"
+        - label: "1 Bedroom"
+        - label: "2 Bedroom"
+        - label: "3 Bedroom"
+
+      - label: "Square footage of ADU #9"
+        type: number
+        unit: square feet
+        maxlength: 4
+
+      - label: "ADU #10"
+        type: header
+        level: 3
+
+      - label: "Unit type of ADU #10"
+        type: radio
+        other: true
+        options:
+        - label: "Studio"
+        - label: "1 Bedroom"
+        - label: "2 Bedroom"
+        - label: "3 Bedroom"
+
+      - label: "Square footage of ADU #10"
+        type: number
+        unit: square feet
+        maxlength: 4
+
+      - label: "ADU #11"
+        type: header
+        level: 3
+
+      - label: "Unit type of ADU #11"
+        type: radio
+        other: true
+        options:
+        - label: "Studio"
+        - label: "1 Bedroom"
+        - label: "2 Bedroom"
+        - label: "3 Bedroom"
+
+      - label: "Square footage of ADU #11"
+        type: number
+        unit: square feet
+        maxlength: 4
+
+      - label: "ADU #12"
+        type: header
+        level: 3
+
+      - label: "Unit type of ADU #12"
+        type: radio
+        other: true
+        options:
+        - label: "Studio"
+        - label: "1 Bedroom"
+        - label: "2 Bedroom"
+        - label: "3 Bedroom"
+
+      - label: "Square footage of ADU #12"
+        type: number
+        unit: square feet
+        maxlength: 4
+
+      - label: "ADU #13"
+        type: header
+        level: 3
+
+      - label: "Unit type of ADU #13"
+        type: radio
+        other: true
+        options:
+        - label: "Studio"
+        - label: "1 Bedroom"
+        - label: "2 Bedroom"
+        - label: "3 Bedroom"
+
+      - label: "Square footage of ADU #13"
+        type: number
+        unit: square feet
+        maxlength: 4
+
+- title: Proposed ADUs
+  fields:
+  - label: "Proposed ADU #1"
+    type: header
+    level: 3
+
+  - label: "Unit type of proposed ADU #1"
+    type: radio
+    other: true
+    options:
+    - label: "Studio"
+    - label: "1 Bedroom"
+    - label: "2 Bedroom"
+    - label: "3 Bedroom"
+
+  - label: "Square footage of proposed ADU #1"
+    type: number
+    unit: square feet
+    maxlength: 4
+
+  - label: "Proposed ADU #2"
+    type: header
+    level: 3
+
+  - label: "Unit type of proposed ADU #2"
+    type: radio
+    other: true
+    options:
+    - label: "Studio"
+    - label: "1 Bedroom"
+    - label: "2 Bedroom"
+    - label: "3 Bedroom"
+
+  - label: "Square footage of proposed ADU #2"
+    type: number
+    unit: square feet
+    maxlength: 4
+
+  - label: "Proposed ADU #3"
+    type: header
+    level: 3
+
+  - label: "Unit type of proposed ADU #3"
+    type: radio
+    other: true
+    options:
+    - label: "Studio"
+    - label: "1 Bedroom"
+    - label: "2 Bedroom"
+    - label: "3 Bedroom"
+
+  - label: "Square footage of proposed ADU #3"
+    type: number
+    unit: square feet
+    maxlength: 4
+
+  - label: "Proposed ADU #4"
+    type: header
+    level: 3
+
+  - label: "Unit type of proposed ADU #4"
+    type: radio
+    other: true
+    options:
+    - label: "Studio"
+    - label: "1 Bedroom"
+    - label: "2 Bedroom"
+    - label: "3 Bedroom"
+
+  - label: "Square footage of proposed ADU #4"
+    type: number
+    unit: square feet
+    maxlength: 4
+
+  - label: "Proposed ADU #5"
+    type: header
+    level: 3
+
+  - label: "Unit type of proposed ADU #5"
+    type: radio
+    other: true
+    options:
+    - label: "Studio"
+    - label: "1 Bedroom"
+    - label: "2 Bedroom"
+    - label: "3 Bedroom"
+
+  - label: "Square footage of proposed ADU #5"
+    type: number
+    unit: square feet
+    maxlength: 4
+
+  - label: "Proposed ADU #6"
+    type: header
+    level: 3
+
+  - label: "Unit type of proposed ADU #6"
+    type: radio
+    other: true
+    options:
+    - label: "Studio"
+    - label: "1 Bedroom"
+    - label: "2 Bedroom"
+    - label: "3 Bedroom"
+
+  - label: "Square footage of proposed ADU #6"
+    type: number
+    unit: square feet
+    maxlength: 4
+
+  - label: "Proposed ADU #7"
+    type: header
+    level: 3
+
+  - label: "Unit type of proposed ADU #7"
+    type: radio
+    other: true
+    options:
+    - label: "Studio"
+    - label: "1 Bedroom"
+    - label: "2 Bedroom"
+    - label: "3 Bedroom"
+
+  - label: "Square footage of proposed ADU #7"
+    type: number
+    unit: square feet
+    maxlength: 4
+
+  - label: "Proposed ADU #8"
+    type: header
+    level: 3
+
+  - label: "Unit type of proposed ADU #8"
+    type: radio
+    other: true
+    options:
+    - label: "Studio"
+    - label: "1 Bedroom"
+    - label: "2 Bedroom"
+    - label: "3 Bedroom"
+
+  - label: "Square footage of proposed ADU #8"
+    type: number
+    unit: square feet
+    maxlength: 4
+
+  - label: "Proposed ADU #9"
+    type: header
+    level: 3
+
+  - label: "Unit type of proposed ADU #9"
+    type: radio
+    other: true
+    options:
+    - label: "Studio"
+    - label: "1 Bedroom"
+    - label: "2 Bedroom"
+    - label: "3 Bedroom"
+
+  - label: "Square footage of proposed ADU #9"
+    type: number
+    unit: square feet
+    maxlength: 4
+
+  - label: "Proposed ADU #10"
+    type: header
+    level: 3
+
+  - label: "Unit type of proposed ADU #10"
+    type: radio
+    other: true
+    options:
+    - label: "Studio"
+    - label: "1 Bedroom"
+    - label: "2 Bedroom"
+    - label: "3 Bedroom"
+
+  - label: "Square footage of proposed ADU #10"
+    type: number
+    unit: square feet
+    maxlength: 4
+
+  - label: "Proposed ADU #11"
+    type: header
+    level: 3
+
+  - label: "Unit type of proposed ADU #11"
+    type: radio
+    other: true
+    options:
+    - label: "Studio"
+    - label: "1 Bedroom"
+    - label: "2 Bedroom"
+    - label: "3 Bedroom"
+
+  - label: "Square footage of proposed ADU #11"
+    type: number
+    unit: square feet
+    maxlength: 4
+
+  - label: "Proposed ADU #12"
+    type: header
+    level: 3
+
+  - label: "Unit type of proposed ADU #12"
+    type: radio
+    other: true
+    options:
+    - label: "Studio"
+    - label: "1 Bedroom"
+    - label: "2 Bedroom"
+    - label: "3 Bedroom"
+
+  - label: "Square footage of proposed ADU #12"
+    type: number
+    unit: square feet
+    maxlength: 4
+
+  - label: "Proposed ADU #13"
+    type: header
+    level: 3
+
+  - label: "Unit type of proposed ADU #13"
+    type: radio
+    other: true
+    options:
+    - label: "Studio"
+    - label: "1 Bedroom"
+    - label: "2 Bedroom"
+    - label: "3 Bedroom"
+
+  - label: "Square footage of proposed ADU #13"
+    type: number
+    unit: square feet
+    maxlength: 4
