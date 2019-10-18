@@ -294,16 +294,6 @@
       annotation: Form 3/8 (DBI)
 
 - title: Construction impact
-  fields:
-  - label: Will this ADU remove housing services?
-    helptext: Housing services can include garages, parking facilities, driveways, storage spaces, laundry rooms, decks, patios, or gardens.
-    type: radio
-    annotation: G-23 Attachment B (DBI)
-    options:
-    - label: "Yes"
-
-    - label: "No"
-
   - label: Is the site in a Maher area?
     hidden: yes
     type: radio
@@ -326,29 +316,47 @@
 
         - label: "No"
 
-- title: Describe your ADUs
+- title: Housing services
   fields:
-  - label: Does the property currently have any ADUs?
+  - label: Will this ADU remove garages, parking facilities, driveways, storage spaces, laundry rooms, decks, patios, or gardens?
     type: radio
-    annotation: PRJ (Planning)
+    annotation: G-23 Attachment B (DBI)
     options:
     - label: "Yes"
-      shows: current-adus
+      shows: housing-services
 
     - label: "No"
 
-  - group: current-adus
-    fields:
-    - label: How many ADUs does the property have? List their unit types and square footage.
-      helptext: Your ADU's unit type might be "Studio," "1 Bedroom", "2 Bedroom", etc.
-      type: textarea
-      annotation: PRJ (Planning)
+- title: Housing services
+  group: housing-services
+  fields:
+  - type: paragraph
+      label: >
+        Upload the following attachments.
 
-  - label: How many ADUs will the property have after construction? List their unit types and square footage.
-    helptext: Your ADU's unit type might be "Studio," "1 Bedroom", "2 Bedroom", etc.
-    type: textarea
-    annotation: PRJ (Planning)
+    - label: Upload the notice you sent to applicants
+      type: file
 
+    - label: Upload a photograph of the notice, posted in the property
+      type: file
+
+    - label: Upload a photo or scan of your postmarked letter to the owner
+      type: file
+
+    - label: Upload your mailing list for the notice
+      type: file
+
+- title: Current ADUs
+  fields:
+  - label: How many ADUs does the property currently have?
+    type: number
+    maxlength: 2
+
+- title: Proposed ADUs
+  fields:
+  - label: How many ADUs are you proposing for this project?
+    type: number
+    maxlength: 2
 
 - title: Parking area
   fields:
@@ -842,6 +850,34 @@
       - Street space used during construction
 
       If we approve this application, you will still need to get these other permits approved.
+
+  - type: header
+    label: Removing housing services
+    level: 4
+
+  - type: paragraph
+    label: |
+      Pursuant to Rent Ordinance 37.2(r), you acknowledge that removing any of the following from a tenant requires a "just cause":
+
+      - Garage facilities
+
+      - Parking facilities
+
+      - Driveways
+
+      - Storage space
+
+      - Laundry rooms
+
+      - Decks 
+
+      If we issue you a permit, it does not constitute a just cause.
+
+      By checking the box below, you assert that either:
+
+      - The Owner(s) are aware of these requirements, and are proceeding with this permit.
+
+      - The property is not subject to the Ordinance's controls, or does not propose removing housing services.
 
   - type: header
     label: Your identity
