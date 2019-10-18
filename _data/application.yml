@@ -161,7 +161,6 @@
 
 - title: Construction work
   fields:
-
   - label: Describe the work you are proposing in detail.
     type: textarea
     size: large
@@ -294,6 +293,7 @@
       annotation: Form 3/8 (DBI)
 
 - title: Construction impact
+  fields:
   - label: Is the site in a Maher area?
     hidden: yes
     type: radio
@@ -331,21 +331,17 @@
 - title: Housing services
   group: housing-services
   fields:
-  - type: paragraph
-      label: >
-        Upload the following attachments.
+  - label: Upload the notice you sent to applicants
+    type: file
 
-    - label: Upload the notice you sent to applicants
-      type: file
+  - label: Upload a photograph of the notice, posted in the property
+    type: file
 
-    - label: Upload a photograph of the notice, posted in the property
-      type: file
+  - label: Upload a photo or scan of your postmarked letter to the owner
+    type: file
 
-    - label: Upload a photo or scan of your postmarked letter to the owner
-      type: file
-
-    - label: Upload your mailing list for the notice
-      type: file
+  - label: Upload your mailing list for the notice
+    type: file
 
 - title: Current ADUs
   fields:
