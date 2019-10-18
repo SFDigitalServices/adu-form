@@ -247,20 +247,26 @@
 
     - label: Building a driveway or auto runway
       annotation: Form 3/8 (DBI)
+      shows: auto-runway
 
     - label: Using street space
       annotation: Form 3/8 (DBI)
+      shows: street-space
 
     - label: Changing the front facade
+      shows: historic-resource
 
     - label: Extending the building beyond the property line
       annotation: Form 3/8 (DBI)
+      shows: building-extension
 
     - label: Plumbing work
       annotation: Form 3/8 (DBI)
+      shows: plumbing
 
     - label: Electrical work
       annotation: Form 3/8 (DBI)
+      shows: electrical
 
     - label: Adding height to the existing building
       annotation: Form 3/8 (DBI)
@@ -274,8 +280,10 @@
     fields:
     - label: What is the new height at the center line of the front of the building?
       type: number
-      unit: inches
+      unit: feet
       annotation: PRJ (Planning), Form 3/8 (DBI)
+      shows: shadow-analysis
+      if: ">40"
 
   - group: new-ground-floor
     fields:
@@ -1034,3 +1042,73 @@
   - type: checkbox
     label: I understand and agree to everything on this page.
     annotation: Owner / Builder Disclosure (DBI)
+
+- title: You submitted your application.
+  fields:
+
+  - type: header
+    level: 3
+    label: Other forms you will need
+
+  - group: drop-off-plan
+    fields:
+    - label: |
+        - [School and Child Care Drop-Off and Pick-Up Management Plan](http://forms.sfplanning.org/SchoolChildCareManagementPlan_SupplementalApplication.pdf)
+      type: paragraph
+
+  - group: shadow-analysis
+    fields:
+    - label: |
+        - [Shadow analysis](https://sf-planning.org/sites/default/files/FileCenter/Documents/8442-Shadow%20Analysis%20Application.pdf)
+      type: paragraph
+
+
+  - group: auto-runway
+    fields:
+    - label: |
+        - Auto runway permit
+      type: paragraph
+
+  - group: building-extension
+    fields:
+    - label: |
+        - Building extension permit
+      type: paragraph
+
+  - group: street-space
+    fields:
+    - label: |
+        - [Street space permit](https://sfpublicworks.org/services/permits/street-space)
+      type: paragraph
+
+  - group: plumbing
+    fields:
+    - label: |
+        - [Plumbing permit](https://dbiweb.sfgov.org/dbi_plumbing/)
+      type: paragraph
+
+  - group: electrical
+    fields:
+    - label: |
+        - [Electrical permit](https://dbiweb.sfgov.org/dbi_electrical/)
+      type: paragraph
+
+  - group: maher
+    fields:
+    - label: |
+        - [Maher Ordinance waiver](https://www.sfdph.org/dph/EH/HazWaste/hazWasteSiteMitigation.asp)
+      type: paragraph
+
+  - group: historic-resource
+    fields:
+    - label: |
+        Since the historic status is TK, you'll need to attach a Historic Resource Determination.
+
+        Here's some data from PIM you'll need for the form:
+
+        (Insert address, block/lot, date of construction, survey, designated property)
+      type: paragraph
+
+    - type: paragraph
+      label: |
+        - [Apply for a Historic Resource Determination](http://forms.sfplanning.org/HistoricRD_SupplementalApplication.pdf)
