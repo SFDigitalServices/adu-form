@@ -678,6 +678,29 @@
 
     - label: "No"
 
+- title: Child care
+  fields:
+  - label: Does your project have a child care facility or school?
+    type: radio
+    annotation: This page is from PRJ (Planning)
+    options:
+    - label: "Yes"
+      shows: child-care
+
+    - label: "No"
+
+  - group: child-care
+    fields:
+    - label: Does it have over 30 students or 1,500 square feet?
+      type: radio
+      options:
+      - label: "Yes"
+        shows: drop-off-plan
+
+      - label: "No"
+
+
+
 - title: Environmental assessment
   fields:
 
