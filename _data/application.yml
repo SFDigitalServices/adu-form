@@ -300,11 +300,11 @@
     annotation: PRJ (Planning)
     options:
     - label: "Yes"
-      shows: maher
+      shows: industrial-to-residential
 
     - label: "No"
 
-  - group: maher
+  - group: industrial-to-residential
     fields:
     - group: large-excavation
       fields:
@@ -313,6 +313,7 @@
         annotation: PRJ (Planning)
         options:
         - label: "Yes"
+          shows: maher
 
         - label: "No"
 
