@@ -749,7 +749,7 @@
   fields:
   - type: paragraph
     label: |
-      Next, we'll ask you to upload your plans, and any supplemental documents, in PDF format.
+      Upload your plans and any supplemental documents. They must be in PDF format. 
 
       If your plan is over 200 pages or 200MB, you should split up your PDFs into different sections. Otherwise, you should combine your plans into a single file.
   
