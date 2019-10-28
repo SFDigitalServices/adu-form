@@ -264,6 +264,8 @@
     - label: Changing the front facade
       shows: historic-resource
 
+    - label: Repairing or changing the sidewalk above a basement
+
     - label: Extending the building beyond the property line
       annotation: Form 3/8 (DBI)
       shows: building-extension
