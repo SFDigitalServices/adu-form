@@ -18,7 +18,10 @@
 
 - title: About the owner
   fields:
-  - label: Name
+  - label: First name
+    annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
+
+  - label: Last name
     annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
 
   - label: Phone number
@@ -74,7 +77,10 @@
   description: Who should we talk to when we process your application?
   group: app-contact
   fields:
-  - label: Name
+  - label: First name
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
+
+  - label: Last name
     annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
 
   - label: Relationship to owner
@@ -139,7 +145,10 @@
 - title: Billing contact information
   group: billing-contact
   fields:
-  - label: Name of billing contact
+  - label: First name of billing contact
+    annotation: PRJ (Planning) 
+
+  - label: Last name of billing contact
     annotation: PRJ (Planning) 
 
   - label: Phone number
