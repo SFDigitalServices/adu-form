@@ -18,7 +18,10 @@
 
 - title: About the owner
   fields:
-  - label: Name
+  - label: First name
+    annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
+
+  - label: Last name
     annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
 
   - label: Phone number
@@ -36,7 +39,7 @@
     type: address
     annotation: PRJ (Planning), Authorized Agent Disclosure (DBI) 
 
-  - label: Will this also be the address of your ADU?
+  - label: Will this also be the address of your ADU project?
     type: radio
     options:
     - label: "Yes"
@@ -74,7 +77,10 @@
   description: Who should we talk to when we process your application?
   group: app-contact
   fields:
-  - label: Name
+  - label: First name
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
+
+  - label: Last name
     annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
 
   - label: Relationship to owner
@@ -130,7 +136,7 @@
     options:
     - label: The owner
 
-    - label: The builder
+    - label: The application contact
 
     - label: Someone else
       shows: billing-contact
@@ -139,7 +145,10 @@
 - title: Billing contact information
   group: billing-contact
   fields:
-  - label: Name of billing contact
+  - label: First name of billing contact
+    annotation: PRJ (Planning) 
+
+  - label: Last name of billing contact
     annotation: PRJ (Planning) 
 
   - label: Phone number
@@ -153,15 +162,61 @@
 
 - title: Your property
   fields:
-  - label: Present use
+  - label: What are the building's current uses?
     annotation: Form 3/8 (DBI)
+    type: checkbox
+    options:
+    - label: "10: Office"
+    - label: "24: Apartment"
+    - label: "27: 1–Family Dwelling"
+    - label: "28: 2-Family Dwelling"
+    - label: "79: Vacant Lot"
+    - label: "Other"
+      shows: present-use-other
 
-  - label: Proposed use
+  - group: present-use-other
+    fields:
+    - label: Enter any building use codes that are not listed above. 
+
+  - label: What uses are you proposing?
     annotation: Form 3/8 (DBI)
+    type: checkbox
+    options:
+    - label: "10: Office"
+    - label: "24: Apartment"
+    - label: "27: 1–Family Dwelling"
+    - label: "28: 2-Family Dwelling"
+    - label: "79: Vacant Lot"
+    - label: "Other"
+      shows: proposed-use-other
+
+  - group: proposed-use-other
+    fields:
+    - label: Enter any proposed building use codes that are not listed above. 
+
+- title: Occupancy
+  fields:
+  - label: What are the property's occupancy codes?
+    annotation: DBI and Planning
+    helptext: Please enter all that apply.
+
+  - label: Will the occupancy codes change after construction?
+    type: radio
+    annotation: DBI and Planning
+    options:
+    - label: "Yes"
+      shows: proposed-occupancy
+
+    - label: "No"
+
+  - group: proposed-occupancy
+    fields:
+    - label: Proposed occupancy codes
+      annotation: DBI and Planning
+      helptext: Please enter all that apply.
 
 - title: Construction work
   fields:
-
   - label: Describe the work you are proposing in detail.
     type: textarea
     size: large
@@ -225,12 +280,6 @@
     shows: large-excavation
     if: ">20"
 
-  - group: large-excavation
-    fields:
-    - label: Upload a geotechnical report
-      type: file
-      annotation: PRJ (Planning)
-
   - label: Including foundation work, how deep will you disturb the surface below grade?
     type: number
     annotation: PRJ and Joint Checklist (Planning)
@@ -247,35 +296,60 @@
 
     - label: Building a driveway or auto runway
       annotation: Form 3/8 (DBI)
+      shows: auto-runway
 
     - label: Using street space
       annotation: Form 3/8 (DBI)
+      shows: street-space
 
     - label: Changing the front facade
+      shows: historic-resource
+
+    - label: Repairing or changing the sidewalk above a basement
 
     - label: Extending the building beyond the property line
       annotation: Form 3/8 (DBI)
+      shows: building-extension
 
     - label: Plumbing work
       annotation: Form 3/8 (DBI)
+      shows: plumbing
 
     - label: Electrical work
       annotation: Form 3/8 (DBI)
+      shows: electrical
 
-    - label: Adding height to the existing building
-      annotation: Form 3/8 (DBI)
+- title: Construction impact
+  fields:
+  - label: Are you adding height to the existing building?
+    annotation: Form 3/8 (DBI)
+    type: radio
+    options:
+    - label: "Yes"
       shows: new-height
 
-    - label: Adding a deck or horizontal extension
-      annotation: Form 3/8 (DBI)
-      shows: new-ground-floor
+    - label: "No"
 
   - group: new-height
     fields:
-    - label: What is the new height at the center line of the front of the building?
+    - label: What will be the new height at the center line of the front of the building?
       type: number
-      unit: inches
+      unit: feet
       annotation: PRJ (Planning), Form 3/8 (DBI)
+      shows: shadow-analysis
+      if: ">40"
+
+- title: Construction impact
+  fields:
+  - label: Do you plan to add a deck or horizontal extension?
+    annotation: Form 3/8 (DBI)
+    
+    type: radio
+    options:
+    - label: "Yes"
+      shows: new-ground-floor
+
+    - label: "No"
 
   - group: new-ground-floor
     fields:
@@ -285,66 +359,141 @@
       unit: square feet
       annotation: Form 3/8 (DBI)
 
-- title: Construction impact
-  fields:
-  - label: Will this ADU remove housing services?
-    helptext: Housing services can include garages, parking facilities, driveways, storage spaces, laundry rooms, decks, patios, or gardens.
-    type: radio
-    annotation: G-23 Attachment B (DBI)
-    options:
-    - label: "Yes"
-
-    - label: "No"
-
   - label: Is the site in a Maher area?
     hidden: yes
     type: radio
     annotation: PRJ (Planning)
     options:
     - label: "Yes"
-      shows: maher
+      shows: industrial-to-residential
 
     - label: "No"
 
-  - group: maher
-    fields:
-    - group: large-excavation
-      fields:
-      - label: Are you changing your property from industrial to residential use?
-        type: radio
-        annotation: PRJ (Planning)
-        options:
-        - label: "Yes"
-
-        - label: "No"
-
-- title: Describe your ADUs
+- title: Construction impact
+  group: industrial-to-residential
   fields:
-  - label: Does the property currently have any ADUs?
+  - group: large-excavation
+    fields:
+    - label: Are you changing your property from industrial to residential use?
+      type: radio
+      annotation: PRJ (Planning)
+      options:
+      - label: "Yes"
+        shows: maher
+
+      - label: "No"
+
+- title: Housing services
+  fields:
+  - label: Will this ADU remove garages, parking facilities, driveways, storage spaces, laundry rooms, decks, patios, or gardens?
     type: radio
-    annotation: PRJ (Planning)
+    annotation: G-23 Attachment B (DBI)
     options:
     - label: "Yes"
-      shows: current-adus
+      shows: housing-services
 
     - label: "No"
+
+- title: Current ADUs
+  fields:
+  - label: How many ADUs does the property currently have?
+    type: number
+    maxlength: 2
+    shows: current-adus
+    if: ">0"
 
   - group: current-adus
     fields:
-    - label: How many ADUs does the property have? List their unit types and square footage.
-      helptext: Your ADU's unit type might be "Studio," "1 Bedroom", "2 Bedroom", etc.
-      type: textarea
-      annotation: PRJ (Planning)
+    - label: Enter the unit types and square feet for each ADU.
+      type: paragraph
 
-  - label: How many ADUs will the property have after construction? List their unit types and square footage.
-    helptext: Your ADU's unit type might be "Studio," "1 Bedroom", "2 Bedroom", etc.
-    type: textarea
-    annotation: PRJ (Planning)
+    - label: "ADU #1"
+      type: header
+      level: 3
+
+    - label: "Unit type of ADU #1"
+      type: radio
+      other: true
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+
+    - label: "Square footage of ADU #1"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "ADU #2"
+      type: header
+      level: 3
+
+    - label: "Unit type of ADU #2"
+      type: radio
+      other: true
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+
+    - label: "Square footage of ADU #2"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: Enter the unit types and square feet of any other ADUs on the property.
+      type: textarea
+
+- title: Proposed ADUs
+  fields:
+  - label: How many ADUs are you proposing for this project?
+    type: number
+    maxlength: 2
+    shows: proposed-adus
+    if: ">0"
+
+  - group: proposed-adus
+    fields:
+    - label: Enter the unit types and square feet for each ADU.
+      type: paragraph
+
+    - label: "Proposed ADU #1"
+      type: header
+      level: 3
+
+    - label: Unit type
+      type: text
+      helptext: Enter something like "Studio", "1 Bedroom", or "2 Bedroom."
+
+    - label: Square footage
+      type: number
+      maxlength: 6
+      unit: square feet
+
+    - label: "Proposed ADU #2"
+      type: header
+      level: 3
+
+    - label: Unit type
+      type: text
+      optional: yes
+      helptext: Enter something like "Studio", "1 Bedroom", or "2 Bedroom."
+
+    - label: Square footage
+      type: number
+      optional: yes
+      maxlength: 6
+      unit: square feet
+
+    - label: Enter the unit types and square feet of any other ADUs you are proposing.
+      type: textarea
 
 
 - title: Parking area
   fields:
-  - label: How many square feet of parking space does the property have?
+  - label: How many square feet of parking area does the property have?
     type: number
     unit: gross square feet
     annotation: Everything on this page is from the PRJ (Planning)
@@ -359,7 +508,7 @@
 
   - group: proposed-parking-gsf
     fields:
-    - label: How much parking space will there be?
+    - label: How many square feet of parking area will there be?
       type: number
       unit: gross square feet
 
@@ -662,6 +811,27 @@
 
     - label: "No"
 
+- title: Child care
+  fields:
+  - label: Does your project have a child care facility or school?
+    type: radio
+    annotation: This page is from PRJ (Planning)
+    options:
+    - label: "Yes"
+      shows: child-care
+
+    - label: "No"
+
+  - group: child-care
+    fields:
+    - label: Does it have over 30 students or over 1,500 square feet?
+      type: radio
+      options:
+      - label: "Yes"
+        shows: drop-off-plan
+
+      - label: "No"
+
 - title: Environmental assessment
   fields:
 
@@ -680,7 +850,7 @@
 
       - Underground storage tanks
 
-      You need to upload an environmental site assessment.
+      You need to provide an environmental site assessment after you apply.
     type: paragraph
 
   - label: Does the site have any of the above?
@@ -692,17 +862,11 @@
 
     - label: "No"
 
-  - group: environmental-assessment
-    fields:
-    - label: Upload a Phase I Environmental Site Assessment
-      type: file
-      annotation: PRJ (Planning)
-
 - title: Your plans
   fields:
   - type: paragraph
     label: |
-      Next, we'll ask you to upload your plans, and any supplemental documents, in PDF format.
+      On the next page, you will upload your plans and any supplemental documents. They must be in PDF format. 
 
       If your plan is over 200 pages or 200MB, you should split up your PDFs into different sections. Otherwise, you should combine your plans into a single file.
   
@@ -834,6 +998,34 @@
       - Street space used during construction
 
       If we approve this application, you will still need to get these other permits approved.
+
+  - type: header
+    label: Removing housing services
+    level: 4
+
+  - type: paragraph
+    label: |
+      Pursuant to Rent Ordinance 37.2(r), you acknowledge that removing any of the following from a tenant requires a "just cause":
+
+      - Garage facilities
+
+      - Parking facilities
+
+      - Driveways
+
+      - Storage space
+
+      - Laundry rooms
+
+      - Decks 
+
+      If we issue you a permit, it does not constitute a just cause.
+
+      By checking the box below, you assert that either:
+
+      - The Owner(s) are aware of these requirements, and are proceeding with this permit.
+
+      - The property is not subject to the Ordinance's controls, or does not propose removing housing services.
 
   - type: header
     label: Your identity
@@ -1034,3 +1226,138 @@
   - type: checkbox
     label: I understand and agree to everything on this page.
     annotation: Owner / Builder Disclosure (DBI)
+
+- title: You are about to submit your application.
+  fields:
+  - type: paragraph
+    label: |
+      To make sure you entered everything correctly, we recommend going back to review your answers before you submit.
+
+  - type: header
+    level: 3
+    label: What happens next
+
+  - type: paragraph
+    level: 3
+    label: |
+      Once we process your application, we will email you to schedule an in-person visit to the Department of Building Inspections.
+
+      During your visit, you will apply for permits for:
+
+  - group: auto-runway
+    fields:
+    - label: |
+        - Building a driveway or auto runway
+      type: paragraph
+
+  - group: building-extension
+    fields:
+    - label: |
+        - Extending the building beyond the property line
+      type: paragraph
+
+  - group: housing-services
+    fields:
+    - type: paragraph
+      label: |
+        Since you are removing housing services, you will also need to:
+
+        - Post a notice for 15 days in a common area of the building
+        
+        - Mail that notice to all tenants and the property owner
+
+        During your visit, be prepared to provide us with a:
+
+        - Copy of the notice
+
+        - Postmarked letter to the owner
+
+        - Photograph of the notice posted in the building
+
+        - Copy of your mailing list
+
+  - type: header
+    level: 3
+    label: Other forms you will need
+
+  - type: paragraph
+    label: |
+      We have provided a list below of the additional forms you will need before we issue your permit.
+
+      Please copy it for safekeeping.
+
+  - type: paragraph
+    label: |
+      - [Fixture Count Form](https://www.sfwater.org/modules/showdocument.aspx?documentid=13115)
+
+  - type: paragraph
+    label: |
+      - [SFUSD Form 100](https://sfdbi.org/sites/default/files/IS%20G-11.pdf)
+
+  - type: paragraph
+    label: |
+      - [Request for Water Flow Information](https://sf-fire.org/plan-check#waterf)
+
+  - group: drop-off-plan
+    fields:
+    - label: |
+        - [School and Child Care Drop-Off and Pick-Up Management Plan](http://forms.sfplanning.org/SchoolChildCareManagementPlan_SupplementalApplication.pdf)
+      type: paragraph
+
+  - group: shadow-analysis
+    fields:
+    - label: |
+        - [Shadow analysis](https://sf-planning.org/sites/default/files/FileCenter/Documents/8442-Shadow%20Analysis%20Application.pdf)
+      type: paragraph
+
+  - group: street-space
+    fields:
+    - label: |
+        - [Street space permit](https://sfpublicworks.org/services/permits/street-space)
+      type: paragraph
+
+  - group: plumbing
+    fields:
+    - label: |
+        - [Plumbing permit](https://dbiweb.sfgov.org/dbi_plumbing/)
+      type: paragraph
+
+  - group: electrical
+    fields:
+    - label: |
+        - [Electrical permit](https://dbiweb.sfgov.org/dbi_electrical/)
+      type: paragraph
+
+  - group: maher
+    fields:
+    - label: |
+        - [Maher Ordinance waiver](https://www.sfdph.org/dph/EH/HazWaste/hazWasteSiteMitigation.asp)
+      type: paragraph
+
+  - type: header
+    level: 3
+    label: Reports you will need to order
+
+  - type: paragraph
+    label: "You will also need to commission these reports:"
+
+  - group: large-excavation
+    fields:
+    - group: geotechnical
+      fields:
+      - label: |
+          - Geotechnical report
+        type: paragraph
+
+  - group: environmental-assessment
+    fields:
+    - label: |
+        - Phase I Site Environmental Assessment
+      type: paragraph
+
+  - label: Are you ready?
+    type: header
+    level: 3
+
+  - label: If everything looks good, go ahead and submit your application.
+    type: paragraph
