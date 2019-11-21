@@ -550,7 +550,7 @@
     fields:
     - label: How much residential space will there be?
       type: number
-      unit: gross square feet
+      unit: units
 
 - title: Affordable dwelling units
   fields:
@@ -575,7 +575,7 @@
   fields:
   - label: How many market-rate dwelling units does the property have?
     type: number
-    unit: gross square feet
+    unit: units
     annotation: Everything on this page is from the PRJ (Planning)
 
   - label: Will this change after you build the ADU(s)?
@@ -1019,6 +1019,10 @@
 
       - Decks 
 
+      - Patios
+
+      - Gardens
+
       If we issue you a permit, it does not constitute a just cause.
 
       By checking the box below, you assert that either:
@@ -1035,7 +1039,7 @@
     label: |
       By checking the box below, you certify that:
 
-      - You are either the owner, the lessee, or their authorized agent
+      - You are either the owner or their authorized agent
 
       - You are authorized to sign this permit application
 
