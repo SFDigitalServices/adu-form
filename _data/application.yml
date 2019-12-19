@@ -646,6 +646,7 @@
   fields:
   - label: How many stories does the property have?
     type: number
+    maxlength: 15 
     annotation: Form 3/8 (DBI), PRJ and Joint Checklist (Planning)
 
   - label: Will this change after you build the ADU(s)?
@@ -661,6 +662,7 @@
     fields:
     - label: How many stories will there be?
       type: number
+      maxlength: 15 
       annotation: PRJ (Planning)
 
 - title: Basements / cellars
