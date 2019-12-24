@@ -491,7 +491,7 @@
       type: textarea
 
 
-- title: Parking area
+- title: Parking
   fields:
   - label: How many square feet of parking area does the property have?
     type: number
@@ -512,8 +512,6 @@
       type: number
       unit: gross square feet
 
-- title: Parking spaces
-  fields:
   - label: How many parking spaces does the property have?
     type: number
     annotation: Everything on this page is from the PRJ (Planning)
