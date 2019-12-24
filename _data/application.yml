@@ -950,33 +950,9 @@
 
       Once we issue a building permit, you must post it at the job. The owner will also be responsible for keeping the approved plans and permit application at the property.
 
-      No one can occupy your ADU until you either:
-
-      - Have a certificate of final completion posted on the building
-
-      - Get a permit of occupancy from us
+      No one can occupy the ADU until you or your company have a certificate of final completion posted on the building.
 
       You will need to follow any stipulations that come up in your application and inspections. You must also follow building code.
-
-  - type: header
-    label: Your application
-    level: 4
-
-  - type: paragraph
-    label: |
-      We will assume that grade lines on the drawings attached to this application are correct. If they are not, you must submit revised drawings for us to approve.
-
-      These drawings must have accurate grade lines and cuts and fills. They must also have complete details of retaining walls and wall footings.
-
-  - type: header
-    label: Building requirements
-    level: 4
-
-  - type: paragraph
-    label: |
-      All parts of the building, structure, or construction scaffolding must be at least 6 feet from any wire over 750 volts. (See Section 385 of the California Penal Code.)
-
-      All insulation in your ADU must be at least 2 inches away from any electrical wires or equipment.
 
   - type: header
     label: Other permits
@@ -988,10 +964,6 @@
       You will still need to apply for separate permits for any:
 
       - Additions or changes to driveways or auto runways
-
-      - Building extensions
-
-      - Changes of occupancy
 
       - Electrical work
 
