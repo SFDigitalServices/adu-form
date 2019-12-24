@@ -217,17 +217,16 @@
 
 - title: Construction work
   fields:
-  - label: Describe the work you are proposing in detail.
+  - label: Are you planning any other work for this project other than building ADUs?
+    type: radio
+    options:
+    - label: "Yes"
+    - label: "No"
+
+  - label: Describe the additional work below.
     type: textarea
     size: large
     annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
-    helptext: |
-      You should include:
-
-      - The number of ADUs you plan to add
-      - The city ordinances they each comply with
-      - A detailed description of all other planned work
-      - Any special authorizations or changes to the Planning Code or Zoning Maps
 
   - label: Type of construction
     type: select
