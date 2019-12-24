@@ -396,7 +396,7 @@
 
 - title: Current ADUs
   fields:
-  - label: How many ADUs does the property currently have?
+  - label: How many legal ADUs does the property currently have?
     type: number
     maxlength: 2
     shows: current-adus
