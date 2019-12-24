@@ -550,7 +550,7 @@
       type: number
       unit: units
 
-- title: Affordable dwelling units
+- title: Number of units
   fields:
   - label: How many affordable dwelling units does the property have?
     type: number
@@ -569,8 +569,6 @@
     - label: How many affordable dwelling units will there be?
       type: number
 
-- title: Market-rate dwelling units
-  fields:
   - label: How many market-rate dwelling units does the property have?
     type: number
     unit: units
