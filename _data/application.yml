@@ -737,23 +737,23 @@
 
 - title: Worker's compensation insurance
   fields:
-  - label: What best describes your worker's compensation insurance coverage for this project?
+  - label: What best describes the owner's coverage for worker's compensation insurance?
     annotation: This is a duplicate, plain-language version of the 'Hold Harmless Clause' in Form 3/8, so it doesn't need to be recorded.
     type: radio
     options:
-    - label: "I am self-insured and have a certificate of consent."
+    - label: "They are self-insured and have a certificate of consent."
       shows: comp-I
 
-    - label: "I have third-party insurance."
+    - label: "They have personally bought insurance for this project."
       shows: comp-II
 
-    - label: "I plan to hire a contractor who will follow worker's compensation laws."
+    - label: "They plan to hire a contractor who will follow worker's compensation laws."
       shows: comp-V
 
-    - label: "I don't need insurance because I'm not hiring anyone."
+    - label: "They don't need insurance because they aren't hiring anyone."
       shows: comp-IV
 
-    - label: "I don't need insurance because the work will cost under $100."
+    - label: "They don't need insurance because the work will cost under $100."
       shows: comp-III
 
   - group: comp-II
