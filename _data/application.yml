@@ -85,7 +85,6 @@
 
   - label: Relationship to owner
     type: radio
-    other: true
     annotation: PRJ and Joint Checklist (Planning), Authorized Agent Disclosure (DBI)
     options:
     - label: Architect
@@ -97,7 +96,7 @@
     - label: Engineer
 
     - label: Attorney
-
+    other: yes
 
   - group: license-org-info
     fields:
@@ -412,12 +411,12 @@
 
     - label: "Unit type of ADU #1"
       type: radio
-      other: true
       options:
       - label: "Studio"
       - label: "1 Bedroom"
       - label: "2 Bedroom"
       - label: "3 Bedroom"
+      other: yes
 
     - label: "Square footage of ADU #1"
       type: number
@@ -430,12 +429,12 @@
 
     - label: "Unit type of ADU #2"
       type: radio
-      other: true
       options:
       - label: "Studio"
       - label: "1 Bedroom"
       - label: "2 Bedroom"
       - label: "3 Bedroom"
+      other: yes
 
     - label: "Square footage of ADU #2"
       type: number
