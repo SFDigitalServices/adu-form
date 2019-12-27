@@ -162,16 +162,29 @@
 
 - title: Billing contact information
   fields:
-  - label: Who should we contact to pay application fees?
-    type: radio
-    annotation: PRJ (Planning) 
-    options:
-    - label: The owner
+  - group: owner
+    fields:
+    - label: Who should we contact to pay application fees?
+      type: radio
+      annotation: PRJ (Planning) 
+      options:
+      - label: Myself
 
-    - label: The application contact
+      - label: Someone else
+        shows: billing-contact
 
-    - label: Someone else
-      shows: billing-contact
+  - group: non-owner
+    fields:
+    - label: Who should we contact to pay application fees?
+      type: radio
+      annotation: PRJ (Planning) 
+      options:
+      - label: The owner
+
+      - label: The application contact
+
+      - label: Someone else
+        shows: billing-contact
 
 
 - title: Billing contact information
