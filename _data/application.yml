@@ -16,30 +16,124 @@
       If you are not building the ADU yourself, you might need a professional to help you answer some questions. If you have not yet hired a architect, contractor or engineer, you may want to do so before applying.
     type: paragraph
 
-- title: About the owner
+- title: About you
+  fields:
+  - label: Do you own the property?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: owner
+
+    - label: "No"
+      shows: non-owner
+
+- title: About you
+  group: owner
+  fields:
+  - type: paragraph
+    label: |
+      Please check the box below to confirm you are building this ADU yourself.
+
+      If not, you will need to ask a professional to fill out this form for you.
+
+  - label: I, the owner, am building this ADU myself.
+    type: checkbox
+    shows: owner-builder
+
+- title: Contact information
   fields:
   - label: First name
-    annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
 
   - label: Last name
-    annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
+
+  - label: Relationship to owner
+    type: radio
+    annotation: PRJ and Joint Checklist (Planning), Authorized Agent Disclosure (DBI)
+    options:
+    - label: Architect
+      shows: license-org-info
+
+    - label: Contractor
+      shows: license-org-info
+
+    - label: Engineer
+      shows: license-org-info
+
+    - label: Attorney
+    other: yes
+
+  - group: license-org-info
+    fields:
+    - label: California license number
+      maxlength: 12
+      annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
+
+    - label: License expiration date
+      type: date
+      annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
+
+- title: Contact information
+  fields:
+  - label: Name of your organization
+    annotation: Authorized Agent Disclosure (DBI) 
+
+  - label: Mailing address
+    type: address
+    annotation: PRJ (Planning), G-23 Attachment B, Form 3/8, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
 
   - label: Phone number
+    type: phone
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Form 3/8, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
+
+  - label: Email
+    type: email
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Form 3/8 and Authorized Agent Disclosure (DBI)
+
+- title: About the owner
+  fields:
+  - label: Who owns the property?
+    type: radio
+    options:
+    - label: "A person"
+      shows: owner-person
+
+    - label: "An organization"
+      shows: owner-org
+
+- title: About the owner
+  fields:
+  - group: owner-org
+    fields:
+    - label: Name of organization
+      annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
+
+  - group: owner-person
+    fields:
+    - label: Owner's first name
+      annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
+
+    - label: Owner's last name
+    other: yes
+      annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
+
+  - label: Owner's phone number
     type: phone
     optional: yes
     annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)  
 
-  - label: Email address
+  - label: Owner's email address
     type: email
     annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI) 
  
 - title: About the owner
   fields:
-  - label: Mailing address
+  - label: Owner's mailing address
     type: address
     annotation: PRJ (Planning), Authorized Agent Disclosure (DBI) 
 
-  - label: Will this also be the address of your ADU project?
+  - label: Is this also the address of your ADU project?
     type: radio
     options:
     - label: "Yes"
@@ -60,72 +154,6 @@
     - label: Block and lot
       annotation: G-23 Attachment B and Form 3/8 (DBI)
       hidden: yes
-
-- title: About the owner
-  fields:
-  - label: Is the owner also building this ADU?
-    type: radio
-    annotation: If "yes", populate the "Contact information" section with the owner's information
-    options:
-    - label: "Yes"
-      shows: owner-builder
-
-    - label: "No"
-      shows: app-contact
-
-- title: Contact information
-  description: Who should we talk to when we process your application?
-  group: app-contact
-  fields:
-  - label: First name
-    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
-
-  - label: Last name
-    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
-
-  - label: Relationship to owner
-    type: radio
-    annotation: PRJ and Joint Checklist (Planning), Authorized Agent Disclosure (DBI)
-    options:
-    - label: Architect
-      shows: license-org-info
-
-    - label: Contractor
-      shows: license-org-info
-
-    - label: Engineer
-
-    - label: Attorney
-    other: yes
-
-  - group: license-org-info
-    fields:
-    - label: License number
-      maxlength: 12
-      annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
-
-    - label: License expiration date
-      type: date
-      annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
-
-
-- title: Contact information
-  group: license-org-info 
-  fields:
-  - label: Name of your organization
-    annotation: Authorized Agent Disclosure (DBI) 
-
-  - label: Mailing address
-    type: address
-    annotation: PRJ (Planning), G-23 Attachment B, Form 3/8, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
-
-  - label: Phone number
-    type: phone
-    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Form 3/8, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
-
-  - label: Email
-    type: email
-    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Form 3/8 and Authorized Agent Disclosure (DBI)
 
 - title: Billing contact information
   fields:
