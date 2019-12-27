@@ -48,31 +48,33 @@
   - label: Last name
     annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
 
-  - label: Relationship to owner
-    type: radio
-    annotation: PRJ and Joint Checklist (Planning), Authorized Agent Disclosure (DBI)
-    options:
-    - label: Architect
-      shows: license-org-info
-
-    - label: Contractor
-      shows: license-org-info
-
-    - label: Engineer
-      shows: license-org-info
-
-    - label: Attorney
-    other: yes
-
-  - group: license-org-info
+  - group: non-owner
     fields:
-    - label: California license number
-      maxlength: 12
-      annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
+    - label: Relationship to owner
+      type: radio
+      annotation: PRJ and Joint Checklist (Planning), Authorized Agent Disclosure (DBI)
+      options:
+      - label: Architect
+        shows: license-org-info
 
-    - label: License expiration date
-      type: date
-      annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
+      - label: Contractor
+        shows: license-org-info
+
+      - label: Engineer
+        shows: license-org-info
+
+      - label: Attorney
+      other: yes
+
+    - group: license-org-info
+      fields:
+      - label: California license number
+        maxlength: 12
+        annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
+
+      - label: License expiration date
+        type: date
+        annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
 
 - title: Contact information
   fields:
@@ -92,6 +94,7 @@
     annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Form 3/8 and Authorized Agent Disclosure (DBI)
 
 - title: About the owner
+  group: non-owner
   fields:
   - label: Who owns the property?
     type: radio
@@ -103,6 +106,7 @@
       shows: owner-org
 
 - title: About the owner
+  group: non-owner
   fields:
   - group: owner-org
     fields:
@@ -128,6 +132,7 @@
     annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI) 
  
 - title: About the owner
+  group: non-owner
   fields:
   - label: Owner's mailing address
     type: address
