@@ -328,7 +328,7 @@
 
 - title: Construction work
   fields:
-  - label: Are you planning any other work for this project other than building ADUs?
+  - label: Are you planning any work for this project in addition to ADUs?
     type: radio
     options:
     - label: "Yes"
