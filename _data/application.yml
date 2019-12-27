@@ -231,13 +231,13 @@
   - label: What are the property's current occupancy codes?
     type: checkbox
     options:
-    - label: "R-1: Residential, transient hotel / motel (residential)"
-    - label: "R-2: Residential, apartment / condominium with 3+ units"
-    - label: "R-2.1: Residential, supervised apartment / condominum"
-    - label: "R-3: General residential"
-    - label: "R-3.1: General supervised residential"
-    - label: "R-4: Residential, supervised"
-    - label: "S: Storage"
+    - label: "**R-1:** Residential, transient hotel / motel (residential)"
+    - label: "**R-2:** Residential, apartment / condominium with 3+ units"
+    - label: "**R-2.1:** Residential, supervised apartment / condominum"
+    - label: "**R-3:** General residential"
+    - label: "**R-3.1:** General supervised residential"
+    - label: "**R-4:** Residential, supervised"
+    - label: "**S:** Storage"
     - label: "Other"
       shows: occupancy-current-other
     annotation: DBI and Planning
@@ -247,33 +247,35 @@
       - label: Check off the rest of the building's current occupancy codes.
         type: checkbox
         options:
-        - label: "A-1: Assembly, fixed seating"
-        - label: "A-2: Assembly, food / drink"
-        - label: "A-3: Assembly, other"
-        - label: "A-4: Assembly: indoor sport"
-        - label: "A-5: Assembly: outdoor activities"
-        - label: "C: Organized camp"
-        - label: "E: Educational"
-        - label: "F-1: Moderate-hazard factory / industrial"
-        - label: "F-2: Low-hazard factory / industrial"
-        - label: "H-1: Detonation hazard"
-        - label: "H-2: Deflagration hazard"
-        - label: "H-3: Combustion hazard"
-        - label: "H-4: Health hazard"
-        - label: "H-5: Semiconductor hazard"
-        - label: "I-1: Institutional, non-ambulatory, more than 6 units, supervised"
-        - label: "I-2 Institutional, non-ambulatory, more than 6 units, custodial"
-        - label: "I-2.1 Institutional, ambulatory, more than 5 units"
-        - label: "I-3: Institutional, restrained"
-        - label: "I-4: Day care facility"
-        - label: "L: Laboratory"
-        - label: "M: Mercantile"
-        - label: "B: Business"
-        - label: "S-1: Moderate-hazard storage"
-        - label: "S-2: Low-hazard storage"
-        - label: "U: Utility / Miscellaneous"
+        - label: "**A-1:** Assembly, fixed seating"
+        - label: "**A-2:** Assembly, food / drink"
+        - label: "**A-3:** Assembly, other"
+        - label: "**A-4:** Assembly: indoor sport"
+        - label: "**A-5:** Assembly: outdoor activities"
+        - label: "**C:** Organized camp"
+        - label: "**E:** Educational"
+        - label: "**F-1:** Moderate-hazard factory / industrial"
+        - label: "**F-2:** Low-hazard factory / industrial"
+        - label: "**H-1:** Detonation hazard"
+        - label: "**H-2:** Deflagration hazard"
+        - label: "**H-3:** Combustion hazard"
+        - label: "**H-4:** Health hazard"
+        - label: "**H-5:** Semiconductor hazard"
+        - label: "**I-1:** Institutional, non-ambulatory, more than 6 units, supervised"
+        - label: "**I-2:** Institutional, non-ambulatory, more than 6 units, custodial"
+        - label: "**I-2.1:** Institutional, ambulatory, more than 5 units"
+        - label: "**I-3:** Institutional, restrained"
+        - label: "**I-4:** Day care facility"
+        - label: "**L:** Laboratory"
+        - label: "**M:** Mercantile"
+        - label: "**B:** Business"
+        - label: "**S-1:** Moderate-hazard storage"
+        - label: "**S-2:** Low-hazard storage"
+        - label: "**U:** Utility / Miscellaneous"
         annotation: DBI and Planning
 
+- title: Occupancy
+  fields:
   - label: Will the occupancy codes change after construction?
     type: radio
     annotation: DBI and Planning
