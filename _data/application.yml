@@ -115,7 +115,7 @@
       annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
 
     - label: Owner's last name
-    other: yes
+      other: yes
       annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
 
   - label: Owner's phone number
@@ -963,7 +963,7 @@
       maxlength: 6
       unit: square feet
 
-      - label: "Proposed ADU #12"
+    - label: "Proposed ADU #12"
       type: header
       level: 3
 
@@ -993,7 +993,7 @@
       maxlength: 6
       unit: square feet
 
-      - label: "Proposed ADU #14"
+    - label: "Proposed ADU #14"
       type: header
       level: 3
 
