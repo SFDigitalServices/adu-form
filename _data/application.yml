@@ -3,7 +3,7 @@
   - label: |
       This application will ask you about:
 
-      - The owner's and agent's contact information
+      - The builder's and owner's contact information
 
       - Construction details like the project address, cost, and excavation area
 
@@ -13,7 +13,7 @@
 
       Then, we'll ask you to upload your plans as PDFs and agree to our legal terms.
 
-      If you are not building the ADU yourself, you might need a professional to help you answer some questions. If you have not yet hired a architect, contractor or engineer, you may want to do so before applying.
+      Unless you are building the ADU yourself, you will need a professional to fill out this form. If you have not yet hired a architect, contractor or engineer licensed in California, you should do so before you apply.
     type: paragraph
 
 - title: About you
