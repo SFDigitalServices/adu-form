@@ -1307,6 +1307,10 @@
 
 - title: Parking
   fields:
+  - label: Square feet of parking
+    type: header
+    level: 3
+
   - label: How many square feet of parking area does the property have?
     type: number
     unit: gross square feet
@@ -1325,6 +1329,10 @@
     - label: How many square feet of parking area will there be?
       type: number
       unit: gross square feet
+
+  - label: Parking spaces
+    type: header
+    level: 3
 
   - label: How many parking spaces does the property have?
     type: number
