@@ -208,7 +208,7 @@
 
 - title: Your property
   fields:
-  - label: What are the building's current uses?
+  - label: What are the building's current use codes?
     annotation: Form 3/8 (DBI)
     type: checkbox
     options:
@@ -224,7 +224,7 @@
     fields:
     - label: Enter any building use codes that are not listed above. 
 
-  - label: What uses are you proposing?
+  - label: What use codes are you proposing?
     annotation: Form 3/8 (DBI)
     type: checkbox
     options:
@@ -353,13 +353,19 @@
     type: radio
     options:
     - label: "Yes"
+      shows: additional-work
+
     - label: "No"
 
-  - label: Describe the additional work below.
-    type: textarea
-    size: large
-    annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
+  - group: additional-work
+    fields:
+    - label: Describe the additional work below.
+      type: textarea
+      size: large
+      annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
 
+- title: Construction work
+  fields:
   - label: Type of construction
     type: select
     annotation: Form 3/8 (DBI), Joint Checklist (Planning)
@@ -384,8 +390,6 @@
     unit: months
     annotation: PRJ (Planning)
 
-- title: Construction impact
-  fields:
   - label: Excavation area
     type: number
     unit: square feet
