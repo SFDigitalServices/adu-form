@@ -428,20 +428,20 @@
     options:
     - label: Repairing or replacing the building's foundation
       annotation: PRJ (Planning)
-
+      
     - label: Building a driveway or auto runway
       annotation: Form 3/8 (DBI)
       shows: auto-runway
-
+      
     - label: Using street space
       annotation: Form 3/8 (DBI)
       shows: street-space
-
+      
     - label: Changing the front facade
       shows: historic-resource
 
     - label: Repairing or changing the sidewalk above a basement
-
+      
     - label: Extending the building beyond the property line
       annotation: Form 3/8 (DBI)
       shows: building-extension
