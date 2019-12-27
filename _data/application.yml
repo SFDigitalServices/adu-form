@@ -79,6 +79,7 @@
 - title: Contact information
   fields:
   - label: Name of your organization
+    optional: yes
     annotation: Authorized Agent Disclosure (DBI) 
 
   - label: Mailing address
