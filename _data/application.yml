@@ -82,9 +82,11 @@
     optional: yes
     annotation: Authorized Agent Disclosure (DBI) 
 
-  - label: Mailing address
-    type: address
-    annotation: PRJ (Planning), G-23 Attachment B, Form 3/8, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
+  - group: non-owner
+    fields:
+    - label: Mailing address
+      type: address
+      annotation: PRJ (Planning), G-23 Attachment B, Form 3/8, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
 
   - label: Phone number
     type: phone
@@ -132,14 +134,13 @@
     type: email
     annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI) 
  
-- title: About the owner
-  group: non-owner
+- title: Addresses
   fields:
   - label: Owner's mailing address
     type: address
     annotation: PRJ (Planning), Authorized Agent Disclosure (DBI) 
 
-  - label: Is this also the address of your ADU project?
+  - label: Is this also the address of the ADU project?
     type: radio
     options:
     - label: "Yes"
