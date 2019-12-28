@@ -546,6 +546,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -571,6 +572,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -609,6 +611,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
+      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -634,6 +637,8 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
+      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
+
       options:
       - label: "95-17"
       - label: "162-16"
