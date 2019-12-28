@@ -350,23 +350,6 @@
 
 - title: Construction work
   fields:
-  - label: Are you planning any work for this project in addition to ADUs?
-    type: radio
-    options:
-    - label: "Yes"
-      shows: additional-work
-
-    - label: "No"
-
-  - group: additional-work
-    fields:
-    - label: Describe the additional work below.
-      type: textarea
-      size: large
-      annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
-
-- title: Construction work
-  fields:
   - label: Type of construction
     type: select
     annotation: Form 3/8 (DBI), Joint Checklist (Planning)
@@ -981,6 +964,23 @@
     - label: "Yes"
 
     - label: "No"
+
+- title: Additional work
+  fields:
+  - label: Are you planning any work for this project in addition to ADUs?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: additional-work
+
+    - label: "No"
+
+  - group: additional-work
+    fields:
+    - label: Describe the additional work below.
+      type: textarea
+      size: large
+      annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
 
 - title: Child care
   fields:
