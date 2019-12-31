@@ -578,6 +578,331 @@
       - label: "162-16"
       - label: "162-17"
 
+    - label: "ADU #3"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #4"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #5"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #6"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #7"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #8"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #9"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #10"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #11"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #12"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #13"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #14"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #15"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
 - title: Proposed ADUs
   fields:
   - label: How many ADUs are you proposing for this project?
@@ -611,13 +936,338 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
-      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
       - label: "162-17"
 
     - label: "ADU #2"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #3"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #4"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #5"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #6"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #7"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #8"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #9"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #10"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #11"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #12"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #13"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #14"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #15"
       type: header
       level: 3
 
