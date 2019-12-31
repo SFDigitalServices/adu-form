@@ -3,7 +3,7 @@
   - label: |
       This application will ask you about:
 
-      - The owner's and agent's contact information
+      - The builder's and owner's contact information
 
       - Construction details like the project address, cost, and excavation area
 
@@ -13,33 +13,134 @@
 
       Then, we'll ask you to upload your plans as PDFs and agree to our legal terms.
 
-      If you are not building the ADU yourself, you might need a professional to help you answer some questions. If you have not yet hired a architect, contractor or engineer, you may want to do so before applying.
+      Unless you are building the ADU yourself, you will need a professional to fill out this form. If you have not yet hired a architect, contractor or engineer licensed in California, you should do so before you apply.
     type: paragraph
 
-- title: About the owner
+- title: About you
+  fields:
+  - label: Do you own the property?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: owner
+
+    - label: "No"
+      shows: non-owner
+
+- title: About you
+  group: owner
+  fields:
+  - type: paragraph
+    label: |
+      Please check the box below to confirm you are building this ADU yourself.
+
+      If not, you will need to ask a professional to fill out this form for you.
+
+  - label: I, the owner, am building this ADU myself.
+    type: checkbox
+    shows: owner-builder
+
+- title: Contact information
   fields:
   - label: First name
-    annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
 
   - label: Last name
-    annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
+
+  - group: non-owner
+    fields:
+    - label: Relationship to owner
+      type: radio
+      annotation: PRJ and Joint Checklist (Planning), Authorized Agent Disclosure (DBI)
+      options:
+      - label: Architect
+        shows: license-org-info
+
+      - label: Contractor
+        shows: license-org-info
+
+      - label: Engineer
+        shows: license-org-info
+
+      - label: Attorney
+      other: yes
+
+    - group: license-org-info
+      fields:
+      - label: California license number
+        maxlength: 12
+        annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
+
+      - label: License expiration date
+        type: date
+        annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
+
+- title: Contact information
+  fields:
+  - label: Name of your organization
+    optional: yes
+    annotation: Authorized Agent Disclosure (DBI) 
+
+  - group: non-owner
+    fields:
+    - label: Mailing address
+      type: address
+      annotation: PRJ (Planning), G-23 Attachment B, Form 3/8, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
 
   - label: Phone number
+    type: phone
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Form 3/8, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
+
+  - label: Email
+    type: email
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Form 3/8 and Authorized Agent Disclosure (DBI)
+
+- title: About the owner
+  group: non-owner
+  fields:
+  - label: Who owns the property?
+    type: radio
+    options:
+    - label: "A person"
+      shows: owner-person
+
+    - label: "An organization"
+      shows: owner-org
+
+- title: About the owner
+  group: non-owner
+  fields:
+  - group: owner-org
+    fields:
+    - label: Name of organization
+      annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
+
+  - group: owner-person
+    fields:
+    - label: Owner's first name
+      annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
+
+    - label: Owner's last name
+      other: yes
+      annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)
+
+  - label: Owner's phone number
     type: phone
     optional: yes
     annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI)  
 
-  - label: Email address
+  - label: Owner's email address
     type: email
     annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI) 
  
-- title: About the owner
+- title: Addresses
   fields:
-  - label: Mailing address
+  - label: Owner's mailing address
     type: address
     annotation: PRJ (Planning), Authorized Agent Disclosure (DBI) 
 
-  - label: Will this also be the address of your ADU project?
+  - label: Is this also the address of the ADU project?
     type: radio
     options:
     - label: "Yes"
@@ -61,85 +162,31 @@
       annotation: G-23 Attachment B and Form 3/8 (DBI)
       hidden: yes
 
-- title: About the owner
-  fields:
-  - label: Is the owner also building this ADU?
-    type: radio
-    annotation: If "yes", populate the "Contact information" section with the owner's information
-    options:
-    - label: "Yes"
-      shows: owner-builder
-
-    - label: "No"
-      shows: app-contact
-
-- title: Contact information
-  description: Who should we talk to when we process your application?
-  group: app-contact
-  fields:
-  - label: First name
-    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
-
-  - label: Last name
-    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
-
-  - label: Relationship to owner
-    type: radio
-    other: true
-    annotation: PRJ and Joint Checklist (Planning), Authorized Agent Disclosure (DBI)
-    options:
-    - label: Architect
-      shows: license-org-info
-
-    - label: Contractor
-      shows: license-org-info
-
-    - label: Engineer
-
-    - label: Attorney
-
-
-  - group: license-org-info
-    fields:
-    - label: License number
-      maxlength: 12
-      annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
-
-    - label: License expiration date
-      type: date
-      annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
-
-
-- title: Contact information
-  group: license-org-info 
-  fields:
-  - label: Name of your organization
-    annotation: Authorized Agent Disclosure (DBI) 
-
-  - label: Mailing address
-    type: address
-    annotation: PRJ (Planning), G-23 Attachment B, Form 3/8, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
-
-  - label: Phone number
-    type: phone
-    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Form 3/8, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
-
-  - label: Email
-    type: email
-    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Form 3/8 and Authorized Agent Disclosure (DBI)
-
 - title: Billing contact information
   fields:
-  - label: Who should we contact to pay application fees?
-    type: radio
-    annotation: PRJ (Planning) 
-    options:
-    - label: The owner
+  - group: owner
+    fields:
+    - label: Who should we contact to pay application fees?
+      type: radio
+      annotation: PRJ (Planning) 
+      options:
+      - label: Myself
 
-    - label: The application contact
+      - label: Someone else
+        shows: billing-contact
 
-    - label: Someone else
-      shows: billing-contact
+  - group: non-owner
+    fields:
+    - label: Who should we contact to pay application fees?
+      type: radio
+      annotation: PRJ (Planning) 
+      options:
+      - label: The owner
+
+      - label: The application contact
+
+      - label: Someone else
+        shows: billing-contact
 
 
 - title: Billing contact information
@@ -162,7 +209,7 @@
 
 - title: Your property
   fields:
-  - label: What are the building's current uses?
+  - label: What are the building's current use codes?
     annotation: Form 3/8 (DBI)
     type: checkbox
     options:
@@ -178,7 +225,7 @@
     fields:
     - label: Enter any building use codes that are not listed above. 
 
-  - label: What uses are you proposing?
+  - label: What use codes are you proposing?
     annotation: Form 3/8 (DBI)
     type: checkbox
     options:
@@ -196,10 +243,54 @@
 
 - title: Occupancy
   fields:
-  - label: What are the property's occupancy codes?
+  - label: What are the property's current occupancy codes?
+    type: checkbox
+    options:
+    - label: "**R-1:** Residential, transient hotel / motel (residential)"
+    - label: "**R-2:** Residential, apartment / condominium with 3+ units"
+    - label: "**R-2.1:** Residential, supervised apartment / condominum"
+    - label: "**R-3:** General residential"
+    - label: "**R-3.1:** General supervised residential"
+    - label: "**R-4:** Residential, supervised"
+    - label: "**S:** Storage"
+    - label: "Other"
+      shows: occupancy-current-other
     annotation: DBI and Planning
-    helptext: Please enter all that apply.
 
+  - group: occupancy-current-other
+    fields:
+      - label: Check off the rest of the building's current occupancy codes.
+        type: checkbox
+        options:
+        - label: "**A-1:** Assembly, fixed seating"
+        - label: "**A-2:** Assembly, food / drink"
+        - label: "**A-3:** Assembly, other"
+        - label: "**A-4:** Assembly: indoor sport"
+        - label: "**A-5:** Assembly: outdoor activities"
+        - label: "**C:** Organized camp"
+        - label: "**E:** Educational"
+        - label: "**F-1:** Moderate-hazard factory / industrial"
+        - label: "**F-2:** Low-hazard factory / industrial"
+        - label: "**H-1:** Detonation hazard"
+        - label: "**H-2:** Deflagration hazard"
+        - label: "**H-3:** Combustion hazard"
+        - label: "**H-4:** Health hazard"
+        - label: "**H-5:** Semiconductor hazard"
+        - label: "**I-1:** Institutional, non-ambulatory, more than 6 units, supervised"
+        - label: "**I-2:** Institutional, non-ambulatory, more than 6 units, custodial"
+        - label: "**I-2.1:** Institutional, ambulatory, more than 5 units"
+        - label: "**I-3:** Institutional, restrained"
+        - label: "**I-4:** Day care facility"
+        - label: "**L:** Laboratory"
+        - label: "**M:** Mercantile"
+        - label: "**B:** Business"
+        - label: "**S-1:** Moderate-hazard storage"
+        - label: "**S-2:** Low-hazard storage"
+        - label: "**U:** Utility / Miscellaneous"
+        annotation: DBI and Planning
+
+- title: Occupancy
+  fields:
   - label: Will the occupancy codes change after construction?
     type: radio
     annotation: DBI and Planning
@@ -212,23 +303,53 @@
   - group: proposed-occupancy
     fields:
     - label: Proposed occupancy codes
+      type: checkbox
+      options:
+      - label: "R-1: Residential, transient hotel / motel (residential)"
+      - label: "R-2: Residential, apartment / condominium with 3+ units"
+      - label: "R-2.1: Residential, supervised apartment / condominum"
+      - label: "R-3: General residential"
+      - label: "R-3.1: General supervised residential"
+      - label: "R-4: Residential, supervised"
+      - label: "S: Storage"
+      - label: "Other"
+        shows: proposed occupancy-other
       annotation: DBI and Planning
-      helptext: Please enter all that apply.
+
+    - group: occupancy-proposed-other
+      fields:
+        - label: Check off the rest of the building's proposed occupancy codes.
+          type: checkbox
+          options:
+          - label: "A-1: Assembly, fixed seating"
+          - label: "A-2: Assembly, food / drink"
+          - label: "A-3: Assembly, other"
+          - label: "A-4: Assembly: indoor sport"
+          - label: "A-5: Assembly: outdoor activities"
+          - label: "C: Organized camp"
+          - label: "E: Educational"
+          - label: "F-1: Moderate-hazard factory / industrial"
+          - label: "F-2: Low-hazard factory / industrial"
+          - label: "H-1: Detonation hazard"
+          - label: "H-2: Deflagration hazard"
+          - label: "H-3: Combustion hazard"
+          - label: "H-4: Health hazard"
+          - label: "H-5: Semiconductor hazard"
+          - label: "I-1: Institutional, non-ambulatory, more than 6 units, supervised"
+          - label: "I-2 Institutional, non-ambulatory, more than 6 units, custodial"
+          - label: "I-2.1 Institutional, ambulatory, more than 5 units"
+          - label: "I-3: Institutional, restrained"
+          - label: "I-4: Day care facility"
+          - label: "L: Laboratory"
+          - label: "M: Mercantile"
+          - label: "B: Business"
+          - label: "S-1: Moderate-hazard storage"
+          - label: "S-2: Low-hazard storage"
+          - label: "U: Utility / Miscellaneous"
+          annotation: DBI and Planning
 
 - title: Construction work
   fields:
-  - label: Describe the work you are proposing in detail.
-    type: textarea
-    size: large
-    annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
-    helptext: |
-      You should include:
-
-      - The number of ADUs you plan to add
-      - The city ordinances they each comply with
-      - A detailed description of all other planned work
-      - Any special authorizations or changes to the Planning Code or Zoning Maps
-
   - label: Type of construction
     type: select
     annotation: Form 3/8 (DBI), Joint Checklist (Planning)
@@ -253,8 +374,6 @@
     unit: months
     annotation: PRJ (Planning)
 
-- title: Construction impact
-  fields:
   - label: Excavation area
     type: number
     unit: square feet
@@ -396,7 +515,7 @@
 
 - title: Current ADUs
   fields:
-  - label: How many ADUs does the property currently have?
+  - label: How many legal ADUs does the property currently have?
     type: number
     maxlength: 2
     shows: current-adus
@@ -404,47 +523,60 @@
 
   - group: current-adus
     fields:
-    - label: Enter the unit types and square feet for each ADU.
+    - label: Enter the relevant information for each ADU.
       type: paragraph
 
     - label: "ADU #1"
       type: header
       level: 3
 
-    - label: "Unit type of ADU #1"
+    - label: "Unit type"
       type: radio
-      other: true
       options:
       - label: "Studio"
       - label: "1 Bedroom"
       - label: "2 Bedroom"
       - label: "3 Bedroom"
+      other: yes
 
-    - label: "Square footage of ADU #1"
+    - label: "Square footage"
       type: number
       unit: square feet
       maxlength: 4
+
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
 
     - label: "ADU #2"
       type: header
       level: 3
 
-    - label: "Unit type of ADU #2"
+    - label: "Unit type"
       type: radio
-      other: true
       options:
       - label: "Studio"
       - label: "1 Bedroom"
       - label: "2 Bedroom"
       - label: "3 Bedroom"
+      other: yes
 
-    - label: "Square footage of ADU #2"
+    - label: "Square footage"
       type: number
       unit: square feet
       maxlength: 4
 
-    - label: Enter the unit types and square feet of any other ADUs on the property.
-      type: textarea
+    - label: "Which ordinance does this ADU comply with?"
+      type: select
+      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
 
 - title: Proposed ADUs
   fields:
@@ -459,40 +591,65 @@
     - label: Enter the unit types and square feet for each ADU.
       type: paragraph
 
-    - label: "Proposed ADU #1"
+    - label: "ADU #1"
       type: header
       level: 3
 
-    - label: Unit type
-      type: text
-      helptext: Enter something like "Studio", "1 Bedroom", or "2 Bedroom."
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
 
-    - label: Square footage
+    - label: "Square footage"
       type: number
-      maxlength: 6
       unit: square feet
+      maxlength: 4
 
-    - label: "Proposed ADU #2"
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
+
+    - label: "ADU #2"
       type: header
       level: 3
 
-    - label: Unit type
-      type: text
-      optional: yes
-      helptext: Enter something like "Studio", "1 Bedroom", or "2 Bedroom."
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
 
-    - label: Square footage
+    - label: "Square footage"
       type: number
-      optional: yes
-      maxlength: 6
       unit: square feet
+      maxlength: 4
 
-    - label: Enter the unit types and square feet of any other ADUs you are proposing.
-      type: textarea
+    - label: "Which ordinance will this ADU comply with?"
+      type: select
+      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
 
+      options:
+      - label: "95-17"
+      - label: "162-16"
+      - label: "162-17"
 
-- title: Parking area
+- title: Parking
   fields:
+  - label: Square feet of parking
+    type: header
+    level: 3
+
   - label: How many square feet of parking area does the property have?
     type: number
     unit: gross square feet
@@ -512,8 +669,10 @@
       type: number
       unit: gross square feet
 
-- title: Parking spaces
-  fields:
+  - label: Parking spaces
+    type: header
+    level: 3
+
   - label: How many parking spaces does the property have?
     type: number
     annotation: Everything on this page is from the PRJ (Planning)
@@ -552,7 +711,7 @@
       type: number
       unit: units
 
-- title: Affordable dwelling units
+- title: Number of units
   fields:
   - label: How many affordable dwelling units does the property have?
     type: number
@@ -571,8 +730,6 @@
     - label: How many affordable dwelling units will there be?
       type: number
 
-- title: Market-rate dwelling units
-  fields:
   - label: How many market-rate dwelling units does the property have?
     type: number
     unit: units
@@ -646,6 +803,7 @@
   fields:
   - label: How many stories does the property have?
     type: number
+    maxlength: 15 
     annotation: Form 3/8 (DBI), PRJ and Joint Checklist (Planning)
 
   - label: Will this change after you build the ADU(s)?
@@ -661,6 +819,7 @@
     fields:
     - label: How many stories will there be?
       type: number
+      maxlength: 15 
       annotation: PRJ (Planning)
 
 - title: Basements / cellars
@@ -735,23 +894,23 @@
 
 - title: Worker's compensation insurance
   fields:
-  - label: What best describes your worker's compensation insurance coverage for this project?
+  - label: What best describes the owner's coverage for worker's compensation insurance?
     annotation: This is a duplicate, plain-language version of the 'Hold Harmless Clause' in Form 3/8, so it doesn't need to be recorded.
     type: radio
     options:
-    - label: "I am self-insured and have a certificate of consent."
+    - label: "They are self-insured and have a certificate of consent."
       shows: comp-I
 
-    - label: "I have third-party insurance."
+    - label: "They have personally bought insurance for this project."
       shows: comp-II
 
-    - label: "I plan to hire a contractor who will follow worker's compensation laws."
+    - label: "They plan to hire a contractor who will follow worker's compensation laws."
       shows: comp-V
 
-    - label: "I don't need insurance because I'm not hiring anyone."
+    - label: "They don't need insurance because they aren't hiring anyone."
       shows: comp-IV
 
-    - label: "I don't need insurance because the work will cost under $100."
+    - label: "They don't need insurance because the work will cost under $100."
       shows: comp-III
 
   - group: comp-II
@@ -810,6 +969,23 @@
     - label: "Yes"
 
     - label: "No"
+
+- title: Additional work
+  fields:
+  - label: Are you planning any work for this project in addition to ADUs?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: additional-work
+
+    - label: "No"
+
+  - group: additional-work
+    fields:
+    - label: Describe the additional work below.
+      type: textarea
+      size: large
+      annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
 
 - title: Child care
   fields:
@@ -948,33 +1124,9 @@
 
       Once we issue a building permit, you must post it at the job. The owner will also be responsible for keeping the approved plans and permit application at the property.
 
-      No one can occupy your ADU until you either:
-
-      - Have a certificate of final completion posted on the building
-
-      - Get a permit of occupancy from us
+      No one can occupy the ADU until you or your company have a certificate of final completion posted on the building.
 
       You will need to follow any stipulations that come up in your application and inspections. You must also follow building code.
-
-  - type: header
-    label: Your application
-    level: 4
-
-  - type: paragraph
-    label: |
-      We will assume that grade lines on the drawings attached to this application are correct. If they are not, you must submit revised drawings for us to approve.
-
-      These drawings must have accurate grade lines and cuts and fills. They must also have complete details of retaining walls and wall footings.
-
-  - type: header
-    label: Building requirements
-    level: 4
-
-  - type: paragraph
-    label: |
-      All parts of the building, structure, or construction scaffolding must be at least 6 feet from any wire over 750 volts. (See Section 385 of the California Penal Code.)
-
-      All insulation in your ADU must be at least 2 inches away from any electrical wires or equipment.
 
   - type: header
     label: Other permits
@@ -986,10 +1138,6 @@
       You will still need to apply for separate permits for any:
 
       - Additions or changes to driveways or auto runways
-
-      - Building extensions
-
-      - Changes of occupancy
 
       - Electrical work
 
