@@ -32,7 +32,7 @@
   fields:
   - type: paragraph
     label: |
-      Please check the box below to confirm you are building this ADU yourself.
+      If you are building this ADU yourself, check the box below.
 
       If not, you will need to ask a professional to fill out this form for you.
 
@@ -1210,14 +1210,15 @@
       unit: square feet
       maxlength: 4
 
-    - label: "Which ordinance will this ADU comply with?"
+    - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
       - label: "162-17"
 
-    - label: "ADU #13"
+    - label: "ADU #2"
       type: header
       level: 3
 
@@ -1359,7 +1360,7 @@
     fields:
     - label: How much residential space will there be?
       type: number
-      unit: units
+      unit: gross square feet
 
 - title: Number of units
   fields:
@@ -1884,7 +1885,7 @@
     - label: |
        The California worker's compensation laws do not apply to me. When I perform the work described in this permit, I do not plan to employ anyone in a way that would subject me to them.
 
-        If California worker's compensation laws do apply to this project, and I fail to comply with them, I understand that the city will revoke my permit.
+        If California worker's compensation laws do apply to this project, and I fail to comply with them, I understand that the City will revoke my permit.
       type: checkbox
       annotation: Form 3/8 (DBI)
 
@@ -2023,7 +2024,7 @@
 
       - Follow all applicable laws and requirements for Owner-Builders and employers
 
-      - Notify the city immediately if you need to add, remove, or change any information on this form
+      - Notify the City immediately if you need to add, remove, or change any information on this form
 
   - type: checkbox
     label: I understand and agree to everything on this page.
@@ -2086,7 +2087,7 @@
     label: |
       We have provided a list below of the additional forms you will need before we issue your permit.
 
-      Please copy it for safekeeping.
+      You should copy it for safekeeping.
 
   - type: paragraph
     label: |
