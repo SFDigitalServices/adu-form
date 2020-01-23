@@ -352,6 +352,7 @@
   fields:
   - label: Does the property have a front setback?
     type: radio
+    annotation: Needed for plan checklist    
     options:
     - label: "Yes"
       shows: front-setback
@@ -360,6 +361,7 @@
 
   - label: Is your project's north different from true north?
     type: radio
+    annotation: Needed for plan checklist
     options:
     - label: "Yes"
       shows: project-north
@@ -469,6 +471,7 @@
   fields:
   - label: Are you changing the front facade?
     type: radio
+    annotation: Needed for plan checklist
     options:
     - label: "Yes"
       shows: exterior-changes-public
@@ -479,6 +482,7 @@
     fields:
     - label: Are you expanding the building?
       type: radio
+      annotation: Needed for plan checklist
       options:
       - label: "Yes"
         shows: exterior-changes-expansion
@@ -490,6 +494,7 @@
   fields:
   - label: Are you planning to plant street trees?
     type: radio
+    annotation: Needed for plan checklist
     options:
     - label: "Yes"
       shows: street-tree-no-fee
