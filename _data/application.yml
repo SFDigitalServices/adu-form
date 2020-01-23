@@ -348,6 +348,24 @@
           - label: "U: Utility / Miscellaneous"
           annotation: DBI and Planning
 
+- title: Your property
+  fields:
+  - label: Does the property have a front setback?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: front-setback
+
+    - label: "No"
+
+  - label: Is your project's north different from true north?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: project-north
+
+    - label: "No"
+
 - title: Construction work
   fields:
   - label: Type of construction
@@ -381,6 +399,14 @@
     annotation: PRJ (Planning)
     shows: geotechnical
     if: ">999"
+
+  - label: Will there be a change in floor-to-ceiling height?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: floor-to-ceiling-height-change
+
+    - label: "No"
 
   - label: Excavation volume
     type: number
@@ -421,8 +447,8 @@
       annotation: Form 3/8 (DBI)
       shows: street-space
 
-    - label: Changing the front facade
-      shows: historic-resource
+    - label: Changing the building's exterior
+      shows: exterior-changes
 
     - label: Repairing or changing the sidewalk above a basement
 
@@ -437,6 +463,39 @@
     - label: Electrical work
       annotation: Form 3/8 (DBI)
       shows: electrical
+
+- title: Construction impact
+  group: exterior-changes
+  fields:
+  - label: Are you changing the front facade?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: exterior-changes-public
+
+    - label: "No"
+
+  - group: exterior-changes-public
+    fields:
+    - label: Are you expanding the building?
+      type: radio
+      options:
+      - label: "Yes"
+        shows: exterior-changes-expansion
+
+      - label: "No"
+        shows: exterior-changes-no-expansion
+
+- title: Construction impact
+  fields:
+  - label: Are you planning to plant street trees?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: street-tree-no-fee
+
+    - label: "No, and I have paid the in-lieu fee"
+      shows: street-tree-fee
 
 - title: Construction impact
   fields:
