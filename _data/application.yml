@@ -207,7 +207,7 @@
     annotation: PRJ (Planning) 
 
 
-- title: Your property
+- title: The property
   fields:
   - label: What are the building's current use codes?
     annotation: Form 3/8 (DBI)
@@ -348,7 +348,7 @@
           - label: "**U**: Utility / Miscellaneous"
           annotation: DBI and Planning
 
-- title: Your property
+- title: The property
   fields:
   - label: Does the property have a front setback?
     type: radio
@@ -359,7 +359,7 @@
 
     - label: "No"
 
-  - label: Is your project's north different from true north?
+  - label: Is the project's north different from true north?
     type: radio
     annotation: Needed for plan checklist
     options:
@@ -557,7 +557,7 @@
   fields:
   - group: large-excavation
     fields:
-    - label: Are you changing your property from industrial to residential use?
+    - label: Are you changing the property from industrial to residential use?
       type: radio
       annotation: PRJ (Planning)
       options:
@@ -1733,7 +1733,7 @@
 
 - title: Child care
   fields:
-  - label: Does your project have a child care facility or school?
+  - label: Does the project have a child care facility or school?
     type: radio
     annotation: This page is from PRJ (Planning)
     options:
@@ -2260,7 +2260,7 @@
 
       If you lose money after contracting an unlicensed worker and file a complaint, the Contractors’ State License Board might not be able to help you. Your only remedy against unlicensed Contractors may be in civil court.
 
-      If an unlicensed worker or their employees are injured while working on your property, you may be held liable for damages. Homeowner's insurance may not provide coverage for these injuries.
+      If an unlicensed worker or their employees are injured while working on the property, you may be held liable for damages. Homeowner's insurance may not provide coverage for these injuries.
 
   - type: header
     level: 5
@@ -2339,7 +2339,7 @@
 
       - Are willfully acting as an Owner-Builder
 
-      - Understand the limits of your insurance coverage for injuries to workers on your property
+      - Understand the limits of your insurance coverage for injuries to workers on the property
 
       - Understand you are legally and financially responsible for the proposed work at the project address
 
