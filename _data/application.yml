@@ -1439,57 +1439,29 @@
       type: number
       unit: gross square feet
 
-- title: Number of units
+- title: Current units
   fields:
-  - label: How many affordable dwelling units does the property have?
-    type: number
-    annotation: Everything on this page is from the PRJ (Planning)
-
-  - label: Will this change after you build the ADU(s)?
-    type: radio
-    options:
-    - label: "Yes"
-      shows: proposed-affordable
-
-    - label: "No"
-
-  - group: proposed-affordable
-    fields:
-    - label: How many affordable dwelling units will there be?
-      type: number
-
-  - label: How many market-rate dwelling units does the property have?
+  - label: How many units does the property have?
     type: number
     unit: units
-    annotation: Everything on this page is from the PRJ (Planning)
-    shows: multi-family
-    if: ">2"
+    annotation: Form 3/8 (DBI). "Number of current market-rate units" (needed by Planning) is this field minus "How many of those units are affordable?"
 
-  - label: Will this change after you build the ADU(s)?
-    type: radio
-    options:
-    - label: "Yes"
-      shows: proposed-market-rate
-
-    - label: "No"
-
-  - group: proposed-market-rate
-    fields:
-    - label: How many market-rate dwelling units will there be?
-      type: number
-      shows: multi-family
-      if: ">2"
-
-  - label: Existing dwelling units
+  - label: How many of those units are affordable?
     type: number
-    hidden: yes
-    annotation: Form 3/8 (DBI). Sum of existing affordable and market-rate dwelling units
+    unit: units
+    annotation: PRJ (Planning)
 
-  - label: Proposed dwelling units
+- title: Proposed units
+  fields:
+  - label: How many units will the property have?
     type: number
-    hidden: yes
-    annotation: Form 3/8 (DBI). Sum of proposed affordable and market-rate dwelling units
+    unit: units
+    annotation: Form 3/8 (DBI). "Number of proposed market-rate units" (needed by Planning) is this field minus "How many of those units are affordable?"
 
+  - label: How many of those units will be affordable?
+    type: number
+    unit: units
+    annotation: PRJ (Planning)
 
 - title: Commercial area
   fields:
