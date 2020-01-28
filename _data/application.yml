@@ -18,14 +18,43 @@
 
 - title: About you
   fields:
-  - label: Do you own the property?
-    type: radio
-    options:
-    - label: "Yes"
-      shows: owner
+  - label: First name
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
 
-    - label: "No"
-      shows: non-owner
+  - label: Last name
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
+
+  - group: non-owner
+    fields:
+    - label: Relationship to owner
+      type: radio
+      annotation: PRJ and Joint Checklist (Planning), Authorized Agent Disclosure (DBI)
+      options:
+      - label: I am the owner
+        shows: owner
+
+      - label: Architect
+        shows: non-owner
+
+      - label: Contractor
+        shows: non-owner
+
+      - label: Engineer
+        shows: non-owner
+
+      - label: Attorney
+        shows: non-owner
+      other: yes
+
+    - group: non-owner
+      fields:
+      - label: California license number
+        maxlength: 12
+        annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
+
+      - label: License expiration date
+        type: date
+        annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
 
 - title: About you
   group: owner
@@ -39,42 +68,6 @@
   - label: I, the owner, am building this ADU myself.
     type: checkbox
     shows: owner-builder
-
-- title: Contact information
-  fields:
-  - label: First name
-    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
-
-  - label: Last name
-    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
-
-  - group: non-owner
-    fields:
-    - label: Relationship to owner
-      type: radio
-      annotation: PRJ and Joint Checklist (Planning), Authorized Agent Disclosure (DBI)
-      options:
-      - label: Architect
-        shows: license-org-info
-
-      - label: Contractor
-        shows: license-org-info
-
-      - label: Engineer
-        shows: license-org-info
-
-      - label: Attorney
-      other: yes
-
-    - group: license-org-info
-      fields:
-      - label: California license number
-        maxlength: 12
-        annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
-
-      - label: License expiration date
-        type: date
-        annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
 
 - title: Contact information
   fields:
