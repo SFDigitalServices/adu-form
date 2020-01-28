@@ -381,7 +381,7 @@
     type: price
     annotation: PRJ (Planning), Form 3/8 (DBI)
 
-  - label: How long do you estimate it will take you to build the ADU?
+  - label: Estimated length of construction
     type: number
     maxlength: 2
     unit: months
@@ -394,14 +394,6 @@
     annotation: PRJ (Planning)
     shows: geotechnical
     if: ">999"
-
-  - label: Will there be a change in floor-to-ceiling height?
-    type: radio
-    options:
-    - label: "Yes"
-      shows: floor-to-ceiling-height-change
-
-    - label: "No"
 
   - label: Excavation volume
     type: number
@@ -444,6 +436,9 @@
 
     - label: Changing the building's exterior
       shows: exterior-changes
+
+    - label: Changing the floor-to-ceiling height
+      shows: floor-to-ceiling-height-change
 
     - label: Repairing or changing the sidewalk above a basement
 
