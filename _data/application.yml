@@ -2324,35 +2324,88 @@
     label: What happens next
 
   - type: paragraph
-    level: 3
     label: |
-      Once we process your application, we will email you to schedule an in-person visit to the Department of Building Inspections.
+      After you submit your application, you will need to complete all of the forms below.
 
-      During your visit, you will apply for permits for:
+      - [Fixture Count Form](https://www.sfwater.org/modules/showdocument.aspx?documentid=13115)
+      - [San Francisco Unified School District’s certification of payment of school facility fees.](https://sfdbi.org/sites/default/files/IS%20G-11.pdf) (The form starts on page 5.)
+      - [Request for Water Flow Information](https://sf-fire.org/plan-check#waterf)
+
+  - label: Other things you might need
+    type: header
+    level: 3
+
+  - label: Permits and forms
+    type: header
+    level: 4
+
+  - type: paragraph
+    label: |
+      You will need to apply for separate permits to:
+
+  - group: street-space
+    fields:
+    - label: |
+        - [Use street space during construction](https://sfpublicworks.org/services/permits/street-space)
+      type: paragraph
+
+  - group: plumbing
+    fields:
+    - label: |
+        - [Do plumbing work](https://dbiweb.sfgov.org/dbi_plumbing/)
+      type: paragraph
+
+  - group: electrical
+    fields:
+    - label: |
+        - [Do electrical work](https://dbiweb.sfgov.org/dbi_electrical/)
+      type: paragraph
+
+  - label: |
+      You will need to apply in person at the Department of Building Inspections to:
+    type: paragraph
 
   - group: auto-runway
     fields:
     - label: |
-        - Building a driveway or auto runway
+        - Build a driveway or auto runway
       type: paragraph
 
   - group: building-extension
     fields:
     - label: |
-        - Extending the building beyond the property line
+        - Extend the building beyond the property line
+      type: paragraph
+
+  - type: paragraph
+    label: |
+      Finally, you may need more permits depending on the project's address. For example, if you are changing the front facade, you may need a [Historic Resource Determination.](https://forms.sfplanning.org/HistoricRD_SupplementalApplication.pdf)
+
+  - group: drop-off-plan
+    fields:
+    - label: Drop-off and pick-up plan
+      type: header
+      level: 4
+
+    - label: |
+        You will need to submit a [drop-off and pick-up management plan](http://forms.sfplanning.org/SchoolChildCareManagementPlan_SupplementalApplication.pdf) for your child care or school.
       type: paragraph
 
   - group: housing-services
     fields:
+    - type: header
+      label: Removing housing services
+      level: 4
+
     - type: paragraph
       label: |
-        Since you are removing housing services, you will also need to:
+        Because you are removing housing services, you will need to:
 
         - Post a notice for 15 days in a common area of the building
         
         - Mail that notice to all tenants and the property owner
 
-        During your visit, be prepared to provide us with a:
+        When you visit us in person, be prepared to provide us with a:
 
         - Copy of the notice
 
@@ -2363,8 +2416,16 @@
         - Copy of your mailing list
 
   - type: header
-    level: 3
-    label: Other forms you will need
+    level: 4
+    label: Street trees
+
+  - type: paragraph
+    label: |
+      To comply with City code, you may need to plant trees on the street. 
+
+      Our [street tree checklist](https://sfpublicworks.org/sites/default/files/Checklist%20for%20Tree%20Planting%20and%20Protection_0.pdf) can tell you whether your project needs this.
+
+      If so, you will need to apply for a [tree planting permit.](https://www.sfpublicworks.org/sites/default/files/Planting%20Application%202018-2019.pdf)
 
   - type: paragraph
     label: |
@@ -2372,73 +2433,43 @@
 
       You should copy it for safekeeping.
 
-  - type: paragraph
-    label: |
-      - [Fixture Count Form](https://www.sfwater.org/modules/showdocument.aspx?documentid=13115)
-
-  - type: paragraph
-    label: |
-      - [SFUSD Form 100](https://sfdbi.org/sites/default/files/IS%20G-11.pdf)
-
-  - type: paragraph
-    label: |
-      - [Request for Water Flow Information](https://sf-fire.org/plan-check#waterf)
-
-  - group: drop-off-plan
-    fields:
-    - label: |
-        - [School and Child Care Drop-Off and Pick-Up Management Plan](http://forms.sfplanning.org/SchoolChildCareManagementPlan_SupplementalApplication.pdf)
-      type: paragraph
-
-  - group: shadow-analysis
-    fields:
-    - label: |
-        - [Shadow analysis](https://sf-planning.org/sites/default/files/FileCenter/Documents/8442-Shadow%20Analysis%20Application.pdf)
-      type: paragraph
-
-  - group: street-space
-    fields:
-    - label: |
-        - [Street space permit](https://sfpublicworks.org/services/permits/street-space)
-      type: paragraph
-
-  - group: plumbing
-    fields:
-    - label: |
-        - [Plumbing permit](https://dbiweb.sfgov.org/dbi_plumbing/)
-      type: paragraph
-
-  - group: electrical
-    fields:
-    - label: |
-        - [Electrical permit](https://dbiweb.sfgov.org/dbi_electrical/)
-      type: paragraph
-
   - group: maher
     fields:
+    - type: header
+      label: Maher ordinance waiver
+      level: 4
+
     - label: |
-        - [Maher Ordinance waiver](https://www.sfdph.org/dph/EH/HazWaste/hazWasteSiteMitigation.asp)
+        If you are in a Maher area, you will need to  [apply for a Maher Ordinance waiver](https://www.sfdph.org/dph/EH/HazWaste/hazWasteSiteMitigation.asp)
+
+        To learn whether this applies to you, consult our [map of Maher areas](https://sfplanninggis.org/pim/map.html?layers=Maher%20Ordinance). 
       type: paragraph
 
   - type: header
-    level: 3
-    label: Reports you will need to order
+    level: 4
+    label: Commissioned reports
 
   - type: paragraph
-    label: "You will also need to commission these reports:"
+    label: "You will also need to hire someone to produce:"
 
   - group: large-excavation
     fields:
     - group: geotechnical
       fields:
       - label: |
-          - Geotechnical report
+          - A geotechnical report
         type: paragraph
 
   - group: environmental-assessment
     fields:
     - label: |
-        - Phase I Site Environmental Assessment
+        - A Phase I Site Environmental Assessment
+      type: paragraph
+
+  - group: shadow-analysis
+    fields:
+    - label: |
+        - A [shadow analysis](https://sf-planning.org/sites/default/files/FileCenter/Documents/8442-Shadow%20Analysis%20Application.pdf)
       type: paragraph
 
   - label: Are you ready?
