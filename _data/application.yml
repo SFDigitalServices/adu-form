@@ -1744,7 +1744,12 @@
 
 - title: Plan checklist
   fields:
+  - type: paragraph
+    label: |
+      Next, we are going to double-check that your plans have everything we need to approve them.
 
+      Once we have gone through the list, we will ask you to upload your plans and agree to our legal terms.
+      
 - title: Site plan
   fields:
   - type: paragraph
