@@ -5,48 +5,24 @@
 
       - The builder's and owner's contact information
 
-      - Construction details like the project address, cost, and excavation area
+      - Property details like use and occupancy codes
 
-      - How you are currently using the land, and how you plan to change it
+      - Construction details like estimated costs, excavation area, all planned changes, and seismic work
 
-      - Safety-related topics like fire protection, seismic retrofitting, and worker's compensation insurance
+      - Legal requirements like workers’ compensation insurance policy coverage
 
-      Then, we'll ask you to upload your plans as PDFs and agree to our legal terms.
+      Finally you will upload your plans as PDFs and agree to our legal terms.
 
       Unless you are building the ADU yourself, you will need a professional to fill out this form. If you have not yet hired a architect, contractor or engineer licensed in California, you should do so before you apply.
     type: paragraph
 
 - title: About you
   fields:
-  - label: Do you own the property?
-    type: radio
-    options:
-    - label: "Yes"
-      shows: owner
-
-    - label: "No"
-      shows: non-owner
-
-- title: About you
-  group: owner
-  fields:
-  - type: paragraph
-    label: |
-      Please check the box below to confirm you are building this ADU yourself.
-
-      If not, you will need to ask a professional to fill out this form for you.
-
-  - label: I, the owner, am building this ADU myself.
-    type: checkbox
-    shows: owner-builder
-
-- title: Contact information
-  fields:
   - label: First name
     annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
 
   - label: Last name
-    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI) 
+    annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
 
   - group: non-owner
     fields:
@@ -54,19 +30,23 @@
       type: radio
       annotation: PRJ and Joint Checklist (Planning), Authorized Agent Disclosure (DBI)
       options:
+      - label: I am the owner
+        shows: owner
+
       - label: Architect
-        shows: license-org-info
+        shows: non-owner
 
       - label: Contractor
-        shows: license-org-info
+        shows: non-owner
 
       - label: Engineer
-        shows: license-org-info
+        shows: non-owner
 
       - label: Attorney
+        shows: non-owner
       other: yes
 
-    - group: license-org-info
+    - group: non-owner
       fields:
       - label: California license number
         maxlength: 12
@@ -75,6 +55,19 @@
       - label: License expiration date
         type: date
         annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
+
+- title: Owner consent
+  group: owner
+  fields:
+  - type: paragraph
+    label: |
+      If you are building this ADU yourself, check the box below.
+
+      If not, you will need to ask a professional to fill out this form for you.
+
+  - label: I, the owner, am building this ADU myself.
+    type: checkbox
+    shows: owner-builder
 
 - title: Contact information
   fields:
@@ -134,7 +127,7 @@
     type: email
     annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI) 
  
-- title: Addresses
+- title: Owner’s address
   fields:
   - label: Owner's mailing address
     type: address
@@ -188,7 +181,6 @@
       - label: Someone else
         shows: billing-contact
 
-
 - title: Billing contact information
   group: billing-contact
   fields:
@@ -206,18 +198,17 @@
     type: email
     annotation: PRJ (Planning) 
 
-
-- title: Your property
+- title: Use codes
   fields:
   - label: What are the building's current use codes?
     annotation: Form 3/8 (DBI)
     type: checkbox
     options:
-    - label: "10: Office"
-    - label: "24: Apartment"
-    - label: "27: 1–Family Dwelling"
-    - label: "28: 2-Family Dwelling"
-    - label: "79: Vacant Lot"
+    - label: "**10:** Office"
+    - label: "**24:** Apartment"
+    - label: "**27:** 1 Family Dwelling"
+    - label: "**28:** 2 Family Dwelling"
+    - label: "**79:** Vacant Lot"
     - label: "Other"
       shows: present-use-other
 
@@ -225,15 +216,26 @@
     fields:
     - label: Enter any building use codes that are not listed above. 
 
-  - label: What use codes are you proposing?
+  - label: Will the building's use codes change after construction?
+    type: radio
+    annotation: DBI and Planning
+    options:
+    - label: "Yes"
+      shows: proposed-use-codes
+
+    - label: "No"
+
+  - group: proposed-use-codes
+    fields:  
+  - label: What will the building’s use codes be after construction?
     annotation: Form 3/8 (DBI)
     type: checkbox
     options:
-    - label: "10: Office"
-    - label: "24: Apartment"
-    - label: "27: 1–Family Dwelling"
-    - label: "28: 2-Family Dwelling"
-    - label: "79: Vacant Lot"
+    - label: "**10:** Office"
+    - label: "**24:** Apartment"
+    - label: "**27:** 1 Family Dwelling"
+    - label: "**28:** 2 Family Dwelling"
+    - label: "**79:** Vacant Lot"
     - label: "Other"
       shows: proposed-use-other
 
@@ -241,7 +243,7 @@
     fields:
     - label: Enter any proposed building use codes that are not listed above. 
 
-- title: Occupancy
+- title: Occupancy codes
   fields:
   - label: What are the property's current occupancy codes?
     type: checkbox
@@ -259,7 +261,7 @@
 
   - group: occupancy-current-other
     fields:
-      - label: Check off the rest of the building's current occupancy codes.
+      - label: Check all of the building's current occupancy codes.
         type: checkbox
         options:
         - label: "**A-1:** Assembly, fixed seating"
@@ -289,9 +291,7 @@
         - label: "**U:** Utility / Miscellaneous"
         annotation: DBI and Planning
 
-- title: Occupancy
-  fields:
-  - label: Will the occupancy codes change after construction?
+  - label: Will the building’s occupancy codes change after construction?
     type: radio
     annotation: DBI and Planning
     options:
@@ -302,53 +302,73 @@
 
   - group: proposed-occupancy
     fields:
-    - label: Proposed occupancy codes
+    - label: What will the building’s occupancy codes be after construction?
       type: checkbox
       options:
-      - label: "R-1: Residential, transient hotel / motel (residential)"
-      - label: "R-2: Residential, apartment / condominium with 3+ units"
-      - label: "R-2.1: Residential, supervised apartment / condominum"
-      - label: "R-3: General residential"
-      - label: "R-3.1: General supervised residential"
-      - label: "R-4: Residential, supervised"
-      - label: "S: Storage"
+      - label: "**R-1**: Residential, transient hotel / motel (residential)"
+      - label: "**R-2**: Residential, apartment / condominium with 3+ units"
+      - label: "**R-2.1**: Residential, supervised apartment / condominum"
+      - label: "**R-3**: General residential"
+      - label: "**R-3.1**: General supervised residential"
+      - label: "**R-4**: Residential, supervised"
+      - label: "**S**: Storage"
       - label: "Other"
         shows: proposed occupancy-other
       annotation: DBI and Planning
 
     - group: occupancy-proposed-other
       fields:
-        - label: Check off the rest of the building's proposed occupancy codes.
+        - label: Check all of the building's occupancy codes after construction.
           type: checkbox
           options:
-          - label: "A-1: Assembly, fixed seating"
-          - label: "A-2: Assembly, food / drink"
-          - label: "A-3: Assembly, other"
-          - label: "A-4: Assembly: indoor sport"
-          - label: "A-5: Assembly: outdoor activities"
-          - label: "C: Organized camp"
-          - label: "E: Educational"
-          - label: "F-1: Moderate-hazard factory / industrial"
-          - label: "F-2: Low-hazard factory / industrial"
-          - label: "H-1: Detonation hazard"
-          - label: "H-2: Deflagration hazard"
-          - label: "H-3: Combustion hazard"
-          - label: "H-4: Health hazard"
-          - label: "H-5: Semiconductor hazard"
-          - label: "I-1: Institutional, non-ambulatory, more than 6 units, supervised"
-          - label: "I-2 Institutional, non-ambulatory, more than 6 units, custodial"
-          - label: "I-2.1 Institutional, ambulatory, more than 5 units"
-          - label: "I-3: Institutional, restrained"
-          - label: "I-4: Day care facility"
-          - label: "L: Laboratory"
-          - label: "M: Mercantile"
-          - label: "B: Business"
-          - label: "S-1: Moderate-hazard storage"
-          - label: "S-2: Low-hazard storage"
-          - label: "U: Utility / Miscellaneous"
+          - label: "**A-1**: Assembly, fixed seating"
+          - label: "**A-2**: Assembly, food / drink"
+          - label: "**A-3**: Assembly, other"
+          - label: "**A-4**: Assembly: indoor sport"
+          - label: "**A-5**: Assembly: outdoor activities"
+          - label: "**C**: Organized camp"
+          - label: "**E**: Educational"
+          - label: "**F-1**: Moderate-hazard factory / industrial"
+          - label: "**F-2**: Low-hazard factory / industrial"
+          - label: "**H-1**: Detonation hazard"
+          - label: "**H-2**: Deflagration hazard"
+          - label: "**H-3**: Combustion hazard"
+          - label: "**H-4**: Health hazard"
+          - label: "**H-5**: Semiconductor hazard"
+          - label: "**I-1**: Institutional, non-ambulatory, more than 6 units, supervised"
+          - label: "**I-2**: Institutional, non-ambulatory, more than 6 units, custodial"
+          - label: "**I-2.1**: Institutional, ambulatory, more than 5 units"
+          - label: "**I-3**: Institutional, restrained"
+          - label: "**I-4**: Day care facility"
+          - label: "**L**: Laboratory"
+          - label: "**M**: Mercantile"
+          - label: "**B**: Business"
+          - label: "**S-1**: Moderate-hazard storage"
+          - label: "**S-2**: Low-hazard storage"
+          - label: "**U**: Utility / Miscellaneous"
           annotation: DBI and Planning
 
-- title: Construction work
+- title: Front setback
+  fields:
+  - label: Does the property have a front setback?
+    type: radio
+    annotation: Needed for plan checklist    
+    options:
+    - label: "Yes"
+      shows: front-setback
+
+    - label: "No"
+
+  - label: Is the project's north different from true north?
+    type: radio
+    annotation: Needed for plan checklist
+    options:
+    - label: "Yes"
+      shows: project-north
+
+    - label: "No"
+
+- title: Type of construction
   fields:
   - label: Type of construction
     type: select
@@ -364,16 +384,20 @@
     - label: "V-A: Protected Wood Frame"
     - label: "V-B: Unprotected Wood Frame"
 
+- title: Project estimates
+  fields:
   - label: Estimated cost
     type: price
     annotation: PRJ (Planning), Form 3/8 (DBI)
 
-  - label: How long do you estimate it will take you to build the ADU?
+  - label: Estimated length of construction
     type: number
     maxlength: 2
     unit: months
     annotation: PRJ (Planning)
 
+- title: Project estimates
+  fields:
   - label: Excavation area
     type: number
     unit: square feet
@@ -421,8 +445,11 @@
       annotation: Form 3/8 (DBI)
       shows: street-space
 
-    - label: Changing the front facade
-      shows: historic-resource
+    - label: Changing the building's exterior
+      shows: exterior-changes
+
+    - label: Changing the floor-to-ceiling height
+      shows: floor-to-ceiling-height-change
 
     - label: Repairing or changing the sidewalk above a basement
 
@@ -437,6 +464,42 @@
     - label: Electrical work
       annotation: Form 3/8 (DBI)
       shows: electrical
+
+- title: Construction impact
+  group: exterior-changes
+  fields:
+  - label: Are you changing the front facade?
+    type: radio
+    annotation: Needed for plan checklist
+    options:
+    - label: "Yes"
+      shows: exterior-changes-public
+
+    - label: "No"
+
+  - group: exterior-changes-public
+    fields:
+    - label: Are you expanding the building?
+      type: radio
+      annotation: Needed for plan checklist
+      options:
+      - label: "Yes"
+        shows: exterior-changes-expansion
+
+      - label: "No"
+        shows: exterior-changes-no-expansion
+
+- title: Construction impact
+  fields:
+  - label: Are you planning to plant street trees?
+    type: radio
+    annotation: Needed for plan checklist
+    options:
+    - label: "Yes"
+      shows: street-tree-no-fee
+
+    - label: "No, and I have paid the in-lieu fee"
+      shows: street-tree-fee
 
 - title: Construction impact
   fields:
@@ -472,7 +535,7 @@
 
   - group: new-ground-floor
     fields:
-    - label: What will the new ground floor area be?
+    - label: What will the new ground floor area be after construction?
       type: number
       maxlength: 4
       unit: square feet
@@ -488,12 +551,12 @@
 
     - label: "No"
 
-- title: Construction impact
+- title: Construction type
   group: industrial-to-residential
   fields:
   - group: large-excavation
     fields:
-    - label: Are you changing your property from industrial to residential use?
+    - label: Are you changing the property from industrial to residential use?
       type: radio
       annotation: PRJ (Planning)
       options:
@@ -546,7 +609,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
-      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -572,7 +635,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
-      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -598,6 +661,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -623,6 +687,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -648,6 +713,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -673,6 +739,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -698,6 +765,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -723,6 +791,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -748,6 +817,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -773,6 +843,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -798,6 +869,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -823,6 +895,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -848,6 +921,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -873,6 +947,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -898,6 +973,7 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -936,6 +1012,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -961,6 +1038,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -986,6 +1064,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -1011,7 +1090,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
-      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -1037,6 +1116,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -1062,6 +1142,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -1087,6 +1168,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -1137,6 +1219,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -1162,6 +1245,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -1187,6 +1271,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -1210,14 +1295,15 @@
       unit: square feet
       maxlength: 4
 
-    - label: "Which ordinance will this ADU comply with?"
+    - label: "Which ordinance does this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
       - label: "162-17"
 
-    - label: "ADU #13"
+    - label: "ADU #2"
       type: header
       level: 3
 
@@ -1237,6 +1323,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -1262,6 +1349,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -1287,8 +1375,7 @@
 
     - label: "Which ordinance will this ADU comply with?"
       type: select
-      helptext: For information, read summaries of [95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-
+      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
       options:
       - label: "95-17"
       - label: "162-16"
@@ -1305,7 +1392,7 @@
     unit: gross square feet
     annotation: Everything on this page is from the PRJ (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the parking square footage change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1315,7 +1402,7 @@
 
   - group: proposed-parking-gsf
     fields:
-    - label: How many square feet of parking area will there be?
+    - label: How many square feet of parking area will there be after construction?
       type: number
       unit: gross square feet
 
@@ -1327,7 +1414,7 @@
     type: number
     annotation: Everything on this page is from the PRJ (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the number of parking spaces change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1337,8 +1424,10 @@
 
   - group: proposed-parking-spaces
     fields:
-    - label: How many parking spaces will there be?
+    - label: How many parking spaces will there be after construction?
       type: number
+      show: no-parking-spaces
+      if: "0"
 
 - title: Residential area
   fields:
@@ -1347,7 +1436,7 @@
     unit: gross square feet
     annotation: Everything on this page is from the PRJ (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the residential square footage change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1357,57 +1446,33 @@
 
   - group: proposed-residential-gsf
     fields:
-    - label: How much residential space will there be?
+    - label: How much residential space will there be after construction?
       type: number
-      unit: units
+      unit: gross square feet
 
-- title: Number of units
+- title: Current units
   fields:
-  - label: How many affordable dwelling units does the property have?
-    type: number
-    annotation: Everything on this page is from the PRJ (Planning)
-
-  - label: Will this change after you build the ADU(s)?
-    type: radio
-    options:
-    - label: "Yes"
-      shows: proposed-affordable
-
-    - label: "No"
-
-  - group: proposed-affordable
-    fields:
-    - label: How many affordable dwelling units will there be?
-      type: number
-
-  - label: How many market-rate dwelling units does the property have?
+  - label: How many units does the property have?
     type: number
     unit: units
-    annotation: Everything on this page is from the PRJ (Planning)
+    annotation: Form 3/8 (DBI). "Number of current market-rate units" (needed by Planning) is this field minus "How many of those units are affordable?"
 
-  - label: Will this change after you build the ADU(s)?
-    type: radio
-    options:
-    - label: "Yes"
-      shows: proposed-market-rate
-
-    - label: "No"
-
-  - group: proposed-market-rate
-    fields:
-    - label: How many market-rate dwelling units will there be?
-      type: number
-
-  - label: Existing dwelling units
+  - label: How many of those units are affordable?
     type: number
-    hidden: yes
-    annotation: Form 3/8 (DBI). Sum of existing affordable and market-rate dwelling units
+    unit: units
+    annotation: PRJ (Planning)
 
-  - label: Proposed dwelling units
+- title: Proposed units
+  fields:
+  - label: How many units will the property have after construction?
     type: number
-    hidden: yes
-    annotation: Form 3/8 (DBI). Sum of proposed affordable and market-rate dwelling units
+    unit: units
+    annotation: Form 3/8 (DBI). "Number of proposed market-rate units" (needed by Planning) is this field minus "How many of those units are affordable?"
 
+  - label: How many of those units will be affordable?
+    type: number
+    unit: units
+    annotation: PRJ (Planning)
 
 - title: Commercial area
   fields:
@@ -1416,7 +1481,7 @@
     unit: gross square feet
     annotation: Everything on this page is from the PRJ (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the commercial square footage change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1426,7 +1491,7 @@
 
   - group: proposed-commercial-gsf
     fields:
-    - label: How much commercial space will there be?
+    - label: How much commercial space will there be after construction?
       type: number
       unit: gross square feet
 
@@ -1436,7 +1501,7 @@
     type: number
     annotation: Everything on this page is from the PRJ (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the number of buildings change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1446,7 +1511,7 @@
 
   - group: proposed-buildings
     fields:
-    - label: How many buildings will there be?
+    - label: How many buildings will there be after construction?
       type: number
 
 - title: Building stories
@@ -1456,7 +1521,7 @@
     maxlength: 15 
     annotation: Form 3/8 (DBI), PRJ and Joint Checklist (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the number of stories change after construction?
     type: radio
     annotation: If "no", populate "proposed stories" with the answer to "existing stories"
     options:
@@ -1467,7 +1532,7 @@
 
   - group: proposed-stories
     fields:
-    - label: How many stories will there be?
+    - label: How many stories will there be after construction?
       type: number
       maxlength: 15 
       annotation: PRJ (Planning)
@@ -1478,7 +1543,7 @@
     type: number
     annotation: Everything on this page is from Form 3/8 (DBI)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will this change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1488,7 +1553,7 @@
 
   - group: proposed-basements
     fields:
-    - label: How many basements or cellars will there be?
+    - label: How many basements or cellars will there be after construction?
       type: number
 
 - title: Bicycle spaces
@@ -1497,7 +1562,7 @@
     type: number
     annotation: Everything on this page is from the PRJ (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the number of bicycle spaces change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1507,7 +1572,7 @@
 
   - group: proposed-bicycle-spaces
     fields:
-    - label: How many bicycle spaces will there be?
+    - label: How many bicycle spaces will there be after construction?
       type: number
 
 - title: Fire protection
@@ -1639,7 +1704,7 @@
 
 - title: Child care
   fields:
-  - label: Does your project have a child care facility or school?
+  - label: Does the project have a child care facility or school?
     type: radio
     annotation: This page is from PRJ (Planning)
     options:
@@ -1688,22 +1753,257 @@
 
     - label: "No"
 
+- title: Plan checklist
+  fields:
+  - type: paragraph
+    label: |
+      Next, we are going to double-check that your plans have everything we need to approve them.
+
+      Once we have gone through the list, we will ask you to upload your plans and agree to our legal terms.
+
+- title: Site plan
+  fields:
+  - type: paragraph
+    label: |
+      Does your site plan show and label:
+
+      - Adjacent lots, and outlines for all their buildings?
+
+      - The distance between the building's existing walls, property lines, and other structures on the lot?
+
+      - The width of the sidewalk from the front property line to the curb?
+
+      - The dimensions of usable open space, like decks, terraces and yards?
+
+      - The dimensions between the new unit's walls and property lines?
+
+  - label: Yes, my plans contain all the above.
+    type: checkbox
+
+- title: Site plan
+  fields:
+  - type: paragraph
+    label: |
+      Does your site plan show:
+
+      - The direction of true north?
+
+  - group: project-north
+    fields:
+    - type: paragraph
+      label: |
+        - The direction of project north?
+
+  - label: Yes, my plans contain all the above.
+    type: checkbox
+
+- title: Site plan
+  fields:
+  - type: paragraph
+    label: |
+      Does your site plan show:
+
+  - group: street-tree-no-fee
+    fields:
+    - type: paragraph
+      label: |
+        - The location of existing and proposed street trees?
+
+  - group: street-tree-fee
+    fields:
+    - type: paragraph
+      label: |
+        - A notation that you’ve paid the in-lieu fee for street trees?
+
+  - group: front-setback
+    fields:
+    - type: paragraph
+      label: |
+        - The required front setback, with landscaping and permeable surface?
+
+  - group: no-parking-spaces
+    fields:
+    - type: paragraph
+      label: |
+        - The note "remove curb cut" next to the curb cuts you are removing?
+
+  - label: Yes, my plans contain all the above.
+    type: checkbox
+
+- group: exterior-changes
+  title: Site plan
+  fields:
+  - type: paragraph
+    label: |
+      Do you have separate existing and proposed site plans, showing all buildings on the lot?
+
+  - label: Yes, my plans contain the above.
+    type: checkbox
+
+- group: multi-family
+  title: Site plan
+  fields:
+  - type: paragraph
+    label: |
+      Does your site plan label the locations of the:
+
+      - Proposed fire department connection?
+
+      - Low-pressure fire hydrants?
+
+      - Proposed fire underground service connection and backflow preventer?
+
+      - Sprinkler riser and required clearances?
+
+  - label: Yes, my plans contain all the above.
+    type: checkbox
+
+- group: multi-family
+  title: Site plan
+  fields:
+  - type: paragraph
+    label: |
+      Does your site plan show the distance between the fire department connection and the nearest hydrant?
+
+  - label: Yes, my plans contain the above.
+    type: checkbox
+
+- title: Floor plans
+  fields:
+  - type: paragraph
+    label: |
+      On all floors, do your existing and proposed floor plans show and label:
+
+      - Labelled street names, rooms, areas, exits and egresses?
+      
+      - All existing units, using the label "Existing Unit?"
+      
+      - Each room and space's use in the existing unit?
+      
+      - Each ADU's street number and square footage?
+      
+      - Each ADU's room and window dimensions?
+      
+      - Laundry and storage locations?
+      
+      - Trash, recycling, and compost cart locations? (They must be on private property and screened from public view.)
+
+  - label: Yes, my plans contain all the above.
+    type: checkbox
+
+- title: Floor plans
+  fields:
+  - type: paragraph
+    label: |
+      On all floors, do your existing and proposed floor plans show and label:
+
+      - Vehicle and bicycle parking dimensions and outlines?
+      
+      - Gas and electrical meters?
+
+  - label: Yes, my plans contain all the above.
+    type: checkbox
+
+- title: Floor plans
+  fields:
+  - type: radio
+    label: |
+      On all floors, do your existing and proposed floor plans show and label all plumbing fixtures?
+
+      (These include dishwashers, clothes washers, and hose bibs.)
+    options:
+    - label: "Yes"
+    - label: "No"
+
+- group: multi-family
+  title: Floor plans
+  fields:
+  - type: paragraph
+    label: |
+      On all floors, do your existing and proposed floor plans show and label:
+
+      - Exit(s) from all units, and their route to the public way?
+
+      - All emergency escape and rescue openings (EEROs), and their route to the public way?
+
+      - The travel path from each EERO location to the public way?
+
+      - The main fire department access point?
+
+      - The number of exits, their widths and separations, and the common path of travel distances?
+
+      - A way to compare the number of exits required by code with existing and proposed exits?
+
+      - The location of the fire alarm control unit, and the fire alarm annunciator?
+
+  - label: Yes, my plans contain the above.
+    type: checkbox
+
+- title: Elevations
+  fields:
+  - type: paragraph
+    label: |
+      Do your building elevations show and label:
+
+      - Each window's dimensions, operation, material type, and fire rating?
+
+      - Windows that are next to the line openings of a property lot?
+
+      - Windows that are emergency escape and rescue openings (EEROs?)
+
+
+  - label: Yes, my elevations contain all the above.
+    type: checkbox
+
+- group: exterior-changes
+  title: Elevations
+  fields:
+  - type: paragraph
+    label: |
+      Do your building elevations show and label:
+
+  - group: exterior-changes-expansion
+    fields:
+    - type: paragraph
+      label: |
+        - Existing and proposed elevations for the face of the building you're working on?
+
+        - Existing and proposed exterior materials for new or replaced doors, windows, and finish?
+
+  - group: exterior-changes-no-expansion
+    fields:
+    - type: paragraph
+      label: |
+        - Partial elevations of the level on which you're proposing the work?
+
+  - label: Yes, my elevations contain all the above.
+    type: checkbox
+
+- title: Section plans
+  fields:
+  - type: paragraph
+    label: |
+      Do your section plans have:
+
+      - Labeled floor-to-ceiling heights and / or excavation at the level of the ADU?
+
+  - group: floor-to-ceiling-height-change
+    fields:
+    - type: paragraph
+      label: |
+        - Separate plans for existing and proposed sections?
+
+  - label: Yes, my plans contain all the above.
+    type: checkbox
+
 - title: Your plans
   fields:
   - type: paragraph
     label: |
-      On the next page, you will upload your plans and any supplemental documents. They must be in PDF format. 
+      On the next page, you will upload your plans and any supplemental documents.
 
-      If your plan is over 200 pages or 200MB, you should split up your PDFs into different sections. Otherwise, you should combine your plans into a single file.
+      They must be in PDF format. If your plan is over 200 pages or 200MB, you should split up your PDFs into different sections. Otherwise, you should combine your plans into a single file.
   
-  - label: Content guidelines
-    type: header
-    level: 3
-
-  - type: paragraph
-    label: |
-      [Our ADU checklist can help you understand what your plans should include.](https://sfplanning.org/resource/accessory-dwelling-units-adu-checklists)
-
   - label: Format guidelines
     type: header
     level: 3
@@ -1711,7 +2011,12 @@
   - type: paragraph
     label: |
 
-      Your PDFs must be vectorized and unsecured, with searchable text. You should also use bookmarks to distinguish different sections (like architectural, site, and structural.) If there are spaces for e-signatures, you should enable markup.
+      Your PDFs must be vectorized and unsecured with searchable text.
+
+      Use bookmarks to distinguish different sections (like architectural, site, and structural). 
+      
+      If there are spaces for e-signatures, you should enable markup.
+
 
       Plans should also have:
 
@@ -1728,7 +2033,6 @@
       - Indexes
 
       - Drawings set to scale
-
 
 - title: Your plans
   fields:
@@ -1770,7 +2074,9 @@
   fields:
   - type: paragraph
     label: |
-      This is not a building permit. Until we issue a permit to you, you cannot start work, change the property's occupancy, or change its use. (See the San Francisco Building Code and San Francisco Housing Code.)
+      This is not a building permit.
+
+      Until we issue a permit to you, you cannot start work, change the property's occupancy, or change its use. (See the San Francisco Building Code and San Francisco Housing Code.)
 
       Once we issue a building permit, you must post it at the job. The owner will also be responsible for keeping the approved plans and permit application at the property.
 
@@ -1884,7 +2190,7 @@
     - label: |
        The California worker's compensation laws do not apply to me. When I perform the work described in this permit, I do not plan to employ anyone in a way that would subject me to them.
 
-        If California worker's compensation laws do apply to this project, and I fail to comply with them, I understand that the city will revoke my permit.
+        If California worker's compensation laws do apply to this project, and I fail to comply with them, I understand that the City will revoke my permit.
       type: checkbox
       annotation: Form 3/8 (DBI)
 
@@ -1936,7 +2242,7 @@
 
       If you lose money after contracting an unlicensed worker and file a complaint, the Contractors’ State License Board might not be able to help you. Your only remedy against unlicensed Contractors may be in civil court.
 
-      If an unlicensed worker or their employees are injured while working on your property, you may be held liable for damages. Homeowner's insurance may not provide coverage for these injuries.
+      If an unlicensed worker or their employees are injured while working on the property, you may be held liable for damages. Homeowner's insurance may not provide coverage for these injuries.
 
   - type: header
     level: 5
@@ -2015,7 +2321,7 @@
 
       - Are willfully acting as an Owner-Builder
 
-      - Understand the limits of your insurance coverage for injuries to workers on your property
+      - Understand the limits of your insurance coverage for injuries to workers on the property
 
       - Understand you are legally and financially responsible for the proposed work at the project address
 
@@ -2023,7 +2329,7 @@
 
       - Follow all applicable laws and requirements for Owner-Builders and employers
 
-      - Notify the city immediately if you need to add, remove, or change any information on this form
+      - Notify the City immediately if you need to add, remove, or change any information on this form
 
   - type: checkbox
     label: I understand and agree to everything on this page.
@@ -2040,35 +2346,88 @@
     label: What happens next
 
   - type: paragraph
-    level: 3
     label: |
-      Once we process your application, we will email you to schedule an in-person visit to the Department of Building Inspections.
+      After you submit your application, you will need to complete all of the forms below.
 
-      During your visit, you will apply for permits for:
+      - [Fixture Count Form](https://www.sfwater.org/modules/showdocument.aspx?documentid=13115)
+      - [San Francisco Unified School District’s certification of payment of school facility fees.](https://sfdbi.org/sites/default/files/IS%20G-11.pdf) (The form starts on page 5.)
+      - [Request for Water Flow Information](https://sf-fire.org/plan-check#waterf)
+
+  - label: Other things you might need
+    type: header
+    level: 3
+
+  - label: Permits and forms
+    type: header
+    level: 4
+
+  - type: paragraph
+    label: |
+      You will need to apply for separate permits to:
+
+  - group: street-space
+    fields:
+    - label: |
+        - [Use street space during construction](https://sfpublicworks.org/services/permits/street-space)
+      type: paragraph
+
+  - group: plumbing
+    fields:
+    - label: |
+        - [Do plumbing work](https://dbiweb.sfgov.org/dbi_plumbing/)
+      type: paragraph
+
+  - group: electrical
+    fields:
+    - label: |
+        - [Do electrical work](https://dbiweb.sfgov.org/dbi_electrical/)
+      type: paragraph
+
+  - label: |
+      You will need to apply in person at the Department of Building Inspections to:
+    type: paragraph
 
   - group: auto-runway
     fields:
     - label: |
-        - Building a driveway or auto runway
+        - Build a driveway or auto runway
       type: paragraph
 
   - group: building-extension
     fields:
     - label: |
-        - Extending the building beyond the property line
+        - Extend the building beyond the property line
+      type: paragraph
+
+  - type: paragraph
+    label: |
+      Finally, you may need more permits depending on the project's address. For example, if you are changing the front facade, you may need a [Historic Resource Determination.](https://forms.sfplanning.org/HistoricRD_SupplementalApplication.pdf)
+
+  - group: drop-off-plan
+    fields:
+    - label: Drop-off and pick-up plan
+      type: header
+      level: 4
+
+    - label: |
+        You will need to submit a [drop-off and pick-up management plan](http://forms.sfplanning.org/SchoolChildCareManagementPlan_SupplementalApplication.pdf) for your child care or school.
       type: paragraph
 
   - group: housing-services
     fields:
+    - type: header
+      label: Removing housing services
+      level: 4
+
     - type: paragraph
       label: |
-        Since you are removing housing services, you will also need to:
+        Because you are removing housing services, you will need to:
 
         - Post a notice for 15 days in a common area of the building
         
         - Mail that notice to all tenants and the property owner
 
-        During your visit, be prepared to provide us with a:
+        When you visit us in person, be prepared to provide us with a:
 
         - Copy of the notice
 
@@ -2079,82 +2438,60 @@
         - Copy of your mailing list
 
   - type: header
-    level: 3
-    label: Other forms you will need
+    level: 4
+    label: Street trees
+
+  - type: paragraph
+    label: |
+      To comply with City code, you may need to plant trees on the street. 
+
+      Our [street tree checklist](https://sfpublicworks.org/sites/default/files/Checklist%20for%20Tree%20Planting%20and%20Protection_0.pdf) can tell you whether your project needs this.
+
+      If so, you will need to apply for a [tree planting permit.](https://www.sfpublicworks.org/sites/default/files/Planting%20Application%202018-2019.pdf)
 
   - type: paragraph
     label: |
       We have provided a list below of the additional forms you will need before we issue your permit.
 
-      Please copy it for safekeeping.
-
-  - type: paragraph
-    label: |
-      - [Fixture Count Form](https://www.sfwater.org/modules/showdocument.aspx?documentid=13115)
-
-  - type: paragraph
-    label: |
-      - [SFUSD Form 100](https://sfdbi.org/sites/default/files/IS%20G-11.pdf)
-
-  - type: paragraph
-    label: |
-      - [Request for Water Flow Information](https://sf-fire.org/plan-check#waterf)
-
-  - group: drop-off-plan
-    fields:
-    - label: |
-        - [School and Child Care Drop-Off and Pick-Up Management Plan](http://forms.sfplanning.org/SchoolChildCareManagementPlan_SupplementalApplication.pdf)
-      type: paragraph
-
-  - group: shadow-analysis
-    fields:
-    - label: |
-        - [Shadow analysis](https://sf-planning.org/sites/default/files/FileCenter/Documents/8442-Shadow%20Analysis%20Application.pdf)
-      type: paragraph
-
-  - group: street-space
-    fields:
-    - label: |
-        - [Street space permit](https://sfpublicworks.org/services/permits/street-space)
-      type: paragraph
-
-  - group: plumbing
-    fields:
-    - label: |
-        - [Plumbing permit](https://dbiweb.sfgov.org/dbi_plumbing/)
-      type: paragraph
-
-  - group: electrical
-    fields:
-    - label: |
-        - [Electrical permit](https://dbiweb.sfgov.org/dbi_electrical/)
-      type: paragraph
+      You should copy it for safekeeping.
 
   - group: maher
     fields:
+    - type: header
+      label: Maher ordinance waiver
+      level: 4
+
     - label: |
-        - [Maher Ordinance waiver](https://www.sfdph.org/dph/EH/HazWaste/hazWasteSiteMitigation.asp)
+        If you are in a Maher area, you will need to  [apply for a Maher Ordinance waiver](https://www.sfdph.org/dph/EH/HazWaste/hazWasteSiteMitigation.asp)
+
+        To learn whether this applies to you, consult our [map of Maher areas](https://sfplanninggis.org/pim/map.html?layers=Maher%20Ordinance). 
       type: paragraph
 
   - type: header
-    level: 3
-    label: Reports you will need to order
+    level: 4
+    label: Commissioned reports
 
   - type: paragraph
-    label: "You will also need to commission these reports:"
+    label: "You will also need to hire someone to produce:"
 
   - group: large-excavation
     fields:
     - group: geotechnical
       fields:
       - label: |
-          - Geotechnical report
+          - A geotechnical report
         type: paragraph
 
   - group: environmental-assessment
     fields:
     - label: |
-        - Phase I Site Environmental Assessment
+        - A Phase I Site Environmental Assessment
+      type: paragraph
+
+  - group: shadow-analysis
+    fields:
+    - label: |
+        - A [shadow analysis](https://sf-planning.org/sites/default/files/FileCenter/Documents/8442-Shadow%20Analysis%20Application.pdf)
       type: paragraph
 
   - label: Are you ready?
