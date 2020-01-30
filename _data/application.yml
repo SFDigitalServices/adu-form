@@ -181,7 +181,6 @@
       - label: Someone else
         shows: billing-contact
 
-
 - title: Billing contact information
   group: billing-contact
   fields:
@@ -199,18 +198,17 @@
     type: email
     annotation: PRJ (Planning) 
 
-
 - title: Use codes
   fields:
   - label: What are the building's current use codes?
     annotation: Form 3/8 (DBI)
     type: checkbox
     options:
-    - label: "10: Office"
-    - label: "24: Apartment"
-    - label: "27: 1 Family Dwelling"
-    - label: "28: 2 Family Dwelling"
-    - label: "79: Vacant Lot"
+    - label: "**10:** Office"
+    - label: "**24:** Apartment"
+    - label: "**27:** 1 Family Dwelling"
+    - label: "**28:** 2 Family Dwelling"
+    - label: "**79:** Vacant Lot"
     - label: "Other"
       shows: present-use-other
 
@@ -233,11 +231,11 @@
     annotation: Form 3/8 (DBI)
     type: checkbox
     options:
-    - label: "10: Office"
-    - label: "24: Apartment"
-    - label: "27: 1 Family Dwelling"
-    - label: "28: 2 Family Dwelling"
-    - label: "79: Vacant Lot"
+    - label: "**10:** Office"
+    - label: "**24:** Apartment"
+    - label: "**27:** 1 Family Dwelling"
+    - label: "**28:** 2 Family Dwelling"
+    - label: "**79:** Vacant Lot"
     - label: "Other"
       shows: proposed-use-other
 
@@ -1577,6 +1575,38 @@
     - label: How many bicycle spaces will there be after construction?
       type: number
 
+- title: Fire protection
+  fields:
+  - label: Does the property have fire sprinklers?
+    type: radio
+    annotation: Multi-Family Joint Checklist (Planning)
+    options:
+    - label: "Yes"
+      shows: sprinklers
+
+    - label: "No"
+
+  - group: sprinklers
+    fields:
+    - label: Which rooms and spaces do the sprinklers cover?
+      type: textarea
+      annotation: Multi-Family Joint Checklist (Planning)
+
+  - label: Does the property have fire alarms?
+    type: radio
+    annotation: Multi-Family Joint Checklist (Planning)
+    options:
+    - label: "Yes"
+      shows: alarms
+
+    - label: "No"
+
+  - group: alarms
+    fields:
+    - label: Which rooms and spaces do the alarms cover?
+      annotation: Multi-Family Joint Checklist (Planning)
+      type: textarea
+
 - title: Worker's compensation insurance
   fields:
   - label: What best describes the owner's coverage for worker's compensation insurance?
@@ -1671,38 +1701,6 @@
       type: textarea
       size: large
       annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
-
-- title: Fire protection
-  fields:
-  - label: Does the property have fire sprinklers?
-    type: radio
-    annotation: Multi-Family Joint Checklist (Planning)
-    options:
-    - label: "Yes"
-      shows: sprinklers
-
-    - label: "No"
-
-  - group: sprinklers
-    fields:
-    - label: Which rooms and spaces do the sprinklers cover?
-      type: textarea
-      annotation: Multi-Family Joint Checklist (Planning)
-
-  - label: Does the property have fire alarms?
-    type: radio
-    annotation: Multi-Family Joint Checklist (Planning)
-    options:
-    - label: "Yes"
-      shows: alarms
-
-    - label: "No"
-
-  - group: alarms
-    fields:
-    - label: Which rooms and spaces do the alarms cover?
-      annotation: Multi-Family Joint Checklist (Planning)
-      type: textarea
 
 - title: Child care
   fields:
@@ -2035,7 +2033,6 @@
       - Indexes
 
       - Drawings set to scale
-
 
 - title: Your plans
   fields:
