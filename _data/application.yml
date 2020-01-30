@@ -5,13 +5,13 @@
 
       - The builder's and owner's contact information
 
-      - Construction details like the project address, cost, and excavation area
+      - Property details like use and occupancy codes
 
-      - How you are currently using the land, and how you plan to change it
+      - Construction details like estimated costs, excavation area, all planned changes, and seismic work
 
-      - Safety-related topics like fire protection, seismic retrofitting, and worker's compensation insurance
+      - Legal requirements like workers’ compensation insurance policy coverage
 
-      Then, we'll ask you to upload your plans as PDFs and agree to our legal terms.
+      Finally you will upload your plans as PDFs and agree to our legal terms.
 
       Unless you are building the ADU yourself, you will need a professional to fill out this form. If you have not yet hired a architect, contractor or engineer licensed in California, you should do so before you apply.
     type: paragraph
@@ -56,7 +56,7 @@
         type: date
         annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
 
-- title: About you
+- title: Owner consent
   group: owner
   fields:
   - type: paragraph
@@ -127,7 +127,7 @@
     type: email
     annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI) 
  
-- title: Addresses
+- title: Owner’s address
   fields:
   - label: Owner's mailing address
     type: address
@@ -200,7 +200,7 @@
     annotation: PRJ (Planning) 
 
 
-- title: The property
+- title: Use codes
   fields:
   - label: What are the building's current use codes?
     annotation: Form 3/8 (DBI)
@@ -208,8 +208,8 @@
     options:
     - label: "10: Office"
     - label: "24: Apartment"
-    - label: "27: 1–Family Dwelling"
-    - label: "28: 2-Family Dwelling"
+    - label: "27: 1 Family Dwelling"
+    - label: "28: 2 Family Dwelling"
     - label: "79: Vacant Lot"
     - label: "Other"
       shows: present-use-other
@@ -218,14 +218,25 @@
     fields:
     - label: Enter any building use codes that are not listed above. 
 
-  - label: What use codes are you proposing?
+  - label: Will the building's use codes change after construction?
+    type: radio
+    annotation: DBI and Planning
+    options:
+    - label: "Yes"
+      shows: proposed-use-codes
+
+    - label: "No"
+
+  - group: proposed-use-codes
+    fields:  
+  - label: What will the building’s use codes be after construction?
     annotation: Form 3/8 (DBI)
     type: checkbox
     options:
     - label: "10: Office"
     - label: "24: Apartment"
-    - label: "27: 1–Family Dwelling"
-    - label: "28: 2-Family Dwelling"
+    - label: "27: 1 Family Dwelling"
+    - label: "28: 2 Family Dwelling"
     - label: "79: Vacant Lot"
     - label: "Other"
       shows: proposed-use-other
@@ -234,7 +245,7 @@
     fields:
     - label: Enter any proposed building use codes that are not listed above. 
 
-- title: Occupancy
+- title: Occupancy codes
   fields:
   - label: What are the property's current occupancy codes?
     type: checkbox
@@ -252,7 +263,7 @@
 
   - group: occupancy-current-other
     fields:
-      - label: Check off the rest of the building's current occupancy codes.
+      - label: Check all of the building's current occupancy codes.
         type: checkbox
         options:
         - label: "**A-1:** Assembly, fixed seating"
@@ -282,9 +293,7 @@
         - label: "**U:** Utility / Miscellaneous"
         annotation: DBI and Planning
 
-- title: Occupancy
-  fields:
-  - label: Will the occupancy codes change after construction?
+  - label: Will the building’s occupancy codes change after construction?
     type: radio
     annotation: DBI and Planning
     options:
@@ -295,7 +304,7 @@
 
   - group: proposed-occupancy
     fields:
-    - label: Proposed occupancy codes
+    - label: What will the building’s occupancy codes be after construction?
       type: checkbox
       options:
       - label: "**R-1**: Residential, transient hotel / motel (residential)"
@@ -311,7 +320,7 @@
 
     - group: occupancy-proposed-other
       fields:
-        - label: Check off the rest of the building's proposed occupancy codes.
+        - label: Check all of the building's occupancy codes after construction.
           type: checkbox
           options:
           - label: "**A-1**: Assembly, fixed seating"
@@ -341,7 +350,58 @@
           - label: "**U**: Utility / Miscellaneous"
           annotation: DBI and Planning
 
-- title: The property
+- title: Environmental assessment
+  fields:
+
+  - label: |
+      If your site is over 1,500 square feet or has: 
+
+      - A current or former gas station
+
+      - A parking lot
+
+      - An auto repair shop
+
+      - Dry cleaners
+
+      - Heavy manufacturing use
+
+      - Underground storage tanks
+
+      You need to provide an environmental site assessment after you apply.
+    type: paragraph
+
+  - label: Does the site have any of the above?
+    type: radio
+    annotation: PRJ (Planning)
+    options:
+    - label: "Yes"
+      shows: environmental-assessment
+
+    - label: "No"
+
+- title: Child care
+  fields:
+  - label: Does the project have a child care facility or school?
+    type: radio
+    annotation: This page is from PRJ (Planning)
+    options:
+    - label: "Yes"
+      shows: child-care
+
+    - label: "No"
+
+  - group: child-care
+    fields:
+    - label: Does it have over 30 students or over 1,500 square feet?
+      type: radio
+      options:
+      - label: "Yes"
+        shows: drop-off-plan
+
+      - label: "No"
+
+- title: Front setback
   fields:
   - label: Does the property have a front setback?
     type: radio
@@ -361,7 +421,41 @@
 
     - label: "No"
 
-- title: Construction work
+- title: Fire sprinklers
+  fields:
+  - label: Does the property have fire sprinklers?
+    type: radio
+    annotation: Multi-Family Joint Checklist (Planning)
+    options:
+    - label: "Yes"
+      shows: sprinklers
+
+    - label: "No"
+
+  - group: sprinklers
+    fields:
+    - label: Which rooms and spaces do the sprinklers cover?
+      type: textarea
+      annotation: Multi-Family Joint Checklist (Planning)
+
+- title: Fire alarms
+  fields:
+  - label: Does the property have fire alarms?
+    type: radio
+    annotation: Multi-Family Joint Checklist (Planning)
+    options:
+    - label: "Yes"
+      shows: alarms
+
+    - label: "No"
+
+  - group: alarms
+    fields:
+    - label: Which rooms and spaces do the alarms cover?
+      annotation: Multi-Family Joint Checklist (Planning)
+      type: textarea
+
+- title: Type of construction
   fields:
   - label: Type of construction
     type: select
@@ -377,6 +471,8 @@
     - label: "V-A: Protected Wood Frame"
     - label: "V-B: Unprotected Wood Frame"
 
+- title: Project estimates
+  fields:
   - label: Estimated cost
     type: price
     annotation: PRJ (Planning), Form 3/8 (DBI)
@@ -387,6 +483,8 @@
     unit: months
     annotation: PRJ (Planning)
 
+- title: Project estimates
+  fields:
   - label: Excavation area
     type: number
     unit: square feet
@@ -540,7 +638,7 @@
 
     - label: "No"
 
-- title: Construction impact
+- title: Construction type
   group: industrial-to-residential
   fields:
   - group: large-excavation
@@ -1564,38 +1662,6 @@
     - label: How many bicycle spaces will there be?
       type: number
 
-- title: Fire protection
-  fields:
-  - label: Does the property have fire sprinklers?
-    type: radio
-    annotation: Multi-Family Joint Checklist (Planning)
-    options:
-    - label: "Yes"
-      shows: sprinklers
-
-    - label: "No"
-
-  - group: sprinklers
-    fields:
-    - label: Which rooms and spaces do the sprinklers cover?
-      type: textarea
-      annotation: Multi-Family Joint Checklist (Planning)
-
-  - label: Does the property have fire alarms?
-    type: radio
-    annotation: Multi-Family Joint Checklist (Planning)
-    options:
-    - label: "Yes"
-      shows: alarms
-
-    - label: "No"
-
-  - group: alarms
-    fields:
-    - label: Which rooms and spaces do the alarms cover?
-      annotation: Multi-Family Joint Checklist (Planning)
-      type: textarea
-
 - title: Worker's compensation insurance
   fields:
   - label: What best describes the owner's coverage for worker's compensation insurance?
@@ -1691,57 +1757,6 @@
       size: large
       annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
 
-- title: Child care
-  fields:
-  - label: Does the project have a child care facility or school?
-    type: radio
-    annotation: This page is from PRJ (Planning)
-    options:
-    - label: "Yes"
-      shows: child-care
-
-    - label: "No"
-
-  - group: child-care
-    fields:
-    - label: Does it have over 30 students or over 1,500 square feet?
-      type: radio
-      options:
-      - label: "Yes"
-        shows: drop-off-plan
-
-      - label: "No"
-
-- title: Environmental assessment
-  fields:
-
-  - label: |
-      If your site is over 1,500 square feet or has: 
-
-      - A current or former gas station
-
-      - A parking lot
-
-      - An auto repair shop
-
-      - Dry cleaners
-
-      - Heavy manufacturing use
-
-      - Underground storage tanks
-
-      You need to provide an environmental site assessment after you apply.
-    type: paragraph
-
-  - label: Does the site have any of the above?
-    type: radio
-    annotation: PRJ (Planning)
-    options:
-    - label: "Yes"
-      shows: environmental-assessment
-
-    - label: "No"
-
 - title: Plan checklist
   fields:
   - type: paragraph
@@ -1749,7 +1764,7 @@
       Next, we are going to double-check that your plans have everything we need to approve them.
 
       Once we have gone through the list, we will ask you to upload your plans and agree to our legal terms.
-      
+
 - title: Site plan
   fields:
   - type: paragraph
