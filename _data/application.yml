@@ -1482,7 +1482,7 @@
 
   - group: proposed-buildings
     fields:
-    - label: How many buildings will there be?
+    - label: How many buildings will there be after construction?
       type: number
 
 - title: Building stories
@@ -1560,7 +1560,7 @@
     unit: gross square feet
     annotation: Everything on this page is from the PRJ (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the commercial square footage change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1580,7 +1580,7 @@
     type: number
     annotation: Everything on this page is from Form 3/8 (DBI)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the number of basements and cellars change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1590,7 +1590,7 @@
 
   - group: proposed-basements
     fields:
-    - label: How many basements or cellars will there be?
+    - label: How many basements or cellars will there be after construction?
       type: number
 
 - title: Parking
@@ -2002,9 +2002,9 @@
   fields:
   - type: paragraph
     label: |
-      On the next page, you will upload your plans and any supplemental documents. They must be in PDF format. 
+      On the next page, you will upload your plans and any supplemental documents. 
 
-      If your plan is over 200 pages or 200MB, you should split up your PDFs into different sections. Otherwise, you should combine your plans into a single file.
+      They must be in PDF format. If your plan is less than 200 pages or 200MB, upload your plans in a single file. If your plan is over 200 pages or 200MB, split your PDFs into different sections.
   
   - label: Format guidelines
     type: header
@@ -2013,7 +2013,11 @@
   - type: paragraph
     label: |
 
-      Your PDFs must be vectorized and unsecured, with searchable text. You should also use bookmarks to distinguish different sections (like architectural, site, and structural.) If there are spaces for e-signatures, you should enable markup.
+      Your PDFs must be vectorized and unsecured with searchable text. 
+
+      Use bookmarks to distinguish different sections (like architectural, site, and structural). 
+
+      If there are spaces for e-signatures, you should enable markup.
 
       Plans should also have:
 
@@ -2099,10 +2103,8 @@
 
       If we approve this application, you will still need to get these other permits approved.
 
-  - type: header
-    label: Removing housing services
-    level: 4
-
+- title: Removing housing services
+  fields:
   - type: paragraph
     label: |
       Pursuant to Rent Ordinance 37.2(r), you acknowledge that removing any of the following from a tenant requires a "just cause":
