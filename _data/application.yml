@@ -1514,6 +1514,48 @@
       show: no-parking-spaces
       if: "0"
 
+- title: Buildings
+  fields:
+  - label: How many buildings does the property have?
+    type: number
+    annotation: Everything on this page is from the PRJ (Planning)
+
+  - label: Will this change after you build the ADU(s)?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: proposed-buildings
+
+    - label: "No"
+
+  - group: proposed-buildings
+    fields:
+    - label: How many buildings will there be?
+      type: number
+
+- title: Building stories
+  fields:
+  - label: How many stories does the property have?
+    type: number
+    maxlength: 15 
+    annotation: Form 3/8 (DBI), PRJ and Joint Checklist (Planning)
+
+  - label: Will this change after you build the ADU(s)?
+    type: radio
+    annotation: If "no", populate "proposed stories" with the answer to "existing stories"
+    options:
+    - label: "Yes"
+      shows: proposed-stories
+
+    - label: "No"
+
+  - group: proposed-stories
+    fields:
+    - label: How many stories will there be?
+      type: number
+      maxlength: 15 
+      annotation: PRJ (Planning)
+
 - title: Residential area
   fields:
   - label: How many square feet of residential space does the property have?
@@ -1579,48 +1621,6 @@
     - label: How much commercial space will there be?
       type: number
       unit: gross square feet
-
-- title: Buildings
-  fields:
-  - label: How many buildings does the property have?
-    type: number
-    annotation: Everything on this page is from the PRJ (Planning)
-
-  - label: Will this change after you build the ADU(s)?
-    type: radio
-    options:
-    - label: "Yes"
-      shows: proposed-buildings
-
-    - label: "No"
-
-  - group: proposed-buildings
-    fields:
-    - label: How many buildings will there be?
-      type: number
-
-- title: Building stories
-  fields:
-  - label: How many stories does the property have?
-    type: number
-    maxlength: 15 
-    annotation: Form 3/8 (DBI), PRJ and Joint Checklist (Planning)
-
-  - label: Will this change after you build the ADU(s)?
-    type: radio
-    annotation: If "no", populate "proposed stories" with the answer to "existing stories"
-    options:
-    - label: "Yes"
-      shows: proposed-stories
-
-    - label: "No"
-
-  - group: proposed-stories
-    fields:
-    - label: How many stories will there be?
-      type: number
-      maxlength: 15 
-      annotation: PRJ (Planning)
 
 - title: Basements / cellars
   fields:
