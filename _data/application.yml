@@ -453,103 +453,6 @@
       annotation: Multi-Family Joint Checklist (Planning)
       type: textarea
 
-- title: Type of construction
-  fields:
-  - label: Type of construction
-    type: select
-    annotation: Form 3/8 (DBI), Joint Checklist (Planning)
-    options:
-    - label: "I-A: Fire Resistive Non-Combustible"
-    - label: "I-B: Fire Resistive Non-Combustible"
-    - label: "II-A: Protected Non-Combustible"
-    - label: "II-B: Unprotected Non-Combustible"
-    - label: "III-A: Protected Combustible"
-    - label: "III-B: Unprotected Combustible"
-    - label: "IV: Heavy Timber"
-    - label: "V-A: Protected Wood Frame"
-    - label: "V-B: Unprotected Wood Frame"
-
-- title: Project estimates
-  fields:
-  - label: Estimated cost
-    type: price
-    annotation: PRJ (Planning), Form 3/8 (DBI)
-
-  - label: Estimated length of construction
-    type: number
-    maxlength: 2
-    unit: months
-    annotation: PRJ (Planning)
-
-- title: Project excavation
-  fields:
-  - label: Excavation area
-    type: number
-    unit: square feet
-    maxlength: 4
-    annotation: PRJ (Planning)
-    shows: geotechnical
-    if: ">999"
-
-  - label: Excavation volume
-    type: number
-    unit: cubic yards
-    maxlength: 5
-    annotation: PRJ and Joint Checklist (Planning)
-    shows: large-excavation
-    if: ">49"
-
-  - label: Slope of building
-    hidden: yes
-    type: number
-    maxlength: 2
-    unit: "%"
-    annotation: PRJ (Planning)
-    shows: large-excavation
-    if: ">20"
-
-  - label: Including foundation work, how deep will you disturb the surface below grade?
-    type: number
-    annotation: PRJ and Joint Checklist (Planning)
-    maxlength: 3
-    unit: feet
-
-- title: Construction impact
-  fields:
-  - label: Will the work involve any of the following?
-    type: checkbox
-    options:
-    - label: Repairing or replacing the building's foundation
-      annotation: PRJ (Planning)
-
-    - label: Building a driveway or auto runway
-      annotation: Form 3/8 (DBI)
-      shows: auto-runway
-
-    - label: Using street space
-      annotation: Form 3/8 (DBI)
-      shows: street-space
-
-    - label: Changing the building's exterior
-      shows: exterior-changes
-
-    - label: Changing the floor-to-ceiling height
-      shows: floor-to-ceiling-height-change
-
-    - label: Repairing or changing the sidewalk above a basement
-
-    - label: Extending the building beyond the property line
-      annotation: Form 3/8 (DBI)
-      shows: building-extension
-
-    - label: Plumbing work
-      annotation: Form 3/8 (DBI)
-      shows: plumbing
-
-    - label: Electrical work
-      annotation: Form 3/8 (DBI)
-      shows: electrical
-
 - title: Front facade
   group: exterior-changes
   fields:
@@ -1465,6 +1368,103 @@
       - label: "95-17"
       - label: "162-16"
       - label: "162-17"
+
+- title: Type of construction
+  fields:
+  - label: Type of construction
+    type: select
+    annotation: Form 3/8 (DBI), Joint Checklist (Planning)
+    options:
+    - label: "I-A: Fire Resistive Non-Combustible"
+    - label: "I-B: Fire Resistive Non-Combustible"
+    - label: "II-A: Protected Non-Combustible"
+    - label: "II-B: Unprotected Non-Combustible"
+    - label: "III-A: Protected Combustible"
+    - label: "III-B: Unprotected Combustible"
+    - label: "IV: Heavy Timber"
+    - label: "V-A: Protected Wood Frame"
+    - label: "V-B: Unprotected Wood Frame"
+
+- title: Project estimates
+  fields:
+  - label: Estimated cost
+    type: price
+    annotation: PRJ (Planning), Form 3/8 (DBI)
+
+  - label: Estimated length of construction
+    type: number
+    maxlength: 2
+    unit: months
+    annotation: PRJ (Planning)
+
+- title: Project excavation
+  fields:
+  - label: Excavation area
+    type: number
+    unit: square feet
+    maxlength: 4
+    annotation: PRJ (Planning)
+    shows: geotechnical
+    if: ">999"
+
+  - label: Excavation volume
+    type: number
+    unit: cubic yards
+    maxlength: 5
+    annotation: PRJ and Joint Checklist (Planning)
+    shows: large-excavation
+    if: ">49"
+
+  - label: Slope of building
+    hidden: yes
+    type: number
+    maxlength: 2
+    unit: "%"
+    annotation: PRJ (Planning)
+    shows: large-excavation
+    if: ">20"
+
+  - label: Including foundation work, how deep will you disturb the surface below grade?
+    type: number
+    annotation: PRJ and Joint Checklist (Planning)
+    maxlength: 3
+    unit: feet
+
+- title: Construction impact
+  fields:
+  - label: Will the work involve any of the following?
+    type: checkbox
+    options:
+    - label: Repairing or replacing the building's foundation
+      annotation: PRJ (Planning)
+
+    - label: Building a driveway or auto runway
+      annotation: Form 3/8 (DBI)
+      shows: auto-runway
+
+    - label: Using street space
+      annotation: Form 3/8 (DBI)
+      shows: street-space
+
+    - label: Changing the building's exterior
+      shows: exterior-changes
+
+    - label: Changing the floor-to-ceiling height
+      shows: floor-to-ceiling-height-change
+
+    - label: Repairing or changing the sidewalk above a basement
+
+    - label: Extending the building beyond the property line
+      annotation: Form 3/8 (DBI)
+      shows: building-extension
+
+    - label: Plumbing work
+      annotation: Form 3/8 (DBI)
+      shows: plumbing
+
+    - label: Electrical work
+      annotation: Form 3/8 (DBI)
+      shows: electrical
 
 - title: Parking
   fields:
