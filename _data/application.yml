@@ -1662,35 +1662,6 @@
     - label: How many bicycle spaces will there be?
       type: number
 
-- title: Worker's compensation insurance
-  fields:
-  - label: What best describes the owner's coverage for worker's compensation insurance?
-    annotation: This is a duplicate, plain-language version of the 'Hold Harmless Clause' in Form 3/8, so it doesn't need to be recorded.
-    type: radio
-    options:
-    - label: "They are self-insured and have a certificate of consent."
-      shows: comp-I
-
-    - label: "They have personally bought insurance for this project."
-      shows: comp-II
-
-    - label: "They plan to hire a contractor who will follow worker's compensation laws."
-      shows: comp-V
-
-    - label: "They don't need insurance because they aren't hiring anyone."
-      shows: comp-IV
-
-    - label: "They don't need insurance because the work will cost under $100."
-      shows: comp-III
-
-  - group: comp-II
-    fields:
-    - label: Name of insurance carrier
-
-    - label: Policy number
-      type: number
-      maxlength: 15
-
 - title: Seismic work
   fields:
   - label: Have you applied for a seismic retrofitting permit?
@@ -1756,6 +1727,35 @@
       type: textarea
       size: large
       annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
+
+- title: Worker's compensation insurance
+  fields:
+  - label: What best describes the owner's coverage for worker's compensation insurance?
+    annotation: This is a duplicate, plain-language version of the 'Hold Harmless Clause' in Form 3/8, so it doesn't need to be recorded.
+    type: radio
+    options:
+    - label: "They are self-insured and have a certificate of consent."
+      shows: comp-I
+
+    - label: "They have personally bought insurance for this project."
+      shows: comp-II
+
+    - label: "They plan to hire a contractor who will follow worker's compensation laws."
+      shows: comp-V
+
+    - label: "They don't need insurance because they aren't hiring anyone."
+      shows: comp-IV
+
+    - label: "They don't need insurance because the work will cost under $100."
+      shows: comp-III
+
+  - group: comp-II
+    fields:
+    - label: Name of insurance carrier
+
+    - label: Policy number
+      type: number
+      maxlength: 15
 
 - title: Plan checklist
   fields:
