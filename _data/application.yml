@@ -181,7 +181,6 @@
       - label: Someone else
         shows: billing-contact
 
-
 - title: Billing contact information
   group: billing-contact
   fields:
@@ -198,7 +197,6 @@
   - label: Email
     type: email
     annotation: PRJ (Planning) 
-
 
 - title: Use codes
   fields:
@@ -483,7 +481,7 @@
     unit: months
     annotation: PRJ (Planning)
 
-- title: Project estimates
+- title: Project excavation
   fields:
   - label: Excavation area
     type: number
@@ -552,7 +550,7 @@
       annotation: Form 3/8 (DBI)
       shows: electrical
 
-- title: Construction impact
+- title: Front facade
   group: exterior-changes
   fields:
   - label: Are you changing the front facade?
@@ -576,7 +574,7 @@
       - label: "No"
         shows: exterior-changes-no-expansion
 
-- title: Construction impact
+- title: Street trees
   fields:
   - label: Are you planning to plant street trees?
     type: radio
@@ -588,7 +586,7 @@
     - label: "No, and I have paid the in-lieu fee"
       shows: street-tree-fee
 
-- title: Construction impact
+- title: Building height
   fields:
   - label: Are you adding height to the existing building?
     annotation: Form 3/8 (DBI)
@@ -608,7 +606,7 @@
       shows: shadow-analysis
       if: ">40"
 
-- title: Construction impact
+- title: Horizontal extension
   fields:
   - label: Do you plan to add a deck or horizontal extension?
     annotation: Form 3/8 (DBI)
@@ -638,7 +636,7 @@
 
     - label: "No"
 
-- title: Construction type
+- title: Usage
   group: industrial-to-residential
   fields:
   - group: large-excavation
@@ -1561,7 +1559,7 @@
     unit: units
     annotation: PRJ (Planning)
 
-- title: Commercial area
+- title: Commercial space
   fields:
   - label: How many square feet of commercial space does the property have?
     type: number
