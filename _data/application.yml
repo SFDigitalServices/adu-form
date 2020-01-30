@@ -622,7 +622,7 @@
 
   - group: new-ground-floor
     fields:
-    - label: What will the new ground floor area be?
+    - label: What will the new ground floor area be after construction?
       type: number
       maxlength: 4
       unit: square feet
@@ -1479,7 +1479,7 @@
     unit: gross square feet
     annotation: Everything on this page is from the PRJ (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the parking square footage change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1489,7 +1489,7 @@
 
   - group: proposed-parking-gsf
     fields:
-    - label: How many square feet of parking area will there be?
+    - label: How many square feet of parking area will there be after construction?
       type: number
       unit: gross square feet
 
@@ -1501,7 +1501,7 @@
     type: number
     annotation: Everything on this page is from the PRJ (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the number of parking spaces change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1511,7 +1511,7 @@
 
   - group: proposed-parking-spaces
     fields:
-    - label: How many parking spaces will there be?
+    - label: How many parking spaces will there be after construction?
       type: number
       show: no-parking-spaces
       if: "0"
@@ -1523,7 +1523,7 @@
     unit: gross square feet
     annotation: Everything on this page is from the PRJ (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the residential square footage change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1533,7 +1533,7 @@
 
   - group: proposed-residential-gsf
     fields:
-    - label: How much residential space will there be?
+    - label: How much residential space will there be after construction?
       type: number
       unit: gross square feet
 
@@ -1568,7 +1568,7 @@
     unit: gross square feet
     annotation: Everything on this page is from the PRJ (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the commercial square footage change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1578,7 +1578,7 @@
 
   - group: proposed-commercial-gsf
     fields:
-    - label: How much commercial space will there be?
+    - label: How much commercial space will there be after construction?
       type: number
       unit: gross square feet
 
@@ -1588,7 +1588,7 @@
     type: number
     annotation: Everything on this page is from the PRJ (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the number of buildings change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1608,7 +1608,7 @@
     maxlength: 15 
     annotation: Form 3/8 (DBI), PRJ and Joint Checklist (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the number of stories change after construction?
     type: radio
     annotation: If "no", populate "proposed stories" with the answer to "existing stories"
     options:
@@ -1619,7 +1619,7 @@
 
   - group: proposed-stories
     fields:
-    - label: How many stories will there be?
+    - label: How many stories will there be after construction?
       type: number
       maxlength: 15 
       annotation: PRJ (Planning)
@@ -1630,7 +1630,7 @@
     type: number
     annotation: Everything on this page is from Form 3/8 (DBI)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will this change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1640,7 +1640,7 @@
 
   - group: proposed-basements
     fields:
-    - label: How many basements or cellars will there be?
+    - label: How many basements or cellars will there be after construction?
       type: number
 
 - title: Bicycle spaces
@@ -1649,7 +1649,7 @@
     type: number
     annotation: Everything on this page is from the PRJ (Planning)
 
-  - label: Will this change after you build the ADU(s)?
+  - label: Will the number of bicycle spaces change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -1659,7 +1659,7 @@
 
   - group: proposed-bicycle-spaces
     fields:
-    - label: How many bicycle spaces will there be?
+    - label: How many bicycle spaces will there be after construction?
       type: number
 
 - title: Worker's compensation insurance
@@ -2079,7 +2079,9 @@
   fields:
   - type: paragraph
     label: |
-      This is not a building permit. Until we issue a permit to you, you cannot start work, change the property's occupancy, or change its use. (See the San Francisco Building Code and San Francisco Housing Code.)
+      This is not a building permit.
+
+      Until we issue a permit to you, you cannot start work, change the property's occupancy, or change its use. (See the San Francisco Building Code and San Francisco Housing Code.)
 
       Once we issue a building permit, you must post it at the job. The owner will also be responsible for keeping the approved plans and permit application at the property.
 
