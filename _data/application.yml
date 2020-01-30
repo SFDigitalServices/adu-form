@@ -1551,7 +1551,7 @@
 
 - title: Proposed units
   fields:
-  - label: How many units will the property have?
+  - label: How many units will the property have after construction?
     type: number
     unit: units
     annotation: Form 3/8 (DBI). "Number of proposed market-rate units" (needed by Planning) is this field minus "How many of those units are affordable?"
@@ -1598,7 +1598,7 @@
 
   - group: proposed-buildings
     fields:
-    - label: How many buildings will there be?
+    - label: How many buildings will there be after construction?
       type: number
 
 - title: Building stories
@@ -2004,9 +2004,9 @@
   fields:
   - type: paragraph
     label: |
-      On the next page, you will upload your plans and any supplemental documents. They must be in PDF format. 
+      On the next page, you will upload your plans and any supplemental documents.
 
-      If your plan is over 200 pages or 200MB, you should split up your PDFs into different sections. Otherwise, you should combine your plans into a single file.
+      They must be in PDF format. If your plan is over 200 pages or 200MB, you should split up your PDFs into different sections. Otherwise, you should combine your plans into a single file.
   
   - label: Format guidelines
     type: header
@@ -2015,7 +2015,12 @@
   - type: paragraph
     label: |
 
-      Your PDFs must be vectorized and unsecured, with searchable text. You should also use bookmarks to distinguish different sections (like architectural, site, and structural.) If there are spaces for e-signatures, you should enable markup.
+      Your PDFs must be vectorized and unsecured with searchable text.
+
+      Use bookmarks to distinguish different sections (like architectural, site, and structural). 
+      
+      If there are spaces for e-signatures, you should enable markup.
+
 
       Plans should also have:
 
