@@ -350,57 +350,6 @@
           - label: "**U**: Utility / Miscellaneous"
           annotation: DBI and Planning
 
-- title: Environmental assessment
-  fields:
-
-  - label: |
-      If your site is over 1,500 square feet or has: 
-
-      - A current or former gas station
-
-      - A parking lot
-
-      - An auto repair shop
-
-      - Dry cleaners
-
-      - Heavy manufacturing use
-
-      - Underground storage tanks
-
-      You need to provide an environmental site assessment after you apply.
-    type: paragraph
-
-  - label: Does the site have any of the above?
-    type: radio
-    annotation: PRJ (Planning)
-    options:
-    - label: "Yes"
-      shows: environmental-assessment
-
-    - label: "No"
-
-- title: Child care
-  fields:
-  - label: Does the project have a child care facility or school?
-    type: radio
-    annotation: This page is from PRJ (Planning)
-    options:
-    - label: "Yes"
-      shows: child-care
-
-    - label: "No"
-
-  - group: child-care
-    fields:
-    - label: Does it have over 30 students or over 1,500 square feet?
-      type: radio
-      options:
-      - label: "Yes"
-        shows: drop-off-plan
-
-      - label: "No"
-
 - title: Front setback
   fields:
   - label: Does the property have a front setback?
@@ -420,40 +369,6 @@
       shows: project-north
 
     - label: "No"
-
-- title: Fire sprinklers
-  fields:
-  - label: Does the property have fire sprinklers?
-    type: radio
-    annotation: Multi-Family Joint Checklist (Planning)
-    options:
-    - label: "Yes"
-      shows: sprinklers
-
-    - label: "No"
-
-  - group: sprinklers
-    fields:
-    - label: Which rooms and spaces do the sprinklers cover?
-      type: textarea
-      annotation: Multi-Family Joint Checklist (Planning)
-
-- title: Fire alarms
-  fields:
-  - label: Does the property have fire alarms?
-    type: radio
-    annotation: Multi-Family Joint Checklist (Planning)
-    options:
-    - label: "Yes"
-      shows: alarms
-
-    - label: "No"
-
-  - group: alarms
-    fields:
-    - label: Which rooms and spaces do the alarms cover?
-      annotation: Multi-Family Joint Checklist (Planning)
-      type: textarea
 
 - title: Type of construction
   fields:
@@ -1756,6 +1671,89 @@
       type: textarea
       size: large
       annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
+
+- title: Fire protection
+  fields:
+  - label: Does the property have fire sprinklers?
+    type: radio
+    annotation: Multi-Family Joint Checklist (Planning)
+    options:
+    - label: "Yes"
+      shows: sprinklers
+
+    - label: "No"
+
+  - group: sprinklers
+    fields:
+    - label: Which rooms and spaces do the sprinklers cover?
+      type: textarea
+      annotation: Multi-Family Joint Checklist (Planning)
+
+  - label: Does the property have fire alarms?
+    type: radio
+    annotation: Multi-Family Joint Checklist (Planning)
+    options:
+    - label: "Yes"
+      shows: alarms
+
+    - label: "No"
+
+  - group: alarms
+    fields:
+    - label: Which rooms and spaces do the alarms cover?
+      annotation: Multi-Family Joint Checklist (Planning)
+      type: textarea
+
+- title: Child care
+  fields:
+  - label: Does the project have a child care facility or school?
+    type: radio
+    annotation: This page is from PRJ (Planning)
+    options:
+    - label: "Yes"
+      shows: child-care
+
+    - label: "No"
+
+  - group: child-care
+    fields:
+    - label: Does it have over 30 students or over 1,500 square feet?
+      type: radio
+      options:
+      - label: "Yes"
+        shows: drop-off-plan
+
+      - label: "No"
+
+- title: Environmental assessment
+  fields:
+
+  - label: |
+      If your site is over 1,500 square feet or has: 
+
+      - A current or former gas station
+
+      - A parking lot
+
+      - An auto repair shop
+
+      - Dry cleaners
+
+      - Heavy manufacturing use
+
+      - Underground storage tanks
+
+      You need to provide an environmental site assessment after you apply.
+    type: paragraph
+
+  - label: Does the site have any of the above?
+    type: radio
+    annotation: PRJ (Planning)
+    options:
+    - label: "Yes"
+      shows: environmental-assessment
+
+    - label: "No"
 
 - title: Plan checklist
   fields:
