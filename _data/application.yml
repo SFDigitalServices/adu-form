@@ -1466,54 +1466,6 @@
       annotation: Form 3/8 (DBI)
       shows: electrical
 
-- title: Parking
-  fields:
-  - label: Square feet of parking
-    type: header
-    level: 3
-
-  - label: How many square feet of parking area does the property have?
-    type: number
-    unit: gross square feet
-    annotation: Everything on this page is from the PRJ (Planning)
-
-  - label: Will this change after you build the ADU(s)?
-    type: radio
-    options:
-    - label: "Yes"
-      shows: proposed-parking-gsf
-
-    - label: "No"
-
-  - group: proposed-parking-gsf
-    fields:
-    - label: How many square feet of parking area will there be?
-      type: number
-      unit: gross square feet
-
-  - label: Parking spaces
-    type: header
-    level: 3
-
-  - label: How many parking spaces does the property have?
-    type: number
-    annotation: Everything on this page is from the PRJ (Planning)
-
-  - label: Will this change after you build the ADU(s)?
-    type: radio
-    options:
-    - label: "Yes"
-      shows: proposed-parking-spaces
-
-    - label: "No"
-
-  - group: proposed-parking-spaces
-    fields:
-    - label: How many parking spaces will there be?
-      type: number
-      show: no-parking-spaces
-      if: "0"
-
 - title: Buildings
   fields:
   - label: How many buildings does the property have?
@@ -1640,6 +1592,54 @@
     fields:
     - label: How many basements or cellars will there be?
       type: number
+
+- title: Parking
+  fields:
+  - label: Square feet of parking
+    type: header
+    level: 3
+
+  - label: How many square feet of parking area does the property have?
+    type: number
+    unit: gross square feet
+    annotation: Everything on this page is from the PRJ (Planning)
+
+  - label: Will this change after you build the ADU(s)?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: proposed-parking-gsf
+
+    - label: "No"
+
+  - group: proposed-parking-gsf
+    fields:
+    - label: How many square feet of parking area will there be?
+      type: number
+      unit: gross square feet
+
+  - label: Parking spaces
+    type: header
+    level: 3
+
+  - label: How many parking spaces does the property have?
+    type: number
+    annotation: Everything on this page is from the PRJ (Planning)
+
+  - label: Will this change after you build the ADU(s)?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: proposed-parking-spaces
+
+    - label: "No"
+
+  - group: proposed-parking-spaces
+    fields:
+    - label: How many parking spaces will there be?
+      type: number
+      show: no-parking-spaces
+      if: "0"
 
 - title: Bicycle spaces
   fields:
