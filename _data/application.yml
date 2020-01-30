@@ -181,7 +181,6 @@
       - label: Someone else
         shows: billing-contact
 
-
 - title: Billing contact information
   group: billing-contact
   fields:
@@ -199,18 +198,17 @@
     type: email
     annotation: PRJ (Planning) 
 
-
 - title: Use codes
   fields:
   - label: What are the building's current use codes?
     annotation: Form 3/8 (DBI)
     type: checkbox
     options:
-    - label: "10: Office"
-    - label: "24: Apartment"
-    - label: "27: 1 Family Dwelling"
-    - label: "28: 2 Family Dwelling"
-    - label: "79: Vacant Lot"
+    - label: "**10:** Office"
+    - label: "**24:** Apartment"
+    - label: "**27:** 1 Family Dwelling"
+    - label: "**28:** 2 Family Dwelling"
+    - label: "**79:** Vacant Lot"
     - label: "Other"
       shows: present-use-other
 
@@ -233,11 +231,11 @@
     annotation: Form 3/8 (DBI)
     type: checkbox
     options:
-    - label: "10: Office"
-    - label: "24: Apartment"
-    - label: "27: 1 Family Dwelling"
-    - label: "28: 2 Family Dwelling"
-    - label: "79: Vacant Lot"
+    - label: "**10:** Office"
+    - label: "**24:** Apartment"
+    - label: "**27:** 1 Family Dwelling"
+    - label: "**28:** 2 Family Dwelling"
+    - label: "**79:** Vacant Lot"
     - label: "Other"
       shows: proposed-use-other
 
@@ -2035,7 +2033,6 @@
       - Indexes
 
       - Drawings set to scale
-
 
 - title: Your plans
   fields:
