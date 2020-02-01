@@ -96,7 +96,7 @@
 - title: Property
   group: non-owner
   fields:
-  - label: Owner information
+  - label: Owner
     type: header
     level: 2
 
@@ -109,9 +109,12 @@
     - label: "An organization"
       shows: owner-org
 
-- title: "The property: Owner's information"
+- title: Property
   group: non-owner
   fields:
+  - label: Owner's information
+    type: header
+    level: 2
   - group: owner-org
     fields:
     - label: Name of organization
@@ -135,8 +138,12 @@
     type: email
     annotation: PRJ (Planning), Form 3/8 and Authorized Agent Disclosure (DBI) 
  
-- title: "The property: Owner’s address"
+- title: Property
   fields:
+  - label: Owner's address
+    type: header
+    level: 2
+  
   - label: Owner's mailing address
     type: address
     annotation: PRJ (Planning), Authorized Agent Disclosure (DBI) 
@@ -163,8 +170,12 @@
       annotation: G-23 Attachment B and Form 3/8 (DBI)
       hidden: yes
 
-- title: "The property: Use codes"
+- title: Property
   fields:
+  - label: Use codes
+    type: header
+    level: 2
+     
   - label: What are the building's current use codes?
     annotation: Form 3/8 (DBI)
     type: checkbox
@@ -208,20 +219,24 @@
     fields:
     - label: Enter any proposed building use codes that are not listed above. 
 
-- title: "The property: Occupancy codes"
+- title: Property
   fields:
+  - label: Occupancy codes
+    type: header
+    level: 2
+
   - label: What are the property's current occupancy codes?
     type: checkbox
     options:
-    - label: "**R-1:** Residential, transient hotel / motel (residential)"
-    - label: "**R-2:** Residential, apartment / condominium with 3+ units"
-    - label: "**R-2.1:** Residential, supervised apartment / condominum"
-    - label: "**R-3:** General residential"
-    - label: "**R-3.1:** General supervised residential"
-    - label: "**R-4:** Residential, supervised"
-    - label: "**S:** Storage"
-    - label: "Other"
-      shows: occupancy-current-other
+      - label: "R-1: Residential, transient hotel / motel (residential)"
+      - label: "R-2: Residential, apartment / condominium with 3+ units"
+      - label: "R-2.1: Residential, supervised apartment / condominum"
+      - label: "R-3: General residential"
+      - label: "R-3.1: General supervised residential"
+      - label: "R-4: Residential, supervised"
+      - label: "S: Storage"
+      - label: "Other"
+    shows: occupancy-current-other
     annotation: DBI and Planning
 
   - group: occupancy-current-other
@@ -229,31 +244,31 @@
       - label: Check all of the building's current occupancy codes.
         type: checkbox
         options:
-        - label: "**A-1:** Assembly, fixed seating"
-        - label: "**A-2:** Assembly, food / drink"
-        - label: "**A-3:** Assembly, other"
-        - label: "**A-4:** Assembly: indoor sport"
-        - label: "**A-5:** Assembly: outdoor activities"
-        - label: "**C:** Organized camp"
-        - label: "**E:** Educational"
-        - label: "**F-1:** Moderate-hazard factory / industrial"
-        - label: "**F-2:** Low-hazard factory / industrial"
-        - label: "**H-1:** Detonation hazard"
-        - label: "**H-2:** Deflagration hazard"
-        - label: "**H-3:** Combustion hazard"
-        - label: "**H-4:** Health hazard"
-        - label: "**H-5:** Semiconductor hazard"
-        - label: "**I-1:** Institutional, non-ambulatory, more than 6 units, supervised"
-        - label: "**I-2:** Institutional, non-ambulatory, more than 6 units, custodial"
-        - label: "**I-2.1:** Institutional, ambulatory, more than 5 units"
-        - label: "**I-3:** Institutional, restrained"
-        - label: "**I-4:** Day care facility"
-        - label: "**L:** Laboratory"
-        - label: "**M:** Mercantile"
-        - label: "**B:** Business"
-        - label: "**S-1:** Moderate-hazard storage"
-        - label: "**S-2:** Low-hazard storage"
-        - label: "**U:** Utility / Miscellaneous"
+          - label: "A-1: Assembly, fixed seating"
+          - label: "A-2: Assembly, food / drink"
+          - label: "A-3: Assembly, other"
+          - label: "A-4: Assembly: indoor sport"
+          - label: "A-5: Assembly: outdoor activities"
+          - label: "C: Organized camp"
+          - label: "E: Educational"
+          - label: "F-1: Moderate-hazard factory / industrial"
+          - label: "F-2: Low-hazard factory / industrial"
+          - label: "H-1: Detonation hazard"
+          - label: "H-2: Deflagration hazard"
+          - label: "H-3: Combustion hazard"
+          - label: "H-4: Health hazard"
+          - label: "H-5: Semiconductor hazard"
+          - label: "I-1: Institutional, non-ambulatory, more than 6 units, supervised"
+          - label: "I-2: Institutional, non-ambulatory, more than 6 units, custodial"
+          - label: "I-2.1: Institutional, ambulatory, more than 5 units"
+          - label: "I-3: Institutional, restrained"
+          - label: "I-4: Day care facility"
+          - label: "L: Laboratory"
+          - label: "M: Mercantile"
+          - label: "B: Business"
+          - label: "S-1: Moderate-hazard storage"
+          - label: "S-2: Low-hazard storage"
+          - label: "U: Utility / Miscellaneous"
         annotation: DBI and Planning
 
   - label: Will the building’s occupancy codes change after construction?
@@ -270,13 +285,13 @@
     - label: What will the building’s occupancy codes be after construction?
       type: checkbox
       options:
-      - label: "**R-1**: Residential, transient hotel / motel (residential)"
-      - label: "**R-2**: Residential, apartment / condominium with 3+ units"
-      - label: "**R-2.1**: Residential, supervised apartment / condominum"
-      - label: "**R-3**: General residential"
-      - label: "**R-3.1**: General supervised residential"
-      - label: "**R-4**: Residential, supervised"
-      - label: "**S**: Storage"
+      - label: "R-1: Residential, transient hotel / motel (residential)"
+      - label: "R-2: Residential, apartment / condominium with 3+ units"
+      - label: "R-2.1: Residential, supervised apartment / condominum"
+      - label: "R-3: General residential"
+      - label: "R-3.1: General supervised residential"
+      - label: "R-4: Residential, supervised"
+      - label: "S: Storage"
       - label: "Other"
         shows: proposed occupancy-other
       annotation: DBI and Planning
@@ -286,35 +301,38 @@
         - label: Check all of the building's occupancy codes after construction.
           type: checkbox
           options:
-          - label: "**A-1**: Assembly, fixed seating"
-          - label: "**A-2**: Assembly, food / drink"
-          - label: "**A-3**: Assembly, other"
-          - label: "**A-4**: Assembly: indoor sport"
-          - label: "**A-5**: Assembly: outdoor activities"
-          - label: "**C**: Organized camp"
-          - label: "**E**: Educational"
-          - label: "**F-1**: Moderate-hazard factory / industrial"
-          - label: "**F-2**: Low-hazard factory / industrial"
-          - label: "**H-1**: Detonation hazard"
-          - label: "**H-2**: Deflagration hazard"
-          - label: "**H-3**: Combustion hazard"
-          - label: "**H-4**: Health hazard"
-          - label: "**H-5**: Semiconductor hazard"
-          - label: "**I-1**: Institutional, non-ambulatory, more than 6 units, supervised"
-          - label: "**I-2**: Institutional, non-ambulatory, more than 6 units, custodial"
-          - label: "**I-2.1**: Institutional, ambulatory, more than 5 units"
-          - label: "**I-3**: Institutional, restrained"
-          - label: "**I-4**: Day care facility"
-          - label: "**L**: Laboratory"
-          - label: "**M**: Mercantile"
-          - label: "**B**: Business"
-          - label: "**S-1**: Moderate-hazard storage"
-          - label: "**S-2**: Low-hazard storage"
-          - label: "**U**: Utility / Miscellaneous"
+          - label: "A-1: Assembly, fixed seating"
+          - label: "A-2: Assembly, food / drink"
+          - label: "A-3: Assembly, other"
+          - label: "A-4: Assembly: indoor sport"
+          - label: "A-5: Assembly: outdoor activities"
+          - label: "C: Organized camp"
+          - label: "E: Educational"
+          - label: "F-1: Moderate-hazard factory / industrial"
+          - label: "F-2: Low-hazard factory / industrial"
+          - label: "H-1: Detonation hazard"
+          - label: "H-2: Deflagration hazard"
+          - label: "H-3: Combustion hazard"
+          - label: "H-4: Health hazard"
+          - label: "H-5: Semiconductor hazard"
+          - label: "I-1: Institutional, non-ambulatory, more than 6 units, supervised"
+          - label: "I-2: Institutional, non-ambulatory, more than 6 units, custodial"
+          - label: "I-2.1: Institutional, ambulatory, more than 5 units"
+          - label: "I-3: Institutional, restrained"
+          - label: "I-4: Day care facility"
+          - label: "L: Laboratory"
+          - label: "M: Mercantile"
+          - label: "B: Business"
+          - label: "S-1: Moderate-hazard storage"
+          - label: "S-2: Low-hazard storage"
+          - label: "U: Utility / Miscellaneous"
           annotation: DBI and Planning
 
-- title: "The property: Environmental assessment"
+- title: Property
   fields:
+  - label: Environmental assessment
+    type: header
+    level: 2
 
   - label: |
       If your site is over 1,500 square feet or has: 
@@ -343,8 +361,12 @@
 
     - label: "No"
 
-- title: "The property: Child care facility"
+- title: Property
   fields:
+  - label: Child care facility
+    type: header
+    level: 2
+
   - label: Does the project have a child care facility or school?
     type: radio
     annotation: This page is from PRJ (Planning)
@@ -364,8 +386,12 @@
 
       - label: "No"
 
-- title: "The property: Front setback"
+- title: Property
   fields:
+  - label: Front setback
+    type: header
+    level: 2
+
   - label: Does the property have a front setback?
     type: radio
     annotation: Needed for plan checklist    
@@ -384,8 +410,12 @@
 
     - label: "No"
 
-- title: "The property: Fire sprinklers"
+- title: Property
   fields:
+  - label: Fire sprinklers
+    type: header
+    level: 2
+
   - label: Does the property have fire sprinklers?
     type: radio
     annotation: Multi-Family Joint Checklist (Planning)
@@ -401,8 +431,12 @@
       type: textarea
       annotation: Multi-Family Joint Checklist (Planning)
 
-- title: "The property: Fire alarms"
+- title: Pproperty
   fields:
+  - label: Fire alarms
+    type: header
+    level: 2
+
   - label: Does the property have fire alarms?
     type: radio
     annotation: Multi-Family Joint Checklist (Planning)
@@ -418,8 +452,12 @@
       annotation: Multi-Family Joint Checklist (Planning)
       type: textarea
 
-- title: "The property: Current ADUs"
+- title: Property
   fields:
+  - label: Current ADUs
+    type: header
+    level: 2
+
   - label: How many legal ADUs does the property currently have?
     type: number
     maxlength: 2
@@ -821,8 +859,12 @@
       - label: "162-16"
       - label: "162-17"
 
-- title: "Construction: Proposed ADUs"
+- title: Construction
   fields:
+  - label: Proposed ADUs
+    type: header
+    level: 2
+ 
   - label: How many ADUs are you proposing for this project?
     type: number
     maxlength: 2
@@ -1223,10 +1265,14 @@
       - label: "162-16"
       - label: "162-17"
 
-- title: "Construction: Type of construction"
+- title: Construction
   fields:
   - label: Type of construction
-    type: select
+    type: header
+    level: 2
+ 
+  - label: Type of construction
+    type: radio
     annotation: Form 3/8 (DBI), Joint Checklist (Planning)
     options:
     - label: "I-A: Fire Resistive Non-Combustible"
@@ -1239,8 +1285,12 @@
     - label: "V-A: Protected Wood Frame"
     - label: "V-B: Unprotected Wood Frame"
 
-- title: "Construction: Project Esimates"
+- title: Construction
   fields:
+  - label: Project estimates
+    type: header
+    level: 2
+
   - label: Estimated cost
     type: price
     annotation: PRJ (Planning), Form 3/8 (DBI)
@@ -1251,8 +1301,12 @@
     unit: months
     annotation: PRJ (Planning)
 
-- title: "Construction: Excavation"
+- title: Construction
   fields:
+  - label: Excavation
+    type: header
+    level: 2
+
   - label: Excavation area
     type: number
     unit: square feet
@@ -1284,8 +1338,12 @@
     maxlength: 3
     unit: feet
 
-- title: "Construction: Impact"
+- title: Construction
   fields:
+  - label: Impact
+    type: header
+    level: 2
+
   - label: Will the work involve any of the following?
     type: checkbox
     options:
@@ -1320,8 +1378,12 @@
       annotation: Form 3/8 (DBI)
       shows: electrical
 
-- title: "Construction: Buildings"
+- title: Construction
   fields:
+  - label: Buildings
+    type: header
+    level: 2
+
   - label: How many buildings does the property have?
     type: number
     annotation: Everything on this page is from the PRJ (Planning)
@@ -1339,8 +1401,12 @@
     - label: How many buildings will there be after construction?
       type: number
 
-- title: "Construction: Building stories"
+- title: Construction
   fields:
+  - label: Buidling stories
+    type: header
+    level: 2
+
   - label: How many stories does the property have?
     type: number
     maxlength: 15 
@@ -1362,8 +1428,12 @@
       maxlength: 15 
       annotation: PRJ (Planning)
 
-- title: "Construction: Building height"
+- title: Construction
   fields:
+  - label: Building height
+    type: header
+    level: 2
+
   - label: Are you adding height to the existing building?
     annotation: Form 3/8 (DBI)
     type: radio
@@ -1382,8 +1452,12 @@
       shows: shadow-analysis
       if: ">40"
 
-- title: "Construction: Expanding the building"
+- title: Construction
   fields:
+  - label: Expanding the building
+    type: header
+    level: 2
+
   - label: Do you plan to add a deck or horizontal extension?
     annotation: Form 3/8 (DBI)
     
@@ -1412,8 +1486,12 @@
 
     - label: "No"
 
-- title: "Construction: Market-rate dwelling units"
+- title: Construction
   fields:
+  - label: Market-rate dwelling units
+    type: header
+    level: 2
+
   - label: How many market-rate dwelling units does the property have?
     type: number
     unit: units
@@ -1434,8 +1512,12 @@
       unit: units
       annotation: PRJ (Planning)
 
-- title: "Construction: Affrodable dwelling units"
+- title: Construction
   fields:
+  - label: Affordable dwelling units
+    type: header
+    level: 2
+
   - label: How many affordable dwelling units does the property have?
     type: number
     unit: units
@@ -1456,8 +1538,13 @@
       unit: units
       annotation: PRJ (Planning)
 
-- title: "Construction: Residential area"
+- title: Construction
   fields:
+  - label: Residential area
+    type: header
+    level: 2
+
+
   - label: How many square feet of residential space does the property have?
     type: number
     unit: gross square feet
@@ -1477,8 +1564,12 @@
       type: number
       unit: gross square feet
 
-- title: "Construction: Commercial area"
+- title: Construction
   fields:
+  - label: Commercial area
+    type: header
+    level: 2
+
   - label: How many square feet of commercial space does the property have?
     type: number
     unit: gross square feet
@@ -1498,8 +1589,12 @@
       type: number
       unit: gross square feet
 
-- title: "Construction: Basements and cellars"
+- title: Construction
   fields:
+  - label: Basements and cellars
+    type: header
+    level: 2
+
   - label: How many basements or cellars does the property have?
     type: number
     annotation: Everything on this page is from Form 3/8 (DBI)
@@ -1517,9 +1612,13 @@
     - label: How many basements or cellars will there be after construction?
       type: number
 
-- title: "Construction: Front facade"
+- title: Construction
   group: exterior-changes
   fields:
+  - label: Front facade
+    type: header
+    level: 2
+
   - label: Are you changing the front facade?
     type: radio
     annotation: Needed for plan checklist
@@ -1541,8 +1640,12 @@
       - label: "No"
         shows: exterior-changes-no-expansion
 
-- title: "Construction: Street trees"
+- title: Construction
   fields:
+  - label: Street trees
+    type: header
+    level: 2
+
   - label: Are you planning to plant street trees?
     type: radio
     annotation: Needed for plan checklist
@@ -1553,9 +1656,13 @@
     - label: "No, and I have paid the in-lieu fee"
       shows: street-tree-fee
 
-- title: "Construction: Industrial"
+- title: Construction
   group: industrial-to-residential
   fields:
+  - label: Industrial conversion
+    type: header
+    level: 2
+
   - group: large-excavation
     fields:
     - label: Are you changing the property from industrial to residential use?
@@ -1567,8 +1674,13 @@
 
       - label: "No"
 
-- title: "Construction: Housing services"
+- title: Construction
   fields:
+  - label: Housing services
+    type: header
+    level: 2
+
+
   - label: Will this ADU remove garages, parking facilities, driveways, storage spaces, laundry rooms, decks, patios, or gardens?
     type: radio
     annotation: G-23 Attachment B (DBI)
@@ -1578,8 +1690,12 @@
 
     - label: "No"
 
-- title: "Construction: Parking area"
+- title: Construction
   fields:
+  - label: Parking area
+    type: header
+    level: 2
+
   - label: How many square feet of parking area does the property have?
     type: number
     unit: gross square feet
@@ -1599,8 +1715,12 @@
       type: number
       unit: gross square feet
 
-- title: "Construction: Parking spaces"
+- title: Construction
   fields:
+  - label: Parking spaces
+    type: header
+    level: 2
+
   - label: How many parking spaces does the property have?
     type: number
     annotation: Everything on this page is from the PRJ (Planning)
@@ -1620,8 +1740,12 @@
       show: no-parking-spaces
       if: "0"
 
-- title: "Construction: Bicycle spaces"
+- title: Construction
   fields:
+  - label: Bicycle spaces
+    type: header
+    level: 2
+
   - label: How many bicycle spaces does the property have?
     type: number
     annotation: Everything on this page is from the PRJ (Planning)
@@ -1640,8 +1764,12 @@
       type: number
 
 
-- title: "Construction: Seismic retrofitting"
+- title: Construction
   fields:
+  - label: Seismic retrofitting
+    type: header
+    level: 2
+
   - label: Have you applied for a seismic retrofitting permit?
     annotation: G-23 Attachment B (DBI)
     helptext: This is required for all city construction. For more information, see [Chapter 4D of the Existing Building Code](http://library.amlegal.com/nxt/gateway.dll/California/sfbuilding/existingbuildingcode2016edition/chapter4dmandatoryearthquakeretrofitofwo?f=templates$fn=default.htm$3.0).
@@ -1659,8 +1787,12 @@
       maxlength: 15
       annotation: G-23 Attachment B (DBI)
 
-- title: "Construction: Seismic strenghtening"
+- title: Construction
   fields:
+  - label: Seismic strenghtening
+    type: header
+    level: 2
+ 
   - label: Have you filed for a seismic strengthening permit?
     annotation: G-23 Attachment B (DBI)
     helptext: This permit is optional. For more information, see [Administrative Bulletin AB-094](https://sfdbi.org/sites/default/files/migrated/FileCenter/Documents/Administrative_Bulletins/2013_AB/AB_094_updated_010114.pdf).
@@ -1691,8 +1823,12 @@
 
     - label: "No"
 
-- title: "Construction: Additional work"
+- title: Construction
   fields:
+  - label: Additional work
+    type: header
+    level: 2
+
   - label: Are you planning any work for this project in addition to ADUs?
     type: radio
     options:
@@ -1708,8 +1844,13 @@
       size: large
       annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
 
-- title: "Construction: Worker's comp"
+- title: Construction
   fields:
+  - label: Worker's comp
+    type: header
+    level: 2
+
+
   - label: What best describes the owner's coverage for worker's compensation insurance?
     annotation: This is a duplicate, plain-language version of the 'Hold Harmless Clause' in Form 3/8, so it doesn't need to be recorded.
     type: radio
@@ -1745,8 +1886,12 @@
 
       Once we have gone through the list, we will ask you to upload your plans and agree to our legal terms.
 
-- title: "Checklist: Site plan"
+- title: Checklist
   fields:
+  - label: Site plan
+    type: header
+    level: 2
+
   - type: paragraph
     label: |
       Does your site plan show and label:
@@ -1764,8 +1909,12 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
-- title: "Checklist: Site plan"
+- title: Checklist
   fields:
+  - label: Site plan
+    type: header
+    level: 2
+
   - type: paragraph
     label: |
       Does your site plan show:
@@ -1781,8 +1930,12 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
-- title: "Checklist: Site plan"
+- title: Checklist
   fields:
+  - label: Site plan
+    type: header
+    level: 2
+
   - type: paragraph
     label: |
       Does your site plan show:
@@ -1815,6 +1968,7 @@
     type: checkbox
 
 - group: exterior-changes
+
   title: Site plan
   fields:
   - type: paragraph
@@ -1852,8 +2006,12 @@
   - label: Yes, my plans contain the above.
     type: checkbox
 
-- title: "Checklist: Floor plans"
+- title: Checklist
   fields:
+  - label: Floor plan
+    type: header
+    level: 2
+
   - type: paragraph
     label: |
       On all floors, do your existing and proposed floor plans show and label:
@@ -1875,8 +2033,11 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
-- title: "Checklist: Floor plans"
+- title: Checklist
   fields:
+  - label: Floor plan
+    type: header
+    level: 2
   - type: paragraph
     label: |
       On all floors, do your existing and proposed floor plans show and label:
@@ -1888,8 +2049,12 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
-- title: "Checklist: Floor plans"
+- title: Checklist
   fields:
+  - label: Floor plan
+    type: header
+    level: 2
+
   - type: radio
     label: |
       On all floors, do your existing and proposed floor plans show and label all plumbing fixtures?
@@ -1923,8 +2088,12 @@
   - label: Yes, my plans contain the above.
     type: checkbox
 
-- title: "Checklist: Elevations"
+- title: Checklist
   fields:
+  - label: Elevations
+    type: header
+    level: 2
+
   - type: paragraph
     label: |
       Do your building elevations show and label:
@@ -1963,8 +2132,12 @@
   - label: Yes, my elevations contain all the above.
     type: checkbox
 
-- title: "Checklist: Section plans"
+- title: Checklist
   fields:
+  - label: Section plan
+    type: header
+    level: 2
+
   - type: paragraph
     label: |
       Do your section plans have:
