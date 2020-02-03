@@ -2016,22 +2016,20 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
-  - type: radio
+  - type: paragraph
     label: |
       On all floors, do your existing and proposed floor plans show and label all plumbing fixtures?
 
       (These include dishwashers, clothes washers, and hose bibs.)
-    options:
-    - label: "Yes"
-    - label: "No"
+  - label: Yes, my plans contain the above.
+    type: checkbox
 
 - title: Checklist
   fields:
   - label: "Floor plan (Multi-family dwellings)"
     type: header
     level: 2
-- group: multi-family
-  fields:
+  - group: multi-family
   - type: paragraph
     label: |
       On all floors, do your existing and proposed floor plans show and label:
@@ -2080,13 +2078,12 @@
     level: 2
 
   - group: exterior-changes
-    fields:
-    - type: paragraph
-      label: |
+  - type: paragraph
+    label: |
       Do you have separate existing and proposed site plans, showing all buildings on the lot?:
 
-    - label: Yes, my plans contain the above.
-      type: checkbox
+  - label: Yes, my plans contain the above.
+    type: checkbox
 
 - group: exterior-changes
   fields:
