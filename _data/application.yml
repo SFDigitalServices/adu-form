@@ -1666,34 +1666,17 @@
 
 - title: Construction
   fields:
-  - label: Housing services
-    type: header
-    level: 2
-
-
-  - label: Will this ADU remove garages, parking facilities, driveways, storage spaces, laundry rooms, decks, patios, or gardens?
-    type: radio
-    annotation: G-23 Attachment B (DBI)
-    options:
-    - label: "Yes"
-      shows: housing-services
-
-    - label: "No"
-
-
-- title: Construction
-  fields:
   - label: Seismic retrofitting
     type: header
     level: 2
 
   - label: Have you applied for a seismic retrofitting permit?
     annotation: G-23 Attachment B (DBI)
-    helptext: This is required for all city construction. For more information, see [Chapter 4D of the Existing Building Code](http://library.amlegal.com/nxt/gateway.dll/California/sfbuilding/existingbuildingcode2016edition/chapter4dmandatoryearthquakeretrofitofwo?f=templates$fn=default.htm$3.0).
+    helptext: This is required for all city construction. See [Chapter 4D of the Existing Building Code](http://library.amlegal.com/nxt/gateway.dll/California/sfbuilding/existingbuildingcode2016edition/chapter4dmandatoryearthquakeretrofitofwo?f=templates$fn=default.htm$3.0).
     type: radio
     options:
     - label: "Yes"
-      shows: seismic-retro-mandatory
+      shows: seismic-retro-number
 
     - label: "No"
 
@@ -1727,11 +1710,21 @@
       maxlength: 15
       annotation: G-23 Attachment B (DBI)
 
-  - label: >
-      Does the building follow the ordinances for ADUS?
-    helptext: >
-      See Ordinances [95-17](http://default.sfplanning.org/plans-and-programs/planning-for-the-city/accessory-dwelling-units/ADU_Ord_095-17_170125_signed.pdf), [162-16](https://sfgov.legistar.com/View.ashx?M=F&ID=4617538&GUID=2625970B-6704-46C2-A972-68BF0C206D9C) or [162-17](https://sfbos.org/sites/default/files/o0162-17.pdf).
+- title: Construction
+  fields:
+  - label: Housing services
+    type: header
+    level: 2
 
+
+  - label: Will this ADU remove garages, parking facilities, driveways, storage spaces, laundry rooms, decks, patios, or gardens?
+    type: radio
+    annotation: G-23 Attachment B (DBI)
+    options:
+    - label: "Yes"
+      shows: housing-services
+
+    - label: "No"
 
 - title: Construction
   fields:
@@ -1827,6 +1820,14 @@
       type: textarea
       size: large
       annotation: PRJ (Planning), Form 3/8 and Owner / Builder Disclosure (DBI) 
+
+  - label: "Does the building follow the ordinances for ADUs?"
+    type: radio
+    helptext: See Ordinances [95-17](http://default.sfplanning.org/plans-and-programs/planning-for-the-city/accessory-dwelling-units/ADU_Ord_095-17_170125_signed.pdf), [162-16](https://sfgov.legistar.com/View.ashx?M=F&ID=4617538&GUID=2625970B-6704-46C2-A972-68BF0C206D9C) or [162-17](https://sfbos.org/sites/default/files/o0162-17.pdf). After you submit, the planning department will check to see if you comply.
+    annotation: G-23 Attachment B (DBI)
+    options:
+    - label: "Yes"
+    - label: "No"
 
 - title: Construction
   fields:
