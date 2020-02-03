@@ -7,7 +7,7 @@
 
       - Property details like use and occupancy codes
 
-      - Construction details like estimated costs, excavation area, all planned changes, and seismic work
+      - Construction details like estimated costs, excavation area, planned changes, and seismic work
 
       - Legal requirements like workers’ compensation insurance policy coverage
 
@@ -24,37 +24,35 @@
   - label: Last name
     annotation: PRJ and Joint Checklist (Planning), G-23 Attachment B, Authorized Agent Disclosure and Owner / Builder Disclosure (DBI)
 
+  - label: Relationship to owner
+    type: radio
+    annotation: PRJ and Joint Checklist (Planning), Authorized Agent Disclosure (DBI)
+    options:
+    - label: I am the owner
+      shows: owner
+
+    - label: Architect
+      shows: non-owner
+
+    - label: Contractor
+      shows: non-owner
+
+    - label: Engineer
+      shows: non-owner
+
+    - label: Attorney
+      shows: non-owner
+    other: yes
+
   - group: non-owner
     fields:
-    - label: Relationship to owner
-      type: radio
-      annotation: PRJ and Joint Checklist (Planning), Authorized Agent Disclosure (DBI)
-      options:
-      - label: I am the owner
-        shows: owner
+    - label: California license number
+      maxlength: 12
+      annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
 
-      - label: Architect
-        shows: non-owner
-
-      - label: Contractor
-        shows: non-owner
-
-      - label: Engineer
-        shows: non-owner
-
-      - label: Attorney
-        shows: non-owner
-      other: yes
-
-    - group: non-owner
-      fields:
-      - label: California license number
-        maxlength: 12
-        annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
-
-      - label: License expiration date
-        type: date
-        annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
+    - label: License expiration date
+      type: date
+      annotation: Form 3/8 and Authorized Agent Disclosure (DBI)
 
 - title: Owner consent
   group: owner
@@ -96,7 +94,7 @@
 - title: Property
   group: non-owner
   fields:
-  - label: Owner
+  - label: Owner's information
     type: header
     level: 2
 
@@ -109,12 +107,6 @@
     - label: "An organization"
       shows: owner-org
 
-- title: Property
-  group: non-owner
-  fields:
-  - label: Owner's information
-    type: header
-    level: 2
   - group: owner-org
     fields:
     - label: Name of organization
@@ -190,7 +182,7 @@
 
   - group: present-use-other
     fields:
-    - label: Enter any building use codes that are not listed above. 
+    - label: Enter any building use codes not listed above. 
 
   - label: Will the building's use codes change after construction?
     type: radio
@@ -204,8 +196,8 @@
   - group: proposed-use-codes
     fields:  
   - label: What will the building’s use codes be after construction?
-    annotation: Form 3/8 (DBI)
     type: checkbox
+    annotation: Form 3/8 (DBI)
     options:
     - label: "10: Office"
     - label: "24: Apartment"
@@ -217,7 +209,7 @@
 
   - group: proposed-use-other
     fields:
-    - label: Enter any proposed building use codes that are not listed above. 
+    - label: Enter any proposed building use codes not listed above. 
 
 - title: Property
   fields:
@@ -335,7 +327,7 @@
     level: 2
 
   - label: |
-      If your site is over 1,500 square feet or has: 
+      If your lot is over 1,500 square feet or has: 
 
       - A current or former gas station
 
@@ -388,7 +380,49 @@
 
 - title: Property
   fields:
-  - label: Front setback
+  - label: Fire sprinklers
+    type: header
+    level: 2
+
+  - label: Does the property have fire sprinklers?
+    type: radio
+    annotation: Multi-Family Joint Checklist (Planning)
+    options:
+    - label: "Yes"
+      shows: sprinklers
+
+    - label: "No"
+
+  - group: sprinklers
+    fields:
+    - label: Which rooms and spaces do the sprinklers cover?
+      type: textarea
+      annotation: Multi-Family Joint Checklist (Planning)
+
+- title: Property
+  fields:
+  - label: Fire alarms
+    type: header
+    level: 2
+
+  - label: Does the property have fire alarms?
+    type: radio
+    annotation: Multi-Family Joint Checklist (Planning)
+    options:
+    - label: "Yes"
+      shows: alarms
+
+    - label: "No"
+
+  - group: alarms
+    fields:
+    - label: Which rooms and spaces do the alarms cover?
+      annotation: Multi-Family Joint Checklist (Planning)
+      type: textarea
+
+- title: Property
+  fields:
+  - label: Other
     type: header
     level: 2
 
@@ -412,48 +446,6 @@
 
 - title: Property
   fields:
-  - label: Fire sprinklers
-    type: header
-    level: 2
-
-  - label: Does the property have fire sprinklers?
-    type: radio
-    annotation: Multi-Family Joint Checklist (Planning)
-    options:
-    - label: "Yes"
-      shows: sprinklers
-
-    - label: "No"
-
-  - group: sprinklers
-    fields:
-    - label: Which rooms and spaces do the sprinklers cover?
-      type: textarea
-      annotation: Multi-Family Joint Checklist (Planning)
-
-- title: Pproperty
-  fields:
-  - label: Fire alarms
-    type: header
-    level: 2
-
-  - label: Does the property have fire alarms?
-    type: radio
-    annotation: Multi-Family Joint Checklist (Planning)
-    options:
-    - label: "Yes"
-      shows: alarms
-
-    - label: "No"
-
-  - group: alarms
-    fields:
-    - label: Which rooms and spaces do the alarms cover?
-      annotation: Multi-Family Joint Checklist (Planning)
-      type: textarea
-
-- title: Property
-  fields:
   - label: Current ADUs
     type: header
     level: 2
@@ -466,7 +458,7 @@
 
   - group: current-adus
     fields:
-    - label: Enter the relevant information for each ADU.
+    - label: We need to know the following information for each ADU.
       type: paragraph
 
     - label: "ADU #1"
@@ -482,18 +474,18 @@
       - label: "3 Bedroom"
       other: yes
 
-    - label: "Square footage"
+    - label: "Unit square footage"
       type: number
       unit: square feet
       maxlength: 4
 
     - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
+      type: radio
+      helptext: For information, read [a summary of ,  and 
       options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): permitted ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on the updates in this Ordiannce, please review [the Ordinance language](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf) to make sure your ADU complies."
 
     - label: "ADU #2"
       type: header
@@ -873,7 +865,7 @@
 
   - group: proposed-adus
     fields:
-    - label: Enter the unit types and square feet for each ADU.
+    - label: We need to know the following information for each ADU.
       type: paragraph
 
     - label: "ADU #1"
@@ -889,18 +881,18 @@
       - label: "3 Bedroom"
       other: yes
 
-    - label: "Square footage"
+    - label: "Unit square footage"
       type: number
       unit: square feet
       maxlength: 4
 
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
+    - label: "Which ordinance does this ADU comply with?"
+      type: radio
+      helptext: For information, read [a summary of ,  and 
       options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): permitted ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on the updates in this Ordiannce, please review [the Ordinance language](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf) to make sure your ADU complies."
 
     - label: "ADU #2"
       type: header
@@ -1266,11 +1258,7 @@
       - label: "162-17"
 
 - title: Construction
-  fields:
-  - label: Type of construction
-    type: header
-    level: 2
- 
+  fields: 
   - label: Type of construction
     type: radio
     annotation: Form 3/8 (DBI), Joint Checklist (Planning)
@@ -1476,16 +1464,6 @@
       unit: square feet
       annotation: Form 3/8 (DBI)
 
-  - label: Is the site in a Maher area?
-    hidden: yes
-    type: radio
-    annotation: PRJ (Planning)
-    options:
-    - label: "Yes"
-      shows: industrial-to-residential
-
-    - label: "No"
-
 - title: Construction
   fields:
   - label: Market-rate dwelling units
@@ -1656,23 +1634,6 @@
     - label: "No, and I have paid the in-lieu fee"
       shows: street-tree-fee
 
-- title: Construction
-  group: industrial-to-residential
-  fields:
-  - label: Industrial conversion
-    type: header
-    level: 2
-
-  - group: large-excavation
-    fields:
-    - label: Are you changing the property from industrial to residential use?
-      type: radio
-      annotation: PRJ (Planning)
-      options:
-      - label: "Yes"
-        shows: maher
-
-      - label: "No"
 
 - title: Construction
   fields:
@@ -1689,6 +1650,59 @@
       shows: housing-services
 
     - label: "No"
+
+
+- title: Construction
+  fields:
+  - label: Seismic retrofitting
+    type: header
+    level: 2
+
+  - label: Have you applied for a seismic retrofitting permit?
+    annotation: G-23 Attachment B (DBI)
+    helptext: This is required for all city construction. For more information, see [Chapter 4D of the Existing Building Code](http://library.amlegal.com/nxt/gateway.dll/California/sfbuilding/existingbuildingcode2016edition/chapter4dmandatoryearthquakeretrofitofwo?f=templates$fn=default.htm$3.0).
+    type: radio
+    options:
+    - label: "Yes"
+      shows: seismic-retro-mandatory
+
+    - label: "No"
+
+  - group: seismic-retro-number
+    fields:
+    - label: What is your seismic retrofitting permit application number?
+      type: number
+      maxlength: 15
+      annotation: G-23 Attachment B (DBI)
+
+- title: Construction
+  fields:
+  - label: Seismic strenghtening
+    type: header
+    level: 2
+ 
+  - label: Have you filed for a seismic strengthening permit?
+    annotation: G-23 Attachment B (DBI)
+    helptext: This permit is optional. For more information, see [Administrative Bulletin AB-094](https://sfdbi.org/sites/default/files/migrated/FileCenter/Documents/Administrative_Bulletins/2013_AB/AB_094_updated_010114.pdf).
+    type: radio
+    options:
+    - label: "Yes"
+      shows: seismic-strength
+
+    - label: "No"
+
+  - group: seismic-strength
+    fields:
+    - label: What is your seismic strengthening permit application number?
+      type: number
+      maxlength: 15
+      annotation: G-23 Attachment B (DBI)
+
+  - label: >
+      Does the building follow the ordinances for ADUS?
+    helptext: >
+      See Ordinances [95-17](http://default.sfplanning.org/plans-and-programs/planning-for-the-city/accessory-dwelling-units/ADU_Ord_095-17_170125_signed.pdf), [162-16](https://sfgov.legistar.com/View.ashx?M=F&ID=4617538&GUID=2625970B-6704-46C2-A972-68BF0C206D9C) or [162-17](https://sfbos.org/sites/default/files/o0162-17.pdf).
+
 
 - title: Construction
   fields:
@@ -1763,65 +1777,6 @@
     - label: How many bicycle spaces will there be after construction?
       type: number
 
-
-- title: Construction
-  fields:
-  - label: Seismic retrofitting
-    type: header
-    level: 2
-
-  - label: Have you applied for a seismic retrofitting permit?
-    annotation: G-23 Attachment B (DBI)
-    helptext: This is required for all city construction. For more information, see [Chapter 4D of the Existing Building Code](http://library.amlegal.com/nxt/gateway.dll/California/sfbuilding/existingbuildingcode2016edition/chapter4dmandatoryearthquakeretrofitofwo?f=templates$fn=default.htm$3.0).
-    type: radio
-    options:
-    - label: "Yes"
-      shows: seismic-retro-mandatory
-
-    - label: "No"
-
-  - group: seismic-retro-number
-    fields:
-    - label: What is your seismic retrofitting permit application number?
-      type: number
-      maxlength: 15
-      annotation: G-23 Attachment B (DBI)
-
-- title: Construction
-  fields:
-  - label: Seismic strenghtening
-    type: header
-    level: 2
- 
-  - label: Have you filed for a seismic strengthening permit?
-    annotation: G-23 Attachment B (DBI)
-    helptext: This permit is optional. For more information, see [Administrative Bulletin AB-094](https://sfdbi.org/sites/default/files/migrated/FileCenter/Documents/Administrative_Bulletins/2013_AB/AB_094_updated_010114.pdf).
-    type: radio
-    options:
-    - label: "Yes"
-      shows: seismic-strength
-
-    - label: "No"
-
-  - group: seismic-strength
-    fields:
-    - label: What is your seismic strengthening permit application number?
-      type: number
-      maxlength: 15
-      annotation: G-23 Attachment B (DBI)
-
-  - label: >
-      Does the building follow the ordinances for ADUS?
-    helptext: >
-      See Ordinances [95-17](http://default.sfplanning.org/plans-and-programs/planning-for-the-city/accessory-dwelling-units/ADU_Ord_095-17_170125_signed.pdf), [162-16](https://sfgov.legistar.com/View.ashx?M=F&ID=4617538&GUID=2625970B-6704-46C2-A972-68BF0C206D9C) or [162-17](https://sfbos.org/sites/default/files/o0162-17.pdf).
-
-      After you submit, the planning department will check to see if you comply.
-    type: radio
-    annotation: G-23 Attachment B (DBI)
-    options:
-    - label: "Yes"
-
-    - label: "No"
 
 - title: Construction
   fields:
@@ -1909,12 +1864,6 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
-- title: Checklist
-  fields:
-  - label: Site plan
-    type: header
-    level: 2
-
   - type: paragraph
     label: |
       Does your site plan show:
@@ -1929,12 +1878,6 @@
 
   - label: Yes, my plans contain all the above.
     type: checkbox
-
-- title: Checklist
-  fields:
-  - label: Site plan
-    type: header
-    level: 2
 
   - type: paragraph
     label: |
@@ -1967,16 +1910,14 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
-- group: exterior-changes
+  - group: exterior-changes
+    fields:
+    - type: paragraph
+      label: |
+      Do you have separate existing and proposed site plans, showing all buildings on the lot?:
 
-  title: Site plan
-  fields:
-  - type: paragraph
-    label: |
-      Do you have separate existing and proposed site plans, showing all buildings on the lot?
-
-  - label: Yes, my plans contain the above.
-    type: checkbox
+    - label: Yes, my plans contain the above.
+      type: checkbox
 
 - group: multi-family
   title: Site plan
@@ -1997,7 +1938,6 @@
     type: checkbox
 
 - group: multi-family
-  title: Site plan
   fields:
   - type: paragraph
     label: |
@@ -2049,12 +1989,6 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
-- title: Checklist
-  fields:
-  - label: Floor plan
-    type: header
-    level: 2
-
   - type: radio
     label: |
       On all floors, do your existing and proposed floor plans show and label all plumbing fixtures?
@@ -2065,7 +1999,6 @@
     - label: "No"
 
 - group: multi-family
-  title: Floor plans
   fields:
   - type: paragraph
     label: |
@@ -2109,7 +2042,6 @@
     type: checkbox
 
 - group: exterior-changes
-  title: Elevations
   fields:
   - type: paragraph
     label: |
@@ -2651,17 +2583,6 @@
 
       You should copy it for safekeeping.
 
-  - group: maher
-    fields:
-    - type: header
-      label: Maher ordinance waiver
-      level: 4
-
-    - label: |
-        If you are in a Maher area, you will need to  [apply for a Maher Ordinance waiver](https://www.sfdph.org/dph/EH/HazWaste/hazWasteSiteMitigation.asp)
-
-        To learn whether this applies to you, consult our [map of Maher areas](https://sfplanninggis.org/pim/map.html?layers=Maher%20Ordinance). 
-      type: paragraph
 
   - type: header
     level: 4
