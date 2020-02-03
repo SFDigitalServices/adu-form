@@ -479,12 +479,12 @@
       unit: square feet
       maxlength: 4
 
-    - label: "Which ordinance does this ADU comply with?"
+    - label: "How was this ADU permitted?"
       type: radio
       options:
-      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): permitted ADUs on residential lots City-wide"
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
       - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
-      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies."
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
 
     - label: "ADU #2"
       type: header
@@ -885,12 +885,12 @@
       unit: square feet
       maxlength: 4
 
-    - label: "Which ordinance does this ADU comply with?"
+    - label: "Which ordinance applies to this ADU?"
       type: radio
       options:
-      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): permitted ADUs on residential lots City-wide"
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
       - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
-      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies."
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
 
     - label: "ADU #2"
       type: header
@@ -1695,7 +1695,7 @@
  
   - label: Have you filed for a seismic strengthening permit?
     annotation: G-23 Attachment B (DBI)
-    helptext: This permit is optional. For more information, see [Administrative Bulletin AB-094](https://sfdbi.org/sites/default/files/migrated/FileCenter/Documents/Administrative_Bulletins/2013_AB/AB_094_updated_010114.pdf).
+    helptext: This permit is optional. See [Administrative Bulletin AB-094](https://sfdbi.org/sites/default/files/migrated/FileCenter/Documents/Administrative_Bulletins/2013_AB/AB_094_updated_010114.pdf).
     type: radio
     options:
     - label: "Yes"
