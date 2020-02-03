@@ -444,6 +444,16 @@
 
     - label: "No"
 
+  - label: Is the site in a Maher area?
+    hidden: yes
+    type: radio
+    annotation: PRJ (Planning)
+    options:
+    - label: "Yes"
+      shows: industrial-to-residential
+
+    - label: "No"
+
 - title: Property
   fields:
   - label: Current ADUs
@@ -481,11 +491,10 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: radio
-      helptext: For information, read [a summary of ,  and 
       options:
       - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): permitted ADUs on residential lots City-wide"
       - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
-      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on the updates in this Ordiannce, please review [the Ordinance language](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf) to make sure your ADU complies."
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies."
 
     - label: "ADU #2"
       type: header
@@ -888,11 +897,10 @@
 
     - label: "Which ordinance does this ADU comply with?"
       type: radio
-      helptext: For information, read [a summary of ,  and 
       options:
       - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): permitted ADUs on residential lots City-wide"
       - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
-      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on the updates in this Ordiannce, please review [the Ordinance language](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf) to make sure your ADU complies."
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies."
 
     - label: "ADU #2"
       type: header
@@ -1325,6 +1333,7 @@
     annotation: PRJ and Joint Checklist (Planning)
     maxlength: 3
     unit: feet
+
 
 - title: Construction
   fields:
@@ -2582,6 +2591,17 @@
       We have provided a list below of the additional forms you will need before we issue your permit.
 
       You should copy it for safekeeping.
+
+  - group: maher
+    fields:
+    - type: header
+      label: Maher ordinance waiver
+      level: 4
+
+    - label: |
+        If you are in a Maher area, you will need to  [apply for a Maher Ordinance waiver](https://www.sfdph.org/dph/EH/HazWaste/hazWasteSiteMitigation.asp)
+        To learn whether this applies to you, consult our [map of Maher areas](https://sfplanninggis.org/pim/map.html?layers=Maher%20Ordinance). 
+      type: paragraph
 
 
   - type: header
