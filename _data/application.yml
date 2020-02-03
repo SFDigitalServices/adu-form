@@ -444,16 +444,6 @@
 
     - label: "No"
 
-  - label: Is the site in a Maher area?
-    hidden: yes
-    type: radio
-    annotation: PRJ (Planning)
-    options:
-    - label: "Yes"
-      shows: industrial-to-residential
-
-    - label: "No"
-
 - title: Property
   fields:
   - label: Current ADUs
@@ -1375,6 +1365,35 @@
       annotation: Form 3/8 (DBI)
       shows: electrical
 
+  - label: Is the site in a Maher area?
+    hidden: yes
+    type: radio
+    annotation: PRJ (Planning)
+    options:
+    - label: "Yes"
+      shows: industrial-to-residential
+
+    - label: "No"
+
+- title: Construction
+  fields:
+  - label: Industrial-to-residential
+    type: header
+    level: 2
+    group: industrial-to-residential
+
+  - group: large-excavation
+    fields:
+    - label: Are you changing the property from industrial to residential use?
+      type: radio
+      annotation: PRJ (Planning)
+      options:
+      - label: "Yes"
+        shows: maher
+
+      - label: "No"
+
+
 - title: Construction
   fields:
   - label: Buildings
@@ -1626,6 +1645,7 @@
 
       - label: "No"
         shows: exterior-changes-no-expansion
+
 
 - title: Construction
   fields:
