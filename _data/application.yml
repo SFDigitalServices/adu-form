@@ -1893,6 +1893,10 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
+  - label: True north
+    type: header
+    level: 3
+
   - type: paragraph
     label: |
       Does your site plan show:
@@ -1907,6 +1911,10 @@
 
   - label: Yes, my plans contain all the above.
     type: checkbox
+
+  - label: Sidewalk and curbs
+    type: header
+    level: 3
 
   - type: paragraph
     label: |
@@ -1939,18 +1947,14 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
-  - group: exterior-changes
-    fields:
-    - type: paragraph
-      label: |
-      Do you have separate existing and proposed site plans, showing all buildings on the lot?:
-
-    - label: Yes, my plans contain the above.
-      type: checkbox
 
 - group: multi-family
-  title: Site plan
+  title: Checklist
   fields:
+  - label: Fire
+    type: header
+    level: 2
+
   - type: paragraph
     label: |
       Does your site plan label the locations of the:
@@ -1966,8 +1970,6 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
-- group: multi-family
-  fields:
   - type: paragraph
     label: |
       Does your site plan show the distance between the fire department connection and the nearest hydrant?
@@ -2002,11 +2004,6 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
-- title: Checklist
-  fields:
-  - label: Floor plan
-    type: header
-    level: 2
   - type: paragraph
     label: |
       On all floors, do your existing and proposed floor plans show and label:
@@ -2027,6 +2024,11 @@
     - label: "Yes"
     - label: "No"
 
+- title: Checklist
+  fields:
+  - label: "Floor plan (Multi-family dwellings)"
+    type: header
+    level: 2
 - group: multi-family
   fields:
   - type: paragraph
@@ -2069,6 +2071,21 @@
 
   - label: Yes, my elevations contain all the above.
     type: checkbox
+
+- title: Checklist
+  fields:
+  - label: Exterior changes
+    type: header
+    level: 2
+
+  - group: exterior-changes
+    fields:
+    - type: paragraph
+      label: |
+      Do you have separate existing and proposed site plans, showing all buildings on the lot?:
+
+    - label: Yes, my plans contain the above.
+      type: checkbox
 
 - group: exterior-changes
   fields:
