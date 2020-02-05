@@ -168,14 +168,14 @@
     type: header
     level: 2
      
-  - label: What are the building's current use codes?
+  - label: What are the building's present use codes?
     annotation: Form 3/8 (DBI)
     type: checkbox
     options:
-    - label: "10: Office"
     - label: "24: Apartment"
     - label: "27: 1 Family Dwelling"
     - label: "28: 2 Family Dwelling"
+    - label: "10: Office"    
     - label: "79: Vacant Lot"
     - label: "Other"
       shows: present-use-other
@@ -193,23 +193,23 @@
 
     - label: "No"
 
-  - group: proposed-use-codes
-    fields:  
-  - label: What will the building’s use codes be after construction?
-    type: checkbox
-    annotation: Form 3/8 (DBI)
-    options:
-    - label: "10: Office"
-    - label: "24: Apartment"
-    - label: "27: 1 Family Dwelling"
-    - label: "28: 2 Family Dwelling"
-    - label: "79: Vacant Lot"
-    - label: "Other"
-      shows: proposed-use-other
+    - group: proposed-use-codes
+      fields:  
+    - label: What will the building’s use codes be after construction?
+      type: checkbox
+      annotation: Form 3/8 (DBI)
+      options:
+      - label: "24: Apartment"
+      - label: "27: 1 Family Dwelling"
+      - label: "28: 2 Family Dwelling"
+      - label: "10: Office"
+      - label: "79: Vacant Lot"
+      - label: "Other"
+        shows: proposed-use-other
 
-  - group: proposed-use-other
-    fields:
-    - label: Enter any proposed building use codes not listed above. 
+    - group: proposed-use-other
+      fields:
+      - label: Enter any proposed building use codes not listed above. 
 
 - title: Property
   fields:
@@ -426,14 +426,14 @@
     type: header
     level: 2
 
-  - label: Does the property have a front setback?
-    type: radio
+  - label: What is the front setback of the property?
+    type: number
     annotation: Needed for plan checklist    
     options:
-    - label: "Yes"
-      shows: front-setback
-
-    - label: "No"
+    unit: square feet
+    maxlength: 4
+    shows: front-setback
+    if: ">0"
 
   - label: Is the project's north different from true north?
     type: radio
@@ -486,370 +486,6 @@
       - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
       - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
 
-    - label: "ADU #2"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #3"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #4"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #5"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #6"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #7"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #8"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #9"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #10"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #11"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #12"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #13"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #14"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #15"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
 - title: Construction
   fields:
   - label: Proposed ADUs
@@ -891,369 +527,6 @@
       - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
       - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
       - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
-
-    - label: "ADU #2"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #3"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #4"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #5"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #6"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #7"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #8"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #9"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #10"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #11"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #12"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance does this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #2"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #14"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
-
-    - label: "ADU #15"
-      type: header
-      level: 3
-
-    - label: "Unit type"
-      type: radio
-      options:
-      - label: "Studio"
-      - label: "1 Bedroom"
-      - label: "2 Bedroom"
-      - label: "3 Bedroom"
-      other: yes
-
-    - label: "Square footage"
-      type: number
-      unit: square feet
-      maxlength: 4
-
-    - label: "Which ordinance will this ADU comply with?"
-      type: select
-      helptext: For information, read [a summary of Ordinance 95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf), [Ordinance 162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf) and [Ordinance 162-17.](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf)
-      options:
-      - label: "95-17"
-      - label: "162-16"
-      - label: "162-17"
 
 - title: Construction
   fields: 
@@ -1310,7 +583,6 @@
     if: ">49"
 
   - label: Slope of building
-    hidden: yes
     type: number
     maxlength: 2
     unit: "%"
@@ -1366,7 +638,6 @@
       shows: electrical
 
   - label: Is the site in a Maher area?
-    hidden: yes
     type: radio
     annotation: PRJ (Planning)
     options:
@@ -1375,14 +646,9 @@
 
     - label: "No"
 
-- title: Construction
-  fields:
-  - label: Industrial-to-residential
-    type: header
-    level: 2
-    group: industrial-to-residential
-
   - group: large-excavation
+  - group: industrial-to-residential
+
     fields:
     - label: Are you changing the property from industrial to residential use?
       type: radio
@@ -1393,6 +659,51 @@
 
       - label: "No"
 
+- title: Construction
+  fields:
+  - label: Seismic retrofitting
+    type: header
+    level: 2
+
+  - label: Have you applied for a seismic retrofitting permit?
+    annotation: G-23 Attachment B (DBI)
+    helptext: This is required for all city construction. See [Chapter 4D of the Existing Building Code](http://library.amlegal.com/nxt/gateway.dll/California/sfbuilding/existingbuildingcode2016edition/chapter4dmandatoryearthquakeretrofitofwo?f=templates$fn=default.htm$3.0).
+    type: radio
+    options:
+    - label: "Yes"
+      shows: seismic-retro-number
+
+    - label: "No"
+
+  - group: seismic-retro-number
+    fields:
+    - label: What is your seismic retrofitting permit application number?
+      type: number
+      maxlength: 15
+      annotation: G-23 Attachment B (DBI)
+
+- title: Construction
+  fields:
+  - label: Seismic strenghtening
+    type: header
+    level: 2
+ 
+  - label: Have you filed for a seismic strengthening permit?
+    annotation: G-23 Attachment B (DBI)
+    helptext: This permit is optional. See [Administrative Bulletin AB-094](https://sfdbi.org/sites/default/files/migrated/FileCenter/Documents/Administrative_Bulletins/2013_AB/AB_094_updated_010114.pdf).
+    type: radio
+    options:
+    - label: "Yes"
+      shows: seismic-strength
+
+    - label: "No"
+
+  - group: seismic-strength
+    fields:
+    - label: What is your seismic strengthening permit application number?
+      type: number
+      maxlength: 15
+      annotation: G-23 Attachment B (DBI)
 
 - title: Construction
   fields:
@@ -1636,7 +947,7 @@
 
   - group: exterior-changes-public
     fields:
-    - label: Are you expanding the building?
+    - label: Are you expanding the front of the building?
       type: radio
       annotation: Needed for plan checklist
       options:
@@ -1662,53 +973,6 @@
 
     - label: "No, and I have paid the in-lieu fee"
       shows: street-tree-fee
-
-
-- title: Construction
-  fields:
-  - label: Seismic retrofitting
-    type: header
-    level: 2
-
-  - label: Have you applied for a seismic retrofitting permit?
-    annotation: G-23 Attachment B (DBI)
-    helptext: This is required for all city construction. See [Chapter 4D of the Existing Building Code](http://library.amlegal.com/nxt/gateway.dll/California/sfbuilding/existingbuildingcode2016edition/chapter4dmandatoryearthquakeretrofitofwo?f=templates$fn=default.htm$3.0).
-    type: radio
-    options:
-    - label: "Yes"
-      shows: seismic-retro-number
-
-    - label: "No"
-
-  - group: seismic-retro-number
-    fields:
-    - label: What is your seismic retrofitting permit application number?
-      type: number
-      maxlength: 15
-      annotation: G-23 Attachment B (DBI)
-
-- title: Construction
-  fields:
-  - label: Seismic strenghtening
-    type: header
-    level: 2
- 
-  - label: Have you filed for a seismic strengthening permit?
-    annotation: G-23 Attachment B (DBI)
-    helptext: This permit is optional. See [Administrative Bulletin AB-094](https://sfdbi.org/sites/default/files/migrated/FileCenter/Documents/Administrative_Bulletins/2013_AB/AB_094_updated_010114.pdf).
-    type: radio
-    options:
-    - label: "Yes"
-      shows: seismic-strength
-
-    - label: "No"
-
-  - group: seismic-strength
-    fields:
-    - label: What is your seismic strengthening permit application number?
-      type: number
-      maxlength: 15
-      annotation: G-23 Attachment B (DBI)
 
 - title: Construction
   fields:
@@ -1877,41 +1141,16 @@
     type: header
     level: 2
 
-  - type: paragraph
-    label: |
-      Does your site plan show and label:
-
-      - Adjacent lots, and outlines for all their buildings?
-
-      - The distance between the building's existing walls, property lines, and other structures on the lot?
-
-      - The width of the sidewalk from the front property line to the curb?
-
-      - The dimensions of usable open space, like decks, terraces and yards?
-
-      - The dimensions between the new unit's walls and property lines?
-
-  - label: Yes, my plans contain all the above.
+  - label: "Does your site plan show and label:"
     type: checkbox
-
-  - label: True north
-    type: header
-    level: 3
-
-  - type: paragraph
-    label: |
-      Does your site plan show:
-
-      - The direction of true north?
-
-  - group: project-north
-    fields:
-    - type: paragraph
-      label: |
-        - The direction of project north?
-
-  - label: Yes, my plans contain all the above.
-    type: checkbox
+    options:
+      - label: "Adjacent lots, and outlines for all their buildings?"
+      - label: "The distance between the building's existing walls, property lines, and other structures on the lot?"
+      - label: "The width of the sidewalk from the front property line to the curb?"
+      - label: "The dimensions of usable open space, like decks, terraces and yards?"
+      - label: "The dimensions between the new unit's walls and property lines?"
+      - label: "The direction of true north?"
+    annotation: DBI and Planning
 
   - label: Sidewalk and curbs
     type: header
