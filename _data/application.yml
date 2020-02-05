@@ -1177,9 +1177,30 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
+  - label: Sidewalk and curbs TEST
+    type: header
+    level: 3
+
+  - label: "Does your site plan show:"
+    type: checkbox
+    options:
+  - group: street-tree-no-fee
+    fields:
+      label: "The location of existing and proposed street trees?"
+
+  - group: street-tree-fee
+    fields:
+      label: "A notation that you’ve paid the in-lieu fee for street trees?"
+
+  - group: front-setback
+    fields:
+      label: "The required front setback with landscaping and permeable surface?"
+
+  - group: no-parking-spaces
+    fields:
+      label: "The note 'remove curb cut' next to the curb cuts you are removing?"
 
 - group: multi-family
-  title: Checklist
   fields:
   - label: Fire
     type: header
