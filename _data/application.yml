@@ -1127,6 +1127,23 @@
 
 - title: Checklist
   fields:
+  - label: Title sheet
+    type: header
+    level: 2
+
+  - label: "Does your title sheet identify:"
+    type: checkbox
+    options:
+      - label: "Address and block/lot?"
+      - label: "Existing and proposed number of units?"
+      - label: "Existing and proposed occupancy classification"
+      - label: "Existing and proposed building height, story count, and construction type?"
+      - label: "Existing and proposed sprinkler system and area of coverage?"
+      - label: "Existing and proposed fire alarm systems and area of coverage?"
+    annotation: DBI Intake Screening
+
+- title: Checklist
+  fields:
   - label: Site plan
     type: header
     level: 2
@@ -1265,13 +1282,12 @@
       - label: "Windows that are next to the line openings of a property lot?"
       - label: "Windows that are emergency escape and rescue openings (EEROs?)"
 
-- title: Checklist
 - group: exterior-changes
+- title: Checklist
   fields:
   - label: Exterior changes
     type: header
     level: 2
-
 
   - type: paragraph
     label: |
@@ -1290,12 +1306,10 @@
 
   - group: exterior-changes-no-expansion
     fields:
-    - type: paragraph
-      label: |
-        - Do your building elevations show and label partial elevations of the level on which you're proposing the work?
-
-  - label: Yes, my elevations contain all the above.
-    type: checkbox
+    - label: "Do your building elevations show and label partial elevations of the level on which you're proposing the work?"
+      type: checkbox
+      options:
+      - label: "Yes, my elevations contain all the above."
 
 - title: Checklist
   fields:
