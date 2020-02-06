@@ -1,19 +1,25 @@
 - title: Are you ready to apply for an ADU?
   fields:
   - label: |
-      This application will ask you about:
+      Our online application can save you time. 
 
-      - The builder's and owner's contact information
+      You will need to refer to your ADU plans to fill out this application. We will ask you about:
+
+      - The builder’s and owner’s contact information
 
       - Property details like use and occupancy codes
 
-      - Construction details like estimated costs, excavation area, planned changes, and seismic work
+      - Construction details like estimated costs, excavation area, all planned changes, and seismic work
 
       - Legal requirements like workers’ compensation insurance policy coverage
 
-      Finally you will upload your plans as PDFs and agree to our legal terms.
+      You will also upload your plans as PDFs and review our legal terms.
 
-      Unless you are building the ADU yourself, you will need a professional to fill out this form. If you have not yet hired a architect, contractor or engineer licensed in California, you should do so before you apply.
+      You will need to understand City code to answer some questions. If the application has errors, it may delay your approval.
+
+      After you fill out this online application, we will tell you the remaining paper forms you need to complete.
+
+      This application is for building permits only. If you are submitting a Site Permit, please go to the Permit Center.
     type: paragraph
 
 - title: About you
@@ -1206,29 +1212,6 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
-  - label: Sidewalk and curbs TEST
-    type: header
-    level: 3
-
-  - label: "Does your site plan show:"
-    type: checkbox
-    options:
-  - group: street-tree-no-fee
-    fields:
-      label: "The location of existing and proposed street trees?"
-
-  - group: street-tree-fee
-    fields:
-      label: "A notation that you’ve paid the in-lieu fee for street trees?"
-
-  - group: front-setback
-    fields:
-      label: "The required front setback with landscaping and permeable surface?"
-
-  - group: no-parking-spaces
-    fields:
-      label: "The note 'remove curb cut' next to the curb cuts you are removing?"
-
 - group: multi-family
   fields:
   - label: Fire
@@ -1708,23 +1691,21 @@
       - label: Someone else
         shows: billing-contact
 
+  - group: billing-contact
+    fields:
+    - label: First name of billing contact
+      annotation: PRJ (Planning) 
 
-- title: Billing contact information
-  group: billing-contact
-  fields:
-  - label: First name of billing contact
-    annotation: PRJ (Planning) 
+    - label: Last name of billing contact
+      annotation: PRJ (Planning) 
 
-  - label: Last name of billing contact
-    annotation: PRJ (Planning) 
+    - label: Phone number
+      type: phone
+      annotation: PRJ (Planning) 
 
-  - label: Phone number
-    type: phone
-    annotation: PRJ (Planning) 
-
-  - label: Email
-    type: email
-    annotation: PRJ (Planning) 
+    - label: Email
+      type: email
+      annotation: PRJ (Planning) 
 
 - title: You are about to submit your application.
   fields:
