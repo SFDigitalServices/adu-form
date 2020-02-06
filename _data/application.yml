@@ -43,6 +43,7 @@
     - label: Attorney
       shows: non-owner
     other: yes
+    shows: non-owner
 
   - group: non-owner
     fields:
@@ -195,21 +196,22 @@
 
   - group: proposed-use-codes
     fields:  
-  - label: What will the building’s use codes be after construction?
-    type: checkbox
-    annotation: Form 3/8 (DBI)
-    options:
-    - label: "24: Apartment"
-    - label: "27: 1 Family Dwelling"
-    - label: "28: 2 Family Dwelling"
-    - label: "10: Office"
-    - label: "79: Vacant Lot"
-    - label: "Other"
-      shows: proposed-use-other
+    - label: What will the building’s use codes be after construction?
+      type: checkbox
+      annotation: Form 3/8 (DBI)
+      options:
+      - label: "24: Apartment"
+      - label: "27: 1 Family Dwelling"
+      - label: "28: 2 Family Dwelling"
+      - label: "10: Office"
+      - label: "79: Vacant Lot"
+      - label: "Other"
+        shows: proposed-use-other
 
-  - group: proposed-use-other
-    fields:
-    - label: Enter any proposed building use codes not listed above. 
+    - group: proposed-use-other
+      fields:
+      - label: Enter any proposed building use codes not listed above. 
+
 
 - title: Property
   fields:
@@ -327,31 +329,48 @@
     level: 2
 
   - label: |
-      If your lot is over 1,500 square feet or has: 
+      Is your lot is over 1,500 square feet or has: 
 
-      - A current or former gas station
+      - A current or former gas station?
 
-      - A parking lot
+      - A parking lot?
 
-      - An auto repair shop
+      - An auto repair shop?
 
-      - Dry cleaners
+      - Dry cleaners?
 
-      - Heavy manufacturing use
+      - Heavy manufacturing use?
 
-      - Underground storage tanks
+      - Underground storage tanks?
 
-      You need to provide an environmental site assessment after you apply.
     type: paragraph
 
   - label: Does the site have any of the above?
     type: radio
+    helptext: If so, you need to provide an environmental site assessment after you apply. We will include it on the last page of this form.
     annotation: PRJ (Planning)
     options:
     - label: "Yes"
       shows: environmental-assessment
 
     - label: "No"
+
+- title: Property
+  fields:
+  - label: Historic status
+    type: header
+    level: 2
+
+  - label: What is the historic status of the property??
+    type: radio
+    annotation: This page is from the Planning ADU form. It can be removed once we have a PIM microservice.
+    helptext: "If you do not know your property's historic status, select B."
+    options:
+    - label: "A"
+      shows: historic-preservation
+
+    - label: "B"
+    - label: "C"
 
 - title: Property
   fields:
@@ -971,9 +990,9 @@
     - label: "Yes"
       shows: street-tree-no-fee
 
-    - label: "No, and I will pay the in-lieu fee"
-      shows: street-tree-fee
+    - label: "No, and I will pay the in-lieu fee."
 
+      shows: street-tree-fee
 - title: Construction
   fields:
   - label: Housing services
@@ -1156,41 +1175,34 @@
       - label: "The width of the sidewalk from the front property line to the curb?"
       - label: "The dimensions of usable open space, like decks, terraces and yards?"
       - label: "The dimensions between the new unit's walls and property lines?"
-      - label: "The direction of true north?"
+      - label: "The direction of true north and project north?"
     annotation: DBI and Planning
 
-  - label: Sidewalk and curbs
-    type: header
-    level: 3
-
+- title: Site plan
+  fields:
   - type: paragraph
     label: |
       Does your site plan show:
-
   - group: street-tree-no-fee
     fields:
     - type: paragraph
       label: |
         - The location of existing and proposed street trees?
-
   - group: street-tree-fee
     fields:
     - type: paragraph
       label: |
         - A notation that you’ve paid the in-lieu fee for street trees?
-
   - group: front-setback
     fields:
     - type: paragraph
       label: |
         - The required front setback, with landscaping and permeable surface?
-
   - group: no-parking-spaces
     fields:
     - type: paragraph
       label: |
         - The note "remove curb cut" next to the curb cuts you are removing?
-
   - label: Yes, my plans contain all the above.
     type: checkbox
 
@@ -1246,15 +1258,19 @@
       - label: "Each room and space's use in the existing unit?"
       - label: "Each ADU's street number and square footage?"
       - label: "Each ADU's room and window dimensions?"
-      - label: "Laundry and storage locations?"
+
+  - label: "On all floors, do your existing and proposed floor plans show and label:"
+    type: checkbox
+    options:
       - label: "All plumbing fixtures (including dishwashers, clothes washers, and hose bibs)?"
+      - label: "Laundry and storage locations?"
       - label: "Vehicle and bicycle parking dimensions and outlines?"
       - label: "Gas and electrical meters?"
       - label: "Trash, recycling, and compost cart locations? (They must be on private property, screened from public view, and not in an exit passageway.)"
 
   - group: multi-family
     fields:
-  - label: "Floor plan (Multi-family dwellings)"
+  - label: "Multi-family dwelling floor plan"
     type: header
     level: 2
 
@@ -1291,7 +1307,7 @@
 
   - type: paragraph
     label: |
-      Do you have separate existing and proposed site plans, showing all buildings on the lot?:
+      Do you have separate existing and proposed site plans, showing all buildings on the lot?
 
   - label: Yes, my plans contain the above.
     type: checkbox
