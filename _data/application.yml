@@ -1,4 +1,4 @@
-- title: Are you ready to apply for an ADU?
+- title: Start your ADU application online
   fields:
   - label: |
       Our online application can save you time. 
@@ -367,7 +367,7 @@
     type: header
     level: 2
 
-  - label: What is the historic status of the property??
+  - label: What is the historic status of the property?
     type: radio
     annotation: This page is from the Planning ADU form. It can be removed once we have a PIM microservice.
     helptext: "If you do not know your property's historic status, select B."
@@ -1161,7 +1161,7 @@
     options:
       - label: "Address and block/lot?"
       - label: "Existing and proposed number of units?"
-      - label: "Existing and proposed occupancy classification"
+      - label: "Existing and proposed occupancy classification?"
       - label: "Existing and proposed building height, story count, and construction type?"
       - label: "Existing and proposed sprinkler system and area of coverage?"
       - label: "Existing and proposed fire alarm systems and area of coverage?"
@@ -1184,11 +1184,16 @@
       - label: "The direction of true north and project north?"
     annotation: DBI and Planning
 
-- title: Site plan
+- title: Checklist
   fields:
+  - label: Street trees
+    type: header
+    level: 2
+
   - type: paragraph
     label: |
       Does your site plan show:
+
   - group: street-tree-no-fee
     fields:
     - type: paragraph
@@ -1212,26 +1217,18 @@
   - label: Yes, my plans contain all the above.
     type: checkbox
 
-- group: multi-family
-  fields:
-  - label: Fire
-    type: header
-    level: 2
-
-  - label: "Does your site plan label the locations of the:"
-    type: checkbox
-    options:
-      - label: "Proposed fire department connection?"
-      - label: "Low-pressure fire hydrants?"
-      - label: "Proposed fire underground service connection and backflow preventer?"
-      - label: "Sprinkler riser and required clearances?"
-      - label: "Distance between the fire department connection and the nearest hydrant?"
-
 - title: Checklist
   fields:
   - label: Floor plan
     type: header
     level: 2
+
+  - label: "How many proposed ADUs do your plans show?"
+    type: number
+    annotation: validation question for planning checklist data    
+    options:
+    unit: feet
+    maxlength: 4
 
   - label: "On all floors, do your existing and proposed floor plans show and label:"
     type: checkbox
@@ -1268,9 +1265,29 @@
       - label: "A way to compare the number of exits required by code with existing and proposed exits?"
       - label: "The location of the fire alarm control unit, and the fire alarm annunciator?"
 
+  - group: multi-family
+  - label: Fire
+    type: header
+    level: 2
+
+  - label: "What is the distance between the fire department connection and the nearest hydrant on your plans?"
+    type: number
+    annotation: validation question for planning checklist data    
+    options:
+    unit: feet
+    maxlength: 4
+
+  - label: "Does your site plan label the locations of the:"
+    type: checkbox
+    options:
+      - label: "Proposed fire department connection?"
+      - label: "Low-pressure fire hydrants?"
+      - label: "Proposed fire underground service connection and backflow preventer?"
+      - label: "Sprinkler riser and required clearances?"
+
 - title: Checklist
   fields:
-  - label: Elevations
+  - label: Elevations and exteriors
     type: header
     level: 2
 
@@ -1281,13 +1298,7 @@
       - label: "Windows that are next to the line openings of a property lot?"
       - label: "Windows that are emergency escape and rescue openings (EEROs?)"
 
-- group: exterior-changes
-- title: Checklist
-  fields:
-  - label: Exterior changes
-    type: header
-    level: 2
-
+  - group: exterior-changes
   - type: paragraph
     label: |
       Do you have separate existing and proposed site plans, showing all buildings on the lot?
