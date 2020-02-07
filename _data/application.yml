@@ -1146,9 +1146,9 @@
   fields:
   - type: paragraph
     label: |
-      Next, we are going to review that your plans have everything we need to approve them.
+      Next, we are going to review that your plans have all the information that we need to approve them.
 
-      Once we have gone through the list, we will ask you to upload your plans and agree to our legal terms.
+      Once we have gone through the lists, we will ask you to upload your plans and agree to our legal terms.
 
 - title: Checklist
   fields:
@@ -1299,12 +1299,11 @@
       - label: "Windows that are emergency escape and rescue openings (EEROs?)"
 
   - group: exterior-changes
-  - type: paragraph
-    label: |
-      Do you have separate existing and proposed site plans, showing all buildings on the lot?
-
-  - label: Yes, my plans contain the above.
-    type: checkbox
+  - label: "Do you have separate existing and proposed site plans, showing all buildings on the lot?"
+    type: radio
+    options:
+      - label: "Yes, my site plans show all the buildings on the lot"
+      - label: "No"
 
   - group: exterior-changes-expansion
     fields:
@@ -1317,9 +1316,10 @@
   - group: exterior-changes-no-expansion
     fields:
     - label: "Do your building elevations show and label partial elevations of the level on which you're proposing the work?"
-      type: checkbox
+      type: radio
       options:
-      - label: "Yes, my elevations contain all the above."
+      - label: "Yes, my elevations show and label the partial elevations."
+      - label: "No"
 
 - title: Checklist
   fields:
