@@ -332,34 +332,33 @@
   fields:
   - label: Environmental assessment
     type: header
-    level: 2
 
-  - label: |
-      Is your lot is over 1,500 square feet or has: 
-
-      - A current or former gas station?
-
-      - A parking lot?
-
-      - An auto repair shop?
-
-      - Dry cleaners?
-
-      - Heavy manufacturing use?
-
-      - Underground storage tanks?
-
-    type: paragraph
-
-  - label: Does the site have any of the above?
-    type: radio
-    helptext: If so, you need to provide an environmental site assessment after you apply. We will include it on the last page of this form.
-    annotation: PRJ (Planning)
+  - label: "Check the box if your lot contains the following:"
+    type: checkbox
     options:
-    - label: "Yes"
+    - label: Lot over 1,500 square feet
       shows: environmental-assessment
 
-    - label: "No"
+    - label: Current or former gas station
+      shows: environmental-assessment
+
+    - label: A parking lot
+      shows: environmental-assessment
+
+    - label: An auto repair shop
+      shows: environmental-assessment
+
+    - label: Dry cleaners
+      shows: environmental-assessment
+
+    - label: Heavy manufacturing use
+      shows: environmental-assessment
+
+    - label: Underground storage tanks
+      shows: environmental-assessment
+
+    helptext: If so, you need to provide an environmental site assessment after you apply. We will include it on the last page of this form.
+    annotation: PRJ (Planning)
 
 - title: Property
   fields:
@@ -455,7 +454,7 @@
     type: number
     annotation: Needed for plan checklist    
     options:
-    unit: square feet
+    unit: feet
     maxlength: 4
     shows: front-setback
     if: ">0"
@@ -755,7 +754,7 @@
 
 - title: Construction
   fields:
-  - label: Buidling stories
+  - label: Building stories
     type: header
     level: 2
 
@@ -1227,7 +1226,7 @@
     type: number
     annotation: validation question for planning checklist data    
     options:
-    unit: feet
+    unit: units
     maxlength: 4
 
   - label: "On all floors, do your existing and proposed floor plans show and label:"
