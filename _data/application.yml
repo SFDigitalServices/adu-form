@@ -333,7 +333,7 @@
   - label: Environmental assessment
     type: header
 
-  - label: "Check the box if your lot contains the following:"
+  - label: "Check the box if it applies to your lot:"
     type: checkbox
     options:
     - label: Lot over 1,500 square feet
@@ -376,6 +376,21 @@
 
     - label: "B"
     - label: "C"
+
+- title: Property
+  fields:
+  - label: Air Pollutant Exposure Zone
+    type: header
+    level: 2
+
+  - label: Is the property in an Air Pollutant Exposure Zone?
+    type: radio
+    annotation: This page is from PRJ (Planning)
+    options:
+    - label: "Yes"
+      shows: air-pollutant
+
+    - label: "No"
 
 - title: Property
   fields:
@@ -1162,8 +1177,6 @@
       - label: "Existing and proposed number of units?"
       - label: "Existing and proposed occupancy classification?"
       - label: "Existing and proposed building height, story count, and construction type?"
-      - label: "Existing and proposed sprinkler system and area of coverage?"
-      - label: "Existing and proposed fire alarm systems and area of coverage?"
     annotation: DBI Intake Screening
 
 - title: Checklist
@@ -1264,7 +1277,9 @@
       - label: "A way to compare the number of exits required by code with existing and proposed exits?"
       - label: "The location of the fire alarm control unit, and the fire alarm annunciator?"
 
-  - group: multi-family
+- group: multi-family
+- title: Checklist
+  fields:
   - label: Fire
     type: header
     level: 2
@@ -1283,6 +1298,12 @@
       - label: "Low-pressure fire hydrants?"
       - label: "Proposed fire underground service connection and backflow preventer?"
       - label: "Sprinkler riser and required clearances?"
+
+  - label: "Do your floor plans label the locations of the:"
+    type: checkbox
+    options:
+      - label: "Existing and proposed sprinkler system and area of coverage?"
+      - label: "Existing and proposed fire alarm systems and area of coverage?"
 
 - title: Checklist
   fields:
