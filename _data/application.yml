@@ -333,13 +333,19 @@
   - label: Environmental assessment
     type: header
 
-  - label: "Check the box if it applies to your lot:"
-    type: checkbox
+  - label: Is your lot over 1,500 sq. feet?
+    type: radio
+    annotation: PRJ (Planning)
     options:
-    - label: Lot over 1,500 square feet
+    - label: "Yes"
       shows: environmental-assessment
 
-    - label: Current or former gas station
+    - label: "No"
+
+  - label: "Check the box if your lot has:"
+    type: checkbox
+    options:
+    - label: A current or former gas station
       shows: environmental-assessment
 
     - label: A parking lot
