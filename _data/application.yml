@@ -37,6 +37,12 @@
     - label: I am the owner
       shows: owner
 
+    - label: Agent
+      shows: non-owner
+
+    - label: Designer
+      shows: non-owner
+
     - label: Architect
       shows: non-owner
 
@@ -48,8 +54,9 @@
 
     - label: Attorney
       shows: non-owner
-    other: yes
-    shows: non-owner
+
+    - label: Other
+      shows: non-owner
 
   - group: non-owner
     fields:
@@ -236,10 +243,10 @@
       - label: "R-4: Residential, supervised"
       - label: "S: Storage"
       - label: "Other"
-    shows: occupancy-current-other
+    shows: current-occupancy-other
     annotation: DBI and Planning
 
-  - group: occupancy-current-other
+  - group: current-occupancy-other
     fields:
       - label: Check all of the building's current occupancy codes.
         type: checkbox
@@ -276,11 +283,11 @@
     annotation: DBI and Planning
     options:
     - label: "Yes"
-      shows: proposed-occupancy
+      shows: proposed-occupancy-codes
 
     - label: "No"
 
-  - group: proposed-occupancy
+  - group: proposed-occupancy-codes
     fields:
     - label: What will the building’s occupancy codes be after construction?
       type: checkbox
@@ -293,10 +300,10 @@
       - label: "R-4: Residential, supervised"
       - label: "S: Storage"
       - label: "Other"
-        shows: proposed occupancy-other
+        shows: proposed-occupancy-other
       annotation: DBI and Planning
 
-    - group: occupancy-proposed-other
+    - group: proposed-occupancy-other
       fields:
         - label: Check all of the building's occupancy codes after construction.
           type: checkbox
