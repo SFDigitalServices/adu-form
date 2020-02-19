@@ -209,7 +209,7 @@
 
   - group: proposed-use-codes
     fields:  
-    - label: What will the building’s use codes be after construction?
+    - label: What will the building's use codes be after construction?
       type: checkbox
       annotation: Form 3/8 (DBI)
       options:
@@ -235,11 +235,11 @@
   - label: What are the property's current occupancy codes?
     type: checkbox
     options:
-      - label: "R-1: Residential, transient hotel / motel (residential)"
       - label: "R-2: Residential, apartment / condominium with 3+ units"
-      - label: "R-2.1: Residential, supervised apartment / condominum"
+      - label: "R-2.1: Residential, supervised apartment / condominium"
       - label: "R-3: General residential"
       - label: "R-3.1: General supervised residential"
+      - label: "R-1: Residential, transient hotel / motel (residential)"
       - label: "R-4: Residential, supervised"
       - label: "S: Storage"
       - label: "Other"
@@ -292,11 +292,11 @@
     - label: What will the building’s occupancy codes be after construction?
       type: checkbox
       options:
-      - label: "R-1: Residential, transient hotel / motel (residential)"
       - label: "R-2: Residential, apartment / condominium with 3+ units"
-      - label: "R-2.1: Residential, supervised apartment / condominum"
+      - label: "R-2.1: Residential, supervised apartment / condominium"
       - label: "R-3: General residential"
       - label: "R-3.1: General supervised residential"
+      - label: "R-1: Residential, transient hotel / motel (residential)"
       - label: "R-4: Residential, supervised"
       - label: "S: Storage"
       - label: "Other"
@@ -340,7 +340,7 @@
   - label: Environmental assessment
     type: header
 
-  - label: Is your lot over 1,500 sq. feet?
+  - label: Is your lot over 1,500 square feet?
     type: radio
     annotation: PRJ (Planning)
     options:
@@ -498,22 +498,372 @@
 
 - title: Property
   fields:
-  - label: Current ADUs
+  - label: Existing ADUs
     type: header
     level: 2
 
-  - label: How many legal ADUs does the property currently have?
+  - label: How many existing legal ADUs does the property have?
     type: number
     maxlength: 2
-    shows: current-adus
+    shows: existing-adus
     if: ">0"
 
-  - group: current-adus
+  - group: existing-adus
     fields:
     - label: We need to know the following information for each ADU.
       type: paragraph
 
-    - label: "ADU #1"
+    - label: "Existing ADU #1"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #2"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #3"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #4"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #5"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #6"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #7"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #8"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #9"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #10"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #11"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #12"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #13"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #14"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "How was this ADU permitted?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Existing ADU #15"
       type: header
       level: 3
 
@@ -555,7 +905,357 @@
     - label: We need to know the following information for each ADU.
       type: paragraph
 
-    - label: "ADU #1"
+    - label: "Proposed ADU #1"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #2"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #3"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #4"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #5"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #6"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #7"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #8"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #9"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #10"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #11"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #12"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #13"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #14"
+      type: header
+      level: 3
+
+    - label: "Unit type"
+      type: radio
+      options:
+      - label: "Studio"
+      - label: "1 Bedroom"
+      - label: "2 Bedroom"
+      - label: "3 Bedroom"
+      other: yes
+
+    - label: "Unit square footage"
+      type: number
+      unit: square feet
+      maxlength: 4
+
+    - label: "Which ordinance applies to this ADU?"
+      type: radio
+      options:
+      - label: "[162-16](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/160657.pdf): allowed ADUs on residential lots City-wide"
+      - label: "[95-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170125.pdf): updated requirements for non-waiver ADUs"
+      - label: "[162-17](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf): includes many, specific ADU updates. (If your ADU relies on this [Ordinance](https://sfplanning.org/sites/default/files/documents/legis/code-summaries/170434.pdf), please review it to make sure your ADU complies.)"
+
+    - label: "Proposed ADU #15"
       type: header
       level: 3
 
@@ -736,7 +1436,7 @@
 
 - title: Construction
   fields:
-  - label: Seismic strenghtening
+  - label: Seismic strengthening
     type: header
     level: 2
  
@@ -855,6 +1555,32 @@
       unit: square feet
       annotation: Form 3/8 (DBI)
 
+  - group: exterior-changes
+  - label: Front facade
+    type: header
+    level: 2
+
+  - label: Are you changing the front facade?
+    type: radio
+    annotation: Needed for plan checklist
+    options:
+    - label: "Yes"
+      shows: exterior-changes-public
+
+    - label: "No"
+
+  - group: exterior-changes-public
+    fields:
+    - label: Are you expanding the front of the building?
+      type: radio
+      annotation: Needed for plan checklist
+      options:
+      - label: "Yes"
+        shows: exterior-changes-expansion
+
+      - label: "No"
+        shows: exterior-changes-no-expansion
+
 - title: Construction
   fields:
   - label: Market-rate dwelling units
@@ -887,12 +1613,12 @@
     type: header
     level: 2
 
-  - label: How many affordable dwelling units does the property have?
+  - label: How many Affordable dwelling units does the property have?
     type: number
     unit: units
     annotation: Form 3/8 (DBI). "Number of proposed market-rate units" (needed by Planning) is this field minus "How many of those units are affordable?"
 
-  - label: Will the number of affordable dwelling units change after construction?
+  - label: Will the number of Affordable dwelling units change after construction?
     type: radio
     options:
     - label: "Yes"
@@ -902,7 +1628,7 @@
 
   - group: proposed-affordable-dwellings
     fields:
-    - label: How many affordable dwelling units will there be?
+    - label: How many Affordable dwelling units will there be?
       type: number
       unit: units
       annotation: PRJ (Planning)
@@ -982,35 +1708,6 @@
       type: number
 
 - title: Construction
-  group: exterior-changes
-  fields:
-  - label: Front facade
-    type: header
-    level: 2
-
-  - label: Are you changing the front facade?
-    type: radio
-    annotation: Needed for plan checklist
-    options:
-    - label: "Yes"
-      shows: exterior-changes-public
-
-    - label: "No"
-
-  - group: exterior-changes-public
-    fields:
-    - label: Are you expanding the front of the building?
-      type: radio
-      annotation: Needed for plan checklist
-      options:
-      - label: "Yes"
-        shows: exterior-changes-expansion
-
-      - label: "No"
-        shows: exterior-changes-no-expansion
-
-
-- title: Construction
   fields:
   - label: Street trees
     type: header
@@ -1026,6 +1723,7 @@
     - label: "No, and I will pay the in-lieu fee."
 
       shows: street-tree-fee
+
 - title: Construction
   fields:
   - label: Housing services
@@ -1044,29 +1742,6 @@
 
 - title: Construction
   fields:
-  - label: Parking area
-    type: header
-    level: 2
-
-  - label: How many square feet of parking area does the property have?
-    type: number
-    unit: gross square feet
-    annotation: Everything on this page is from the PRJ (Planning)
-
-  - label: Will the square feet of parking change after construction?
-    type: radio
-    options:
-    - label: "Yes"
-      shows: proposed-parking-gsf
-
-    - label: "No"
-
-  - group: proposed-parking-gsf
-    fields:
-    - label: How many square feet of parking area will there be after construction?
-      type: number
-      unit: gross square feet
-
   - label: Parking spaces
     type: header
     level: 2
@@ -1089,6 +1764,29 @@
       type: number
       show: no-parking-spaces
       if: "0"
+
+  - label: Parking area
+    type: header
+    level: 2
+
+  - label: How many square feet of parking area does the property have?
+    type: number
+    unit: gross square feet
+    annotation: Everything on this page is from the PRJ (Planning)
+
+  - label: Will the square feet of parking change after construction?
+    type: radio
+    options:
+    - label: "Yes"
+      shows: proposed-parking-gsf
+
+    - label: "No"
+
+  - group: proposed-parking-gsf
+    fields:
+    - label: How many square feet of parking area will there be after construction?
+      type: number
+      unit: gross square feet
 
 - title: Construction
   fields:
@@ -1146,14 +1844,14 @@
     annotation: This is a duplicate, plain-language version of the 'Hold Harmless Clause' in Form 3/8, so it doesn't need to be recorded.
     type: radio
     options:
+    - label: "They plan to hire a contractor who will follow worker's compensation laws."
+      shows: comp-V
+
     - label: "They are self-insured and have a certificate of consent."
       shows: comp-I
 
     - label: "They have personally bought insurance for this project."
       shows: comp-II
-
-    - label: "They plan to hire a contractor who will follow worker's compensation laws."
-      shows: comp-V
 
     - label: "They don't need insurance because they aren't hiring anyone."
       shows: comp-IV
@@ -1202,6 +1900,7 @@
     type: checkbox
     options:
       - label: "Adjacent lots, and outlines for all their buildings?"
+      - label: "All buildings on the lot?"
       - label: "The distance between the building's existing walls, property lines, and other structures on the lot?"
       - label: "The width of the sidewalk from the front property line to the curb?"
       - label: "The dimensions of usable open space, like decks, terraces and yards?"
@@ -1275,7 +1974,7 @@
 
   - group: multi-family
     fields:
-  - label: "Multi-family dwelling floor plan"
+  - label: "Multi-family floor plan"
     type: header
     level: 2
 
@@ -1330,13 +2029,6 @@
       - label: "Each window's dimensions, operation, material type, and fire rating?"
       - label: "Windows that are next to the line openings of a property lot?"
       - label: "Windows that are emergency escape and rescue openings (EEROs?)"
-
-  - group: exterior-changes
-  - label: "Do you have separate existing and proposed site plans, showing all buildings on the lot?"
-    type: radio
-    options:
-      - label: "Yes, my site plans show all the buildings on the lot"
-      - label: "No"
 
   - group: exterior-changes-expansion
     fields:
