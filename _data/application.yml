@@ -388,6 +388,7 @@
       shows: historic-preservation
 
     - label: "B"
+      shows: historic-determination
     - label: "C"
 
 - title: Property
@@ -2509,7 +2510,37 @@
 
   - type: paragraph
     label: |
-      Finally, you may need more permits depending on the project's address. For example, if you are changing the front facade, you may need a [Historic Resource Determination.](https://forms.sfplanning.org/HistoricRD_SupplementalApplication.pdf)
+      Finally, you may need more permits depending on your project's address and plans. 
+
+  - group: historic-preservation
+    fields:
+    - label: "Historic resource (Category A)"
+      type: header
+      level: 4
+
+    - label: |
+        If you are changing the front facade, please see the Planning Department to review your plans.
+      type: paragraph
+
+  - group: historic-determiniation
+    fields:
+    - label: "Historic resource (Category B)"
+      type: header
+      level: 4
+
+    - label: |
+        If you are changing the front facade, you will need a [Historic Resource Determination.](https://forms.sfplanning.org/HistoricRD_SupplementalApplication.pdf)
+      type: paragraph
+
+  - group: air-pollutant
+    fields:
+    - label: Air Pollutant Exposure Zone
+      type: header
+      level: 4
+
+    - label: |
+        Since your property is in an Air Pollutant Exposure Zone, you need to file [this application with the Department of Public Health for Article 38 Compliance Assessment](https://www.sfdph.org/dph/files/EHSdocs/AirQuality/Article38Application.pdf).
+      type: paragraph
 
   - group: drop-off-plan
     fields:
